@@ -33,26 +33,30 @@ Here is a quick nested grid example:
 
 **HTML file**
 
-    <div class="*block-group*">
-        <div class="*block* header">Header</div>
-        <div class="*block* sidebar">Sidebar</div>
-        <div class="*block-group* content"><!-- nested grid -->
-            <div class="*block* nheader">Nested header</div>
-            <div class="*block* item">Block 1</div>
-            <div class="*block* item">Block 2</div>
-            <div class="*block* item">Block 3</div>
-            <div class="*block* item">Block 4</div>
-            <div class="*block* item">Block 5</div>
+```HTML
+    <div class="block-group">
+        <div class="block header">Header</div>
+        <div class="block sidebar">Sidebar</div>
+        <div class="block-group content"><!-- nested grid -->
+            <div class="block nheader">Nested header</div>
+            <div class="block item">Block 1</div>
+            <div class="block item">Block 2</div>
+            <div class="block item">Block 3</div>
+            <div class="block item">Block 4</div>
+            <div class="block item">Block 5</div>
         </div>
-        <div class="*block* footer">Footer</div>
+        <div class="block footer">Footer</div>
     </div>
+```
 
 **CSS file**
 
+```CSS
     /* blocks have a default size of 100%. */
     .sidebar { width: 25%; }
     .content { width: 75%; }
     .item { width: 20%; }
+```
 
 ## Compatibility
 By default, the Pocket Grid is compatible with **IE8+, Firefox, Google Chrome, Safari, Opera, and mobile browsers (iPhone, iPad, Android...)**  
