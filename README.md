@@ -26,6 +26,7 @@ You just have to include the `pocketgrid.css` file in your page!
 ## Example
 The `/examples` directory will soon contain many complete examples.
 
+### Nested grid example
 Here is a quick nested grid example:
 
 **Preview**  
@@ -57,6 +58,7 @@ Here is a quick nested grid example:
     .item { width: 20%; } /* 20% => items on 5 columns */
 ```
 
+### Responsive example
 To make a responsive version of this example, we could just change the CSS file like that:
 
 **CSS file**  
