@@ -26,10 +26,13 @@ You just have to include the `pocketgrid.css` file in your page!
 See the `/examples` directory for complete examples.
 
 Here is a quick nested grid example:
+
 **Preview**
+
 ![Nested grid](http://i.imgur.com/DYFRDP2.png)
 
 **HTML file**
+
     <div class="block-group">
         <div class="block header">Header</div>
         <div class="block sidebar">Sidebar</div>
@@ -46,13 +49,14 @@ Here is a quick nested grid example:
     </div>
 
 **CSS file**
+
     /* blocks have a default size of 100%. */
     .sidebar { width: 25%; }
     .content { width: 75%; }
     .item { width: 20%; }
 
 ## Compatibility
-By default, the Pocket Grid is compatible with **IE8+, Firefox, Google Chrome, Safari, Opera, and mobile browsers (iPhone, iPad, Android...)**
+By default, the Pocket Grid is compatible with **IE8+, Firefox, Google Chrome, Safari, Opera, and mobile browsers (iPhone, iPad, Android...)**  
 For **IE6+ compatibility**, you can use these 2 polyfills:
 - Media Queries: https://github.com/scottjehl/Respond
 - Box-sizing: https://github.com/Schepp/box-sizing-polyfill
@@ -65,6 +69,6 @@ For **IE6+ compatibility**, you can use these 2 polyfills:
 
 Copyright 2013 Arnaud Leray.
 
-Licensed under the MIT License:
-[http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
+Licensed under the MIT License:  
+[http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)  
 Basically, you can do whatever you want as long as you include the original copyright.
