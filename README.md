@@ -57,6 +57,31 @@ Here is a quick nested grid example:
     .item { width: 20%; } /* 20% => items on 5 columns */
 ```
 
+To make a responsive version of this example, we could just change the CSS file like that:
+
+**CSS file**  
+```CSS
+/* Smartphone version:
+   Nothing to write: blocks are 100% width by default, so all blocks will be put below each other. */
+
+/* Tablet version:
+   sidebar and content are side by side, with respectively 25% and 75% of the grid width,
+   and there are 2 items per "row". */
+@media (min-width: 768px) and (max-width: 959px) {
+    .sidebar { width: 25%; }
+    .content { width: 75%; }
+    .item { width: 50%; } /* 50% => items on 2 columns */
+}
+/* Desktop version:
+   sidebar and content are side by side, with respectively 20% and 80% of the grid width,
+   and there are 5 items per "row". */
+@media (min-width: 960px) {
+    .sidebar { width: 20%; }
+    .content { width: 80%; }
+    .item { width: 20%; } /* 20% => items on 5 columns */
+}
+```
+
 ## Compatibility
 By default, the Pocket Grid is compatible with **IE8+, Firefox, Google Chrome, Safari, Opera, and mobile browsers (iPhone, iPad, Android...)**  
 For **IE6+ compatibility**, you can use these 2 polyfills:
