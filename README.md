@@ -33,19 +33,18 @@ Here is a quick nested grid example:
 
 **HTML file**
 
-    <div class="block-group">
-        <div class="block header">Header</div>
-        <div class="block sidebar">Sidebar</div>
-        <div class="block-group content"><!-- nested grid -->
-            <div class="block nheader">Nested header</div>
-            <div class="block item">Block 1</div>
-            <div class="block item">Block 2</div>
-            <div class="block item">Block 3</div>
-            <div class="block item">Block 4</div>
-            <div class="block item">Block 5</div>
-            <div class="block item">Block 6</div>
+    <div class="*block-group*">
+        <div class="*block* header">Header</div>
+        <div class="*block* sidebar">Sidebar</div>
+        <div class="*block-group* content"><!-- nested grid -->
+            <div class="*block* nheader">Nested header</div>
+            <div class="*block* item">Block 1</div>
+            <div class="*block* item">Block 2</div>
+            <div class="*block* item">Block 3</div>
+            <div class="*block* item">Block 4</div>
+            <div class="*block* item">Block 5</div>
         </div>
-        <div class="block footer">Footer</div>
+        <div class="*block* footer">Footer</div>
     </div>
 
 **CSS file**
