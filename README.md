@@ -1,7 +1,5 @@
 # PocketGrid
 
-## About
-
 PocketGrid is the smallest responsive grid system having so many features:
 - **Lightweight**: about 0.5kB!
 - **Pure CSS-only** (no CSS preprocessor needed)
@@ -15,24 +13,25 @@ PocketGrid is the smallest responsive grid system having so many features:
 - Supports unlimited **nested grids**
 - Manage consistent **gutters** (gutters can be defined pixels or ems, which is better than percentage-based solutions because it allows consistent gutters even in nested grids)
 - No dependencies
-- Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components and the Pocket grid)
+- Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. with the Pocket grid for other layout)
 - IE6 compatible with some polyfills (for border box-sizing and media queries compatibility)
+
+**Note** : soon, a PocketGrid *Plus* version will be added to provide many useful features like centering, push/pull, offsets, swaping, gutter improvements...  
+**Keep an eye on this project!** ;)
 
 ## QuickStart
 
 You just have to include the `pocketgrid.css` file in your page!
 
 ## Example
-See the `/examples` directory for complete examples.
+The `/examples` directory will soon contain many complete examples.
 
 Here is a quick nested grid example:
 
-**Preview**
-
+**Preview**  
 ![Nested grid](http://i.imgur.com/DYFRDP2.png)
 
-**HTML file**
-
+**HTML file**  
 ```HTML
     <div class="block-group">
         <div class="block header">Header</div>
@@ -49,13 +48,13 @@ Here is a quick nested grid example:
     </div>
 ```
 
-**CSS file**
-
+**CSS file**  
 ```CSS
-    /* blocks have a default size of 100%. */
+    /* Blocks have a default size of 100%,
+       so elements with a 100% size do not need to be redefined in the CSS. */
     .sidebar { width: 25%; }
     .content { width: 75%; }
-    .item { width: 20%; }
+    .item { width: 20%; } /* 20% => items on 5 columns */
 ```
 
 ## Compatibility
