@@ -16,7 +16,7 @@ PocketGrid is the smallest responsive grid system having so many features:
 - Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. with the Pocket grid for other layout)
 - IE6 compatible with some polyfills (for border box-sizing and media queries compatibility)
 
-**Note** : soon, a PocketGrid *Plus* version will be added to provide many useful features like centering, push/pull, offsets, swaping, gutter improvements...  
+**Note** : soon, a PocketGrid *Plus* version will be added to provide many useful features such as centering, push/pull, offsets, swaping, gutter improvements...  
 **Keep an eye on this project!** ;)
 
 ## QuickStart
@@ -39,11 +39,11 @@ Here is a quick nested grid example:
         <div class="block sidebar">Sidebar</div>
         <div class="block-group content"><!-- nested grid -->
             <div class="block nheader">Nested header</div>
-            <div class="block item">Block 1</div>
-            <div class="block item">Block 2</div>
-            <div class="block item">Block 3</div>
-            <div class="block item">Block 4</div>
-            <div class="block item">Block 5</div>
+            <div class="block item">1</div>
+            <div class="block item">2</div>
+            <div class="block item">3</div>
+            <div class="block item">4</div>
+            <div class="block item">5</div>
         </div>
         <div class="block footer">Footer</div>
     </div>
@@ -59,7 +59,7 @@ Here is a quick nested grid example:
 ```
 
 ### Responsive example
-To make a responsive version of this example, we could just change the CSS file like that:
+To make a responsive version of the nested grid example, we only have to change the CSS file like that:
 
 **CSS file**  
 ```CSS
