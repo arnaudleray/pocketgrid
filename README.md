@@ -26,7 +26,7 @@ You just have to include the `pocketgrid.css` file in your page!
 
 ## Examples
 The `/examples` directory contains some examples (more to come):
-- A very simple 2-columns layout example: http://arnaudleray.github.com/pocketgrid/examples/2-columns.html
+- A very simple 2-columns layout example: http://arnaudleray.github.com/pocketgrid/examples/2columns.html
 - A basic layout example: http://arnaudleray.github.com/pocketgrid/examples/basic-layout.html
 - A simple responsive layout: http://arnaudleray.github.com/pocketgrid/examples/basic-layout-responsive.html
 - A complex responsive layout: http://arnaudleray.github.com/pocketgrid/examples/complex-layout-responsive.html
