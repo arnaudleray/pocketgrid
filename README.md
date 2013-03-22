@@ -1,4 +1,5 @@
 # PocketGrid
+<img src="http://arnaudleray.github.com/pocketgrid/images/logo-pocketgrid.png" height="100px" alt="Logo">
 
 PocketGrid is the smallest responsive grid system having so many features:
 - **Lightweight**: about 0.5kB!
