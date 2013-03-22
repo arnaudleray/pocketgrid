@@ -1,0 +1,19 @@
+body {
+	padding: 0;
+	/*margin: 20px;*/
+	margin: 0;
+	font-size: .9em;
+	font-family: Arial;
+	line-height: 1.5em;
+}
+
+.box {
+	background-color: #CCC;
+	border: solid 1px #999;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.block-group .block-group .box {
+	background-color: #CDF;
+}

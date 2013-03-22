@@ -7,5 +7,5 @@
 .block-group:before,.block-group:after{display:table;content:"";line-height:0;clear:both}
 .block-group>.block-group{float:left;margin:0;clear:none}
 .block{float:left;width:100%}
-.block-group{margin:-.5em}
-.block{padding:.5em}
+.block-group{margin:-1em 0 0 -1em;}
+.block{padding:1em 0 0 1em}

@@ -36,8 +36,10 @@
 
 /* Gutters: can be removed if you don't want gutters */
 .block-group {
-	margin: -.5em;
+	/*margin: -.5em;*/
+	margin: -1em 0 0 -1em;
 }
 .block {
-	padding: .5em;
+	/*padding: .5em;*/
+	padding: 1em 0 0 1em;
 }
