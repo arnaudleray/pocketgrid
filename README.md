@@ -42,13 +42,15 @@ Then, you just have to add `block` classes to elements you want to put in the gr
 
 ## Examples
 The `/examples` directory contains some examples (more to come):
-- A very simple 2-columns layout example: http://arnaudleray.github.com/pocketgrid/examples/2columns.html
-- A basic layout example: http://arnaudleray.github.com/pocketgrid/examples/basic-layout.html
-- A simple responsive layout: http://arnaudleray.github.com/pocketgrid/examples/basic-layout-responsive.html
-- A complex responsive layout: http://arnaudleray.github.com/pocketgrid/examples/complex-layout-responsive.html
-- Nested grids: http://arnaudleray.github.com/pocketgrid/examples/nested-grids.html
-- Responsive nested grids: http://arnaudleray.github.com/pocketgrid/examples/nested-grids-responsive.html
-- Responsive gutters: http://arnaudleray.github.com/pocketgrid/examples/responsive-gutters.html
+- [A very simple 2-columns layout example](http://arnaudleray.github.com/pocketgrid/examples/2columns.html)
+- [A basic layout example](http://arnaudleray.github.com/pocketgrid/examples/basic-layout.html)
+- [A simple responsive layout](http://arnaudleray.github.com/pocketgrid/examples/basic-layout-responsive.html)
+- [A complex responsive layout](http://arnaudleray.github.com/pocketgrid/examples/complex-layout-responsive.html)
+- [Nested grids](http://arnaudleray.github.com/pocketgrid/examples/nested-grids.html)
+- [Responsive nested grids](http://arnaudleray.github.com/pocketgrid/examples/nested-grids-responsive.html)
+- [Responsive gutters](http://arnaudleray.github.com/pocketgrid/examples/responsive-gutters.html)
+- [Block-group on body](http://arnaudleray.github.com/pocketgrid/examples/block-group-on-body.html)
+- [HTML5 tags](http://arnaudleray.github.com/pocketgrid/examples/html5tags.html)
 
 ### A quick example
 Here is a quick nested grid example:
