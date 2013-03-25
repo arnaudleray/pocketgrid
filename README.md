@@ -4,25 +4,41 @@
 PocketGrid is the smallest responsive grid system having so many features:
 - **Lightweight**: about 0.5kB!
 - **Pure CSS-only** (no CSS preprocessor needed)
-- **Fluid** (by default, but you could change the width or max-width if you want)
+- **Fluid** (by default, but you can set a fixed width or max-width if you want)
 - **Responsive**
 - **Unlimited number of breakpoints** (you can define your own Media Queries)
-- **Mobile-first compatible** (but not mandatory)
+- **Mobile-first** compatible (but not mandatory)
 - **Semantic** (as much as a pure CSS grid could be ;) )
 - **Very simple** (just have to define blocks and groups of blocks)
 - **Unlimited number of columns** (no 12 or 16 columns restrictions: blocks just require a width in percentage)
 - Supports unlimited **nested grids**
-- Manage consistent **gutters** (gutters can be defined pixels or ems, which is better than percentage-based solutions because it allows consistent gutters even in nested grids)
+- Manage consistent **gutters** (gutters can be defined in pixels or ems, which is better than percentage-based solutions because it allows consistent gutters even in nested grids)
 - No dependencies
-- Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. with the Pocket grid for other layout)
+- Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. and use the Pocket grid for other layout)
 - IE6 compatible with some polyfills (for border box-sizing and media queries compatibility)
 
 **Note** : soon, a PocketGrid *Plus* version will be added to provide many useful features such as centering, push/pull, offsets, swaping, gutter improvements...  
 **Keep an eye on this project!** ;)
 
-## QuickStart
+## Quick start
 
-You just have to include the `pocketgrid.css` file in your page!
+You just have to include the `pocketgrid.css` file in the `<head>` tag  
+and don't forget the viewport meta tag!
+
+Here is the minimal markup you need to put in your pages:
+```HTML
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pocketgrid.css" />
+  </head>
+  <body>
+    <!-- YOUR CONTENT HERE -->
+  </body>
+</html>
+```
+Then, you just have to add `block` classes to elements you want to put in the grid, and `block-group` classes for block containers
 
 ## Examples
 The `/examples` directory contains some examples (more to come):
