@@ -108,6 +108,37 @@ To make a responsive version of the nested grid example, we only have to change 
 }
 ```
 
+## Quick tips
+- **Want to change the 'block' and 'block-group' class names?** (you may prefer **'grid'** or **'row'** and **'col'**...)  
+PocketGrid is so tiny that it's trivial to customize: in your favorite file editor, first make a 'replace all' for the 'block-group' name (with 'grid' or 'row' for example), and then a 'replace all' for the 'block' name (with 'col' for example).  
+Do it in that order (because there is 'block' in 'block-group'...)  
+_Note: Twitter Bootstrap already defines classes like 'container' or 'row', so if you want to use PocketGrid with Twitter Bootstrap, avoid using the same class names ;)_
+
+- **Don't want to use an extra `<div>` for block groups?**  
+Well you can put the `block-group` class directly on the `<body>` tag!
+```HTML
+  <body class="block-group">
+      <div class="header block">Header</div>
+      <div class="nav block">Nav</div>
+      <div class="main block">Main</div>
+      <div class="links block">Links</div>
+      <div class="footer block">Footer</div>
+  </body>
+```
+
+- **Don't like `<div>`?**  
+You can use any tag you want! You could use the new HTML5 tags for example:
+```HTML
+  <body class="block-group">
+      <header class="header block">Header</header>
+      <nav class="nav block">Nav</nav>
+      <section class="main block">Main</section>
+      <aside class="links block">Links</aside>
+      <footer class="footer block">Footer</footer>
+  </body>
+```
+
+
 ## Compatibility
 By default, the Pocket Grid is compatible with **IE8+, Firefox, Google Chrome, Safari, Opera, and mobile browsers (iPhone, iPad, Android...)**  
 For **IE6+ compatibility**, you can use these 2 polyfills:
