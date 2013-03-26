@@ -7,12 +7,14 @@ PocketGrid is the smallest responsive grid system having so many features:
 - **Fluid** (by default, but you can set a fixed width or max-width if you want)
 - **Responsive**
 - **Unlimited number of breakpoints** (you can define your own Media Queries)
-- **Mobile-first** compatible (but not mandatory)
+- **Mobile-first**
+- **Content-first** compatible (you can define your own breakpoints for each element in your page to finely tune and optimize your content readability)
 - **Semantic** (as much as a pure CSS grid could be ;) )
 - **Very simple** (just have to define blocks and groups of blocks)
 - **Unlimited number of columns** (no 12 or 16 columns restrictions: blocks just require a width in percentage)
-- Supports unlimited **nested grids**
+- **Infinite nested grids**
 - Manage consistent **gutters** (gutters can be defined in pixels or ems, which is better than percentage-based solutions because it allows consistent gutters even in nested grids)
+- Automatic rows (when a row is full, blocks go to a new row without doing anything)
 - No dependencies
 - Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. and use the Pocket grid for other layout)
 - IE6 compatible with some polyfills (for border box-sizing and media queries compatibility)
