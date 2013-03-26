@@ -7,20 +7,29 @@ PocketGrid is the smallest responsive grid system having so many features:
 - **Fluid** (by default, but you can set a fixed width or max-width if you want)
 - **Responsive**
 - **Unlimited number of breakpoints** (you can define your own Media Queries)
-- **Mobile-first**
-- **Content-first** compatible (you can define your own breakpoints for each element in your page to finely tune and optimize your content readability)
+- **Mobile-first** compatible (block width is 100% by default)
+- **Content-first** compatible (you can define your own breakpoints for each element in your page to finely tune and optimize your content readability: not only 'tablet' or 'smartphone' breakpoints)
 - **Semantic** (as much as a pure CSS grid could be ;) )
 - **Very simple** (just have to define blocks and groups of blocks)
 - **Unlimited number of columns** (no 12 or 16 columns restrictions: blocks just require a width in percentage)
 - **Infinite nested grids**
 - Manage consistent **gutters** (gutters can be defined in pixels or ems, which is better than percentage-based solutions because it allows consistent gutters even in nested grids)
-- Automatic rows (when a row is full, blocks go to a new row without doing anything)
+- **Automatic rows** (when a row is full, the next blocks go to a new row without doing anything)
 - No dependencies
 - Compatible with CSS frameworks such as Twitter Bootstrap or Zurb Foundation (you can use the Bootstrap or Foundation components such as buttons, tabs, etc. and use the Pocket grid for other layout)
 - IE6 compatible with some polyfills (for border box-sizing and media queries compatibility)
 
 **Note** : soon, a PocketGrid *Plus* version will be added to provide many useful features such as centering, push/pull, offsets, swaping, gutter improvements...  
 **Keep an eye on this project!** ;)
+
+## Why should I use PocketGrid instead of Twitter Bootstrap or other grids?
+- PocketGrid is really lightweight, so you can use it in all your projects at no cost (Twitter Bootstrap is about 200x bigger, even minified!)  
+_Note: **you can use both!** Bootstrap for styling, tabs or special components AND PocketGrid for layout for example._
+- Twitter Bootstrap's grid has only 1 breakpoint (like most grid systems), with PocketGrid you can define infinite breakpoints!
+- PocketGrid is one of the very few semantic grids (especially pure CSS grids!): you don't have "span4" or "small-6 large-2 columns" classes in your HTML: column size should be defined in the stylesheet!
+- Percentage sizing is **more natural** and **more precise** than using a number of columns (how can you make 5 columns in a 12 or 16-columns system? It's impossible! With PocketGrid, just put "width:20%", easy!)
+- PocketGrid does not require a CSS preprocessor (but you can use one if you want).
+- PocketGrid is compatible with most other CSS frameworks (because it does not use 'grid', 'row' or 'col' classes which are used by too many grid systems).
 
 ## Quick start
 
@@ -130,7 +139,7 @@ Well you can put the `block-group` class directly on the `<body>` tag!
   </body>
 ```
 
-- **Don't like `<div>`?**  
+- **Don't like `<div>` tags?**  
 You can use any tag you want! You could use the new HTML5 tags for example:
 ```HTML
   <body class="block-group">
