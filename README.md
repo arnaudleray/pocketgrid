@@ -8,7 +8,7 @@ PocketGrid is the smallest responsive grid system having so many features:
 - **Responsive**
 - **Unlimited number of breakpoints** (you can define your own Media Queries)
 - **Mobile-first** compatible (block width is 100% by default)
-- **Content-first** compatible (you can define your own breakpoints for each element in your page to finely tune and optimize your content readability: not only 'tablet' or 'smartphone' breakpoints)
+- **Content-first** compatible (you can swap columns and you can define your own breakpoints for each element in your page to finely tune and optimize your content readability: not only 'tablet' or 'smartphone' breakpoints)
 - **Semantic** (as much as a pure CSS grid could be ;) )
 - **Very simple** (just have to define blocks and groups of blocks)
 - **Unlimited number of columns** (no 12 or 16 columns restrictions: blocks just require a width in percentage)
@@ -62,6 +62,7 @@ The `/examples` directory contains some examples (more to come):
 - [Responsive gutters](http://arnaudleray.github.com/pocketgrid/examples/responsive-gutters.html)
 - [Block-group on body](http://arnaudleray.github.com/pocketgrid/examples/block-group-on-body.html)
 - [HTML5 tags](http://arnaudleray.github.com/pocketgrid/examples/html5tags.html)
+- [Content-first / Swap columns](http://arnaudleray.github.com/pocketgrid/examples/content-first.html)
 
 ### A quick example
 Here is a quick nested grid example:
