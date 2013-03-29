@@ -63,7 +63,8 @@ The `/examples` directory contains some examples (more to come):
 - [Portrait / landscape](http://arnaudleray.github.com/pocketgrid/examples/portrait-landscape-responsive.html)
 - [Block-group on body](http://arnaudleray.github.com/pocketgrid/examples/block-group-on-body.html)
 - [HTML5 tags](http://arnaudleray.github.com/pocketgrid/examples/html5tags.html)
-- [Content-first / Swap columns](http://arnaudleray.github.com/pocketgrid/examples/content-first.html)
+- [Content-first](http://arnaudleray.github.com/pocketgrid/examples/content-first.html)
+- [Source ordering / push pull / Swap columns](http://arnaudleray.github.com/pocketgrid/examples/source-ordering-push-pull.html)
 - [Offsets](http://arnaudleray.github.com/pocketgrid/examples/offsets.html)
 
 ### A quick example
