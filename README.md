@@ -52,20 +52,21 @@ Here is the minimal markup you need to put in your pages:
 Then, you just have to add `block` classes to elements you want to put in the grid, and `block-group` classes for block containers
 
 ## Examples
-The `/examples` directory contains some examples (more to come):
+The [/examples](https://github.com/arnaudleray/pocketgrid/tree/master/examples) directory contains some examples (more to come):
 - [A very simple 2-columns layout example](http://arnaudleray.github.com/pocketgrid/examples/2columns.html)
 - [A basic layout example](http://arnaudleray.github.com/pocketgrid/examples/basic-layout.html)
 - [A simple responsive layout](http://arnaudleray.github.com/pocketgrid/examples/basic-layout-responsive.html)
 - [A complex responsive layout](http://arnaudleray.github.com/pocketgrid/examples/complex-layout-responsive.html)
 - [Nested grids](http://arnaudleray.github.com/pocketgrid/examples/nested-grids.html)
 - [Responsive nested grids](http://arnaudleray.github.com/pocketgrid/examples/nested-grids-responsive.html)
-- [Responsive gutters](http://arnaudleray.github.com/pocketgrid/examples/responsive-gutters.html)
+- [Responsive gutters](http://arnaudleray.github.com/pocketgrid/examples/responsive-gutters.html) (why not!)
 - [Portrait / landscape](http://arnaudleray.github.com/pocketgrid/examples/portrait-landscape-responsive.html)
 - [Block-group on body](http://arnaudleray.github.com/pocketgrid/examples/block-group-on-body.html)
 - [HTML5 tags](http://arnaudleray.github.com/pocketgrid/examples/html5tags.html)
 - [Content-first](http://arnaudleray.github.com/pocketgrid/examples/content-first.html)
 - [Source ordering / push pull / Swap columns](http://arnaudleray.github.com/pocketgrid/examples/source-ordering-push-pull.html)
 - [Offsets](http://arnaudleray.github.com/pocketgrid/examples/offsets.html)
+- [Fixed-width](http://arnaudleray.github.com/pocketgrid/examples/fixed-width-responsive.html)
 
 ### A quick example
 Here is a quick nested grid example:
