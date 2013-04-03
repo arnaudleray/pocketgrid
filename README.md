@@ -66,6 +66,7 @@ The [/examples](https://github.com/arnaudleray/pocketgrid/tree/master/examples) 
 - [Content-first](http://arnaudleray.github.com/pocketgrid/examples/content-first.html)
 - [Source ordering / push pull / Swap columns](http://arnaudleray.github.com/pocketgrid/examples/source-ordering-push-pull.html)
 - [Offsets](http://arnaudleray.github.com/pocketgrid/examples/offsets.html)
+- [Max-width](http://arnaudleray.github.com/pocketgrid/examples/max-width.html)
 - [Fixed-width](http://arnaudleray.github.com/pocketgrid/examples/fixed-width-responsive.html)
 
 ### A quick example
