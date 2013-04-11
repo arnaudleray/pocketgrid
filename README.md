@@ -1,8 +1,8 @@
 # PocketGrid
 
-**NEW!**  
-I'm creating the **official PocketGrid website**!  
-Let's take a look here: http://arnaudleray.github.io/pocketgrid/  
+**NEW!** I'm creating the **official PocketGrid website**!  
+It's a _work in progress_ but you can preview it here: http://arnaudleray.github.io/pocketgrid/  
+And of course, it's responsive using the PocketGrid itself!  
 <a href="http://arnaudleray.github.io/pocketgrid/"><img src="http://arnaudleray.github.io/pocketgrid/images/screenshot.png" height="300px" alt="New website"></a>
 
 
