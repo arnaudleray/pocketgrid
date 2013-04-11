@@ -18,7 +18,7 @@ _.each($('h2').toArray(), function (title) {
   var regBody = new RegExp('.*<body (.|[\r\n])*</body>');
   var regDiv = new RegExp('(.*<div(.|[\r\n])*</div>)');
   var regCss = new RegExp('<style.*>[\r\n]*((.|[\r\n])*)\n.*</style>');
-  var regCssIE8 = new RegExp('(.*<style([^<]|[#,])*</style>)');
+  var regCssIE8 = new RegExp('(.*<style([^<])*</style>)');
 
   function getIndent(s) {
     var indent = 0;
@@ -84,7 +84,7 @@ _.each($('h2').toArray(), function (title) {
         cssSource = regExec[0];
         // Remove <style> tags
         cssSource = cssSource.substring(cssSource.indexOf("\n") + 1);
-        cssSource = cssSource.substring(0, cssSource.lastIndexOf("\n") - 1);
+        cssSource = cssSource.substring(0, cssSource.lastIndexOf("\n"));
         cssSource = unindent(cssSource);
 
         // Append CSS sources to the example.
