@@ -1,5 +1,10 @@
 # PocketGrid
-<img src="http://arnaudleray.github.com/pocketgrid/images/logo-pocketgrid.png" height="100px" alt="Logo">
+
+**NEW!**  
+I'm creating the **official PocketGrid website**!  
+Let's take a look here: http://arnaudleray.github.io/pocketgrid/  
+<a href="http://arnaudleray.github.io/pocketgrid/"><img src="http://arnaudleray.github.io/pocketgrid/images/screenshot.png" height="300px" alt="New website"></a>
+
 
 PocketGrid is the smallest responsive grid system having so many features:
 - **Lightweight**: about 0.5kB!
