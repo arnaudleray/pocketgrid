@@ -1,0 +1,223 @@
+body {
+  padding: 0;
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #007edf;
+  text-decoration: none; }
+  a:hover {
+    color: #F60; }
+
+code, pre {
+  font-size: .9em; }
+
+.header {
+  color: white;
+  background-color: black; }
+
+.brand {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin: -2px 10px -20px 20px; }
+  .brand a {
+    color: white !important;
+    text-shadow: 0 0 0.3em #cccccc, 0 0 0.3em #cccccc; }
+    .brand a:hover {
+      text-shadow: 0 0 0.3em #cccccc, 0 0 0.3em #cccccc, 0 0 0.3em #cccccc; }
+
+.nav ul {
+  padding-left: 20px; }
+  .nav ul li {
+    list-style-type: none;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 10px 0; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 0; }
+  .nav a:hover {
+    border-bottom: 5px solid #ff6600; }
+  .nav a.selected {
+    border-bottom: 5px solid #00ccff; }
+
+.main-title {
+  padding: 2em 20px 1em 20px; }
+
+.content {
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.button-group {
+  text-align: center; }
+
+.footer .box {
+  color: white;
+  background-color: black; }
+  .footer .box div {
+    max-width: 65em;
+    margin: 0 auto;
+    padding: 1em 20px; }
+.footer a {
+  color: #108EEF; }
+
+.bookmark {
+  position: relative;
+  padding-top: 20px; }
+
+h1 {
+  margin: 0; }
+
+h2 {
+  font-size: 1.4em; }
+
+pre {
+  padding: 0 10px; }
+
+table {
+  border: solid 1px #cccccc; }
+
+th {
+  text-align: left; }
+
+td {
+  vertical-align: top; }
+
+tr:nth-child(even) td {
+  background-color: #EEE; }
+
+tr:hover td {
+  background-color: #dddddd !important; }
+
+.note, .info {
+  background-color: #FFC;
+  border: 1px solid #cccc99;
+  padding: 0.2em 1em;
+  margin: 0.5em 0;
+  font-style: italic;
+  /*  font-size: .9em; */
+  line-height: 1.2em; }
+
+.info {
+  background-color: #CDF;
+  border-color: #9AC; }
+
+.remark {
+  color: #999; }
+
+.button {
+  color: white;
+  background-color: #06F;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  margin: 0.3em 0;
+  display: inline-block;
+  text-decoration: none; }
+
+.button:hover {
+  color: white;
+  background-color: #F60; }
+
+.button.open {
+  float: right; }
+
+.button-large {
+  width: 8em;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0 1em 1em 1em;
+  font-weight: bold;
+  border-radius: .7em; }
+
+@media (min-width: 35em) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.3)));
+    background-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.3));
+    background-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0.3));
+    background-image: -o-linear-gradient(black, rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(black, rgba(0, 0, 0, 0.3));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF000000', endColorstr='#33000000', GradientType=0 );
+    /* IE6-9 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #aaaaaa; }
+    .header .brand {
+      float: left; }
+    .header ul {
+      float: right;
+      padding-left: 0; }
+      .header ul li {
+        float: left;
+        padding: 0; }
+      .header ul a {
+        padding: 3px 5px; }
+
+  .main {
+    margin-top: 4em; }
+
+  .main-title {
+    font-size: 2em; }
+    .main-title h1 {
+      color: #999;
+      font-weight: normal;
+      text-shadow: 0 0 0.2em #cccccc, 0 0 0.2em #cccccc; }
+      .main-title h1, .main-title h1 x:-moz-any-link {
+        /* Hack Firefox */
+        text-shadow: 0 0 0.12em #cccccc, 0 0 0.12em #cccccc; } }
+.download h2 {
+  margin: 0; }
+.download .source, .download .minified, .download .github {
+  width: 100%; }
+
+.button {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center; }
+  .source .button {
+    background-color: #00C; }
+  .github .button {
+    background-color: #777; }
+  .button:hover {
+    background-color: #F60; }
+
+@media (min-width: 35em) {
+  .source:hover, .minified:hover, .github:hover {
+    background-color: #FFC; }
+
+  .download-text, .download-button {
+    width: 50%; }
+
+  .download-button {
+    padding-top: 3em; }
+
+  .minified {
+    border: 2px solid #dddddd;
+    border-width: 2px 0 2px 0; }
+
+  .button {
+    width: 60%; } }
+@media (min-width: 60em) {
+  .download .description {
+    height: 1em;
+    height: 3em\9;
+    /* Hack IE < 9 */ }
+  .download .source, .download .minified, .download .github {
+    width: 33.33%; }
+
+  .download-text, .download-button {
+    width: 100%; }
+
+  .minified {
+    border-width: 0 2px 0 2px; }
+
+  .button {
+    width: 10em; } }
