@@ -179,9 +179,11 @@ tr:hover td {
   width: 100%; }
 
 .button {
+  text-align: center;
   width: 100%;
-  box-sizing: border-box;
-  text-align: center; }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .source .button {
     background-color: #00C; }
   .github .button {
