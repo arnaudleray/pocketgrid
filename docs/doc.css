@@ -176,6 +176,12 @@ tr:hover td {
 .hero {
   display: none; }
 
+.mobile-description {
+  font-size: 1.4em; }
+
+.features-title {
+  display: none; }
+
 .feature ul {
   margin: 0; }
 
@@ -240,6 +246,12 @@ tr:hover td {
     font-size: 1.8em;
     text-align: center;
     margin-top: -1em; }
+
+  .mobile-description {
+    display: none; }
+
+  .features-title {
+    display: none; }
 
   .feature {
     width: 50% !important;
