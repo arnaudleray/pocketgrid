@@ -14,35 +14,37 @@
     <link rel="stylesheet" href="../pocketgrid.css" media="screen" />
 
     <!-- Styles defining the layout -->
-    <style type="text/css">
+    <style>
       .nav { width: 20%; }
-      .content { width: 80%; }
+      .main { width: 80%; }
+      /* Items in 5 columns (20% each) */
       .item { width: 20%; }
-
+      
       /* Give a height of 200px to the nav, to make it more realistic! */
-      .nav .box { height: 200px; }
+      .nav { height: 200px; }
     </style>
   </head>
 
   <body>
 
     <div class="block-group">
-        <div class="header block"><div class="box">Header</div></div>
-        <div class="nav block"><div class="box">Nav</div></div>
-        <div class="content block-group"><!-- nested grid -->
-            <div class="nheader block"><div class="box">Nested header</div></div>
-            <div class="item block"><div class="box">1</div></div>
-            <div class="item block"><div class="box">2</div></div>
-            <div class="item block"><div class="box">3</div></div>
-            <div class="item block"><div class="box">4</div></div>
-            <div class="item block"><div class="box">5</div></div>
-            <div class="item block"><div class="box">6</div></div>
-            <div class="item block"><div class="box">7</div></div>
-            <div class="item block"><div class="box">8</div></div>
-            <div class="item block"><div class="box">9</div></div>
-            <div class="item block"><div class="box">10</div></div>
-        </div>
-        <div class="footer block"><div class="box">Footer</div></div>
+      <div class="header block"><div class="box">Header</div></div>
+      <div class="nav block"><div class="box">Nav</div></div>
+      <!-- nested grid -->
+      <div class="main block-group">
+        <div class="ngrid block"><div class="box">Nested grid</div></div>
+        <div class="item block"><div class="box">1</div></div>
+        <div class="item block"><div class="box">2</div></div>
+        <div class="item block"><div class="box">3</div></div>
+        <div class="item block"><div class="box">4</div></div>
+        <div class="item block"><div class="box">5</div></div>
+        <div class="item block"><div class="box">6</div></div>
+        <div class="item block"><div class="box">7</div></div>
+        <div class="item block"><div class="box">8</div></div>
+        <div class="item block"><div class="box">9</div></div>
+        <div class="item block"><div class="box">10</div></div>
+      </div>
+      <div class="footer block"><div class="box">Footer</div></div>
     </div>
 
   </body>

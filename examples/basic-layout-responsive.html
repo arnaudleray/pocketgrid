@@ -15,27 +15,20 @@
 
     <!-- Styles defining the layout -->
     <style type="text/css">
+      /* Smartphone version
+         Nothing to do: blocks are stacked by default. */
+
       /* Tablet version */
-      @media (min-width: 40em) and (max-width: 60em) {
-        .nav {
-          width: 30%;
-        }
-        .main {
-          width: 70%;
-        }
+      @media (min-width: 768px) {
+        .nav { width: 20%; }
+        .main { width: 80%; }
       }
 
       /* Desktop version */
-      @media (min-width: 60em) {
-        .nav {
-          width: 20%;
-        }
-        .main {
-          width: 60%;
-        }
-        .links {
-          width: 20%;
-        }
+      @media (min-width: 960px) {
+        .nav { width: 20%; }
+        .main { width: 60%; }
+        .links { width: 20%; }
       }
     </style>
   </head>

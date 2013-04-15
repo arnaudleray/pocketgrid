@@ -14,26 +14,27 @@
     <link rel="stylesheet" href="../pocketgrid.css" media="screen" />
 
     <!-- Styles defining the layout -->
-    <style type="text/css">
+    <style>
       .b1, .b2, .b5, .b6, .b7, .b8, .b9, .b10 {
         width: 10%;
       }
-      .b3 {
+
+      .before {
         width: 30%;
-        /* Move the column to the right (left > 0) */
-        position: relative;
-        left: 20%;
+        /* Move the column to the right
+           (left == AFTER's width) */
+        position: relative; left: 20%;
       }
-      .b4 {
+      .after {
         width: 20%;
 
-        /* Move the column to the left (left < 0) */
-        position: relative;
-        left: -30%;
+        /* Move the column to the left
+           (left == -BEFORE's width) */
+        position: relative; left: -30%;
       }
-      
-      .b3 .box { background-color: #CCF; }
-      .b4 .box { background-color: #CFC; }
+
+      .before .box { background-color: #CCF; }
+      .after .box { background-color: #CFC; }
     </style>
   </head>
 
@@ -41,8 +42,8 @@
 
     <div class="b1 block"><div class="box">B1</div></div>
     <div class="b2 block"><div class="box">B2</div></div>
-    <div class="b3 block"><div class="box" title="left: 20%">BEFORE</div></div>
-    <div class="b4 block"><div class="box" title="left: -30%">AFTER</div></div>
+    <div class="before block"><div class="box">BEFORE</div></div>
+    <div class="after block"><div class="box">AFTER</div></div>
     <div class="b5 block"><div class="box">B5</div></div>
     <div class="b6 block"><div class="box">B6</div></div>
     <div class="b7 block"><div class="box">B7</div></div>

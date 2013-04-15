@@ -49,7 +49,7 @@ Here is the minimal markup you need to put in your pages:
   </body>
 </html>
 ```
-Then, you just have to add `block` classes to elements you want to put in the grid, and `block-group` classes for block containers
+Then, you just have to add `block` classes to elements you want to put in the grid, and `block-group` classes for block containers.
 
 ## Examples
 The [/examples](https://github.com/arnaudleray/pocketgrid/tree/master/examples) directory contains some examples (more to come):
