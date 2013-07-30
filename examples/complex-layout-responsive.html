@@ -8,33 +8,12 @@
     <title>PocketGrid - Complex layout responsive</title>
 
     <!-- Common styles for examples (you do not need to include it in your pages) -->
-    <link rel="stylesheet" href="common.css" media="screen" />
+    <link rel="stylesheet" href="common.css" />
 
     <!-- The PocketGrid -->
-    <link rel="stylesheet" href="../pocketgrid.css" media="screen" />
-
-    <!-- Styles defining the layout -->
-    <style type="text/css">
-      /* Smartphone version:
-         nothing to do: all blocks are stacked by default (width: 100%) */
-
-      /* Tablet version:
-         all stacked except main and links side-by-side */
-      @media (min-width: 40em) and (max-width: 60em) {
-        .main { width: 70%; }
-        .links { width: 30%; }
-      }
-
-      /* Desktop version:
-         header and nav side-by-side, main and links side-by-side */
-      @media (min-width: 60em) {
-        .header { width: 50%; }
-        .nav { width: 50%; }
-
-        .main { width: 80%; }
-        .links { width: 20%; }
-      }
-    </style>
+    <link rel="stylesheet" href="../pocketgrid.css" />
+    <!-- The example stylesheet -->
+    <link rel="stylesheet" href="complex-layout-responsive.css" />
   </head>
 
   <body>
@@ -46,6 +25,9 @@
       <div class="links block"><div class="box">Links</div></div>
       <div class="footer block"><div class="box">Footer</div></div>
     </div>
+
+    <!-- For IE6-8 Media Queries compatibility -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 
   </body>
 
