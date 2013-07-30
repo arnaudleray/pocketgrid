@@ -44,11 +44,12 @@ _.each($('h2').toArray(), function (title) {
 
   function addSources(example, deferred) {
     var $example = $(example);
-    var exampleUrl = $example.find('.example-iframe').attr('src');
+    var $iframe = $example.find('.example-iframe');
+    var exampleUrl = $iframe.attr('src');
 
     // Add a button to open examples in a new tab.
-    $example.find('.example-description')
-      .before($('<a href="' + exampleUrl + '" target="_blank" class="button open">View demo in a new tab</a>'));
+    $example.find('.iframe-border')
+      .prepend($('<a href="' + exampleUrl + '" target="_blank" class="button open" style="margin-top: -27px; margin-right: 1px; padding: 0 10px;">View this demo in a new tab</a>'));
 
     $example.append('<div class="block-group"><div class="html-source block">Loading...</div><div class="css-source block">Loading...</div></div>')
 

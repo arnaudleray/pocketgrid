@@ -29,6 +29,7 @@
             <li><a href="..">Home</a></li>
             <li><a href="#" class="selected">Documentation</a></li>
             <li><a href="../download">Download</a></li>
+            <li><a href="https://github.com/arnaudleray/pocketgrid">Github</a></li>
           </ul>
         </nav>
       </div>
@@ -85,7 +86,7 @@
             <li><b>Blocks must be contained in a block-group</b></li>
             <li>Blocks are <b>stacked by default</b> <span style="color: #999;">(ideal for mobile-first design)</span></li>
             <li>To display blocks side-by-side (like <b>columns</b>), just give them a <b>width in percentage</b> <span style="color: #999;">(for example 30% and 70% to make 2 columns)</span></li>
-            <li>Blocks <b>automatically go to a new row</b> if the current row is full! <span style="color: #999;">(so you don't need to put a block-group container for each row)</li>
+            <li>Blocks <b>automatically go to a new row</b> if the current row is full! <span style="color: #999;">(so you don't need to put a block-group container for each row)</span></li>
           </ul>
           Let's see some examples to clarify it.
         </p>
@@ -99,9 +100,11 @@
             Let's begin with a very basic example, displaying a simple stack of blocks, as we often see for mobile layout.<br/>
             This stack contains a header block, a navigation block, a main block, a links block and a footer block.<br/>
             You can see the preview of this example below<br/>
-            <em>(note: <b>you can open each example alone in a new tab</b> clicking on the <b>"View demo in a new tab"</b> blue button at the right side)</em>
+            <em>(note: <b>you can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below)</em>
           </div>
-          <iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 300px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 300px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">
             The source of this example (just below) is pretty self-explanatory:
             <ul>
@@ -120,7 +123,9 @@
           <div class="example-description">
             Now imagine that we would like to display the navigation block and the main block side-by-side:
           </div>
-          <iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 220px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">
             To do this, we can keep the same HTML as in the previous example: we just have to give a width to the navigation and main blocks (respectively 20% and 80%):
           </div>
@@ -139,11 +144,13 @@
               <li>The navigation and main blocks are side-by-side on tablet (width &gt; 640px)</li>
               <li>The navigation, main and links blocks are side-by-side on desktop (width &gt; 960px)</li>
             </ul>
-            Resize your browser and see the layout changes in the preview below <span class="remark">(you can click on the above "View demo in a new tab" blue button to play with this example more easily)</span>
+            Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
           </div>
-          <iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 280px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">
-            To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change block width according to the device width:
+            To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block width according to the device width:
           </div>
         </div>
       
@@ -157,7 +164,9 @@
             You just have to put a <b>block-group</b> inside another <b>block-group</b>!<br/>
             Let's modify the previous example, replacing the main block with a nested grid (containing items in 5 columns):
           </div>
-          <iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 350px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 350px;" frameborder="0"></iframe>
+          </div>
         </div>
       
         <!-- ************************************************** -->
@@ -166,15 +175,17 @@
           <h2 class="example-title">Nested grids responsive</h2>
       
           <div class="example-description">
-            Now we are going to do something <em>impossible to do with most CSS grid systems!</em> (such as Twitter Bootstrap's)<br/>
+            Now we are going to do something <em>impossible to do with most CSS grid systems!</em> (such as Twitter Bootstrap)<br/>
             We will change the number of columns of our grid according to the device width.<br/>
             Keeping our previous nested grids example, we will display the nested items in 2 columns on mobile, 4 columns on tablet and 5 columns on desktop!<br/>
-            Resize your browser and see the layout changes in the preview below <span class="remark">(you can click on the above "View demo in a new tab" blue button to play with this example more easily)</span>
+            Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
           </div>
-          <iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 450px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 450px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">
             Sounds difficult?<br/>
-            Well, with PocketGrid, to dynamically change the number of columns of a grid, you just have to redefine the block width according to media queries:
+            Well, with PocketGrid, it's very simple: to dynamically change the number of columns of a grid, you just have to redefine the block width according to media queries:
           </div>
         </div>
       
@@ -188,7 +199,9 @@
             To do so, you just have to set the <b>margin-left</b> or <b>margin-right</b> properties of a block to the size of one or more columns.<br/>
             For example, here the "Left offset" block has a left offset of 1 column (<code>margin-left: 20%</code>) and the "Right offset" block has a left offset of 2 column (<code>margin-right: 40%</code>)
           </div>
-          <iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
         </div>
       
@@ -205,8 +218,23 @@
               <li>Set the <code>left</code> property of B to <em>minus</em> the width of A</li>
             </ul>
           </div>
-          <iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe>
+          </div>
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
+        </div>
+      
+        <!-- ************************************************** -->
+      
+        <div class="example">
+          <h2 class="example-title">Fix for different block heights</h2>
+      
+          <div class="example-description">
+            ...
+          </div>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/fix-for-different-block-heights.html" style="height: 680px;" frameborder="0"></iframe>
+          </div>
         </div>
 
 
