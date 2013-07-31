@@ -230,7 +230,9 @@
           <h2 class="example-title">Fix for different block heights</h2>
       
           <div class="example-description">
-            ...
+            When blocks do not have the same height, your layout can seem broken. For example, in the demo below, we want to display 5 blocks per row, but the 3rd block has a greater height than the other blocks.<br/>
+            With the PocketGrid "automatic row" feature, "Block 6" should be placed on a brand new row, but instead, it is <i>blocked</i> by the big "Block 3". This is because PocketGrid uses CSS floats to manage blocks.<br/>
+            To solve this problem, just put "<code>clear: left</code>" in the style of the block ("Block 6" here) to force using a real new row, no matter the height of the previous blocks.
           </div>
           <div class="iframe-border">
             <iframe class="example-iframe" src="../examples/fix-for-different-block-heights.html" style="height: 680px;" frameborder="0"></iframe>
