@@ -2,9 +2,15 @@
 var $toc = $('.toc');
 $toc.html('');
 var iTitle = 0;
+var $title;
+var anchor;
 _.each($('h2').toArray(), function (title) {
   if (iTitle > 0) {
-    $toc.append($('<a href="#">' + $(title).text() + '</a><br/>'));
+    $title = $(title);
+    anchor = $title.text().replace(/[^a-zA-Z]/g, '').toLowerCase();
+    $title.before('<a name="'+anchor+'" href="#" style="visibility: hidden;">#</a>');
+    $title.wrap('<a href="#'+anchor+'" class="title-anchor"></a>');
+    $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
   }
   iTitle++;
 });

@@ -253,6 +253,11 @@ tr:hover td {
   text-align: center;
 }
 
+.section-title, .example-title {
+  color: #777 !important;
+  font-size: 1.8em;
+}
+
 .example-title {
   border-top: solid 3px #CCC;
   padding-top: 1em;
