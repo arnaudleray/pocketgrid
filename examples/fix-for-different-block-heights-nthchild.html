@@ -19,7 +19,7 @@
   <body>
 
     <h3>Bad version</h3>
-    <p style="color: red">Each row should have 5 blocks.<br/>"Block 6" should be on a new row, but is <i>blocked</i> by the big "Block 3" (because of its height).</p>
+    <p style="color: red">Each row should have 2 or 4 blocks (according to the screen width).<br/>"Block 5" should be on a new row, but is <i>blocked</i> by the big "Block 3" (because of its height).</p>
     <div class="block-group">
       <div class="block demo-bad"><div class="box">Block 1</div></div>
       <div class="block demo-bad"><div class="box">Block 2</div></div>
@@ -42,7 +42,7 @@
     <br/>
     <hr/>
 
-    <h3>Fixed version</h3>
+    <h3>Fixed version (using the "<code>clear</code>" property and the "<code>nth-child</code>" selector)</h3>
     <p style="color: #0C0">With the fix (using the "clear" property), the layout is not broken and blocks are cleanly aligned.</p>
     <div class="block-group">
       <div class="block demo-fixed"><div class="box">Block 1</div></div>
