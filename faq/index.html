@@ -137,8 +137,8 @@
                 <div class="block b12"><div class="box">12</div></div>
               </div>
             </div>
-            It's a classical problem with floats: the line break is blocked by the bigger blocks (here block 2).<br/>
-            A simple (but poor) solution could be to use a "block-group" for each row (like Twitter Bootstrap does with <code>class="row"</code>):
+            <div>It's a classical problem with floats: the line break is blocked by the bigger blocks (here block 2).<br/>
+              A simple (but poor) solution could be to use a "block-group" for each row (like Twitter Bootstrap does with <code>class="row"</code>), but you loose the "automatic rows" cool feature:</div>
             <div class="border" style="float: left;">
               <div class="block-group dif-height">
                 <div class="block b1"><div class="box">1</div></div>
@@ -178,7 +178,7 @@
   &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
   &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
-            To solve it, just put "<code>clear: left</code>" on blocks that should be on a real new row (here: block 5):<br/>
+            <div>A better solution (keeping the "automatic rows") is to put "<code>clear: left</code>" on blocks that should be on a real new row (here: block 5):</div>
             <div class="border" style="float: left;">
               <div class="block-group dif-height cleared">
                 <div class="block b1"><div class="box">1</div></div>
