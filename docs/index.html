@@ -28,8 +28,9 @@
             <!-- <li><a href="#">Quick start</a></li> -->
             <li><a href="..">Home</a></li>
             <li><a href="#" class="selected">Documentation</a></li>
+            <li><a href="../faq">FAQ</a></li>
             <li><a href="../download">Download</a></li>
-            <li><a href="https://github.com/arnaudleray/pocketgrid">Github</a></li>
+            <li><a href="https://github.com/arnaudleray/pocketgrid" target="_blank">Github</a></li>
           </ul>
         </nav>
       </div>
@@ -59,15 +60,14 @@
         <!-- <a id="doc">&nbsp;</a> -->
         <h2 class="section-title">Quick start</h2>
       
-        <p>You just have to include the <b>pocketgrid.css</b> (or pocketgrid.min.css) in the <code>&lt;head&gt;</code> tag of your page<br/>
-          and don't forget the <b>viewport meta tag</b>!
-        </p>
         <p>Here is the minimal markup you need to put in your pages:</p>
         <pre class="prettyprint linenums lang-html">
 &lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
+    &lt;!-- Don't forget the viewport meta tag for responsive sites! --&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;!-- Include PocketGrid --&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;pocketgrid.css&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -75,32 +75,96 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-        <p>Then, you just have to add <code class="highlight">block</code> classes to elements you want to put in the grid, and <code class="highlight">block-group</code> classes for block containers.</p>
+        <p>As you can see, you just have to include the <b>pocketgrid.css</b> (or pocketgrid.min.css) file in the <code>&lt;head&gt;</code> tag of your page<br/>
+          and don't forget to set the <b>viewport meta tag</b> to manage media queries correctly on mobile.
+        </p>
+        <!-- <p>Then, to create a grid, you just have to use:<br/>
+        <ul>
+          <li><code>&lt;div class="<code class="highlight">block-group</code>"&gt;</code> to create <b>rows</b>,</li>
+          <li>and <code>&lt;div class="<code class="highlight">block</code>"&gt;</code> to create <b>columns</b> inside rows</li> (see below).
+        </ul>
+        </p> -->
+        <p>That's all you need to work with PocketGrid!</p>
 
         <h2 class="section-title">Basic rules</h2>
       
+        <p>Instead of creating grids with rows and columns, PocketGrid introduces a <b>more flexible concept</b> with <b>blocks</b> and <b>block groups</b>.<br/>
+        <b>Block groups</b> are similar to rows, and <b>blocks</b> are similar to columns.<br/>
+        The main difference is that <b>a block group can represent several rows</b> (thanks to the "automatic rows" feature that we will see later), allowing <b>much more flexibility than traditional grids</b>.</p>
         <p>
           The basic rules with PocketGrid are:
           <ul>
             <li><b>Blocks have a default width of 100%</b></li>
             <li><b>Blocks must be contained in a block-group</b></li>
-            <li>Blocks are <b>stacked by default</b> <span style="color: #999;">(ideal for mobile-first design)</span></li>
-            <li>To display blocks side-by-side (like <b>columns</b>), just give them a <b>width in percentage</b> <span style="color: #999;">(for example 30% and 70% to make 2 columns)</span></li>
-            <li>Blocks <b>automatically go to a new row</b> if the current row is full! <span style="color: #999;">(so you don't need to put a block-group container for each row)</span></li>
+            <li>To display blocks side by side (like <b>columns</b>), just give them a <b>width in percentage</b> <span style="color: #999;">(for example 30% and 70% to make 2 columns)</span></li>
+            <li><b>Automatic rows</b>: blocks automatically go to a new row if the current row is full, like words in a text!<br/>So you don't need to put a block-group container for each row!</li>
           </ul>
           Let's see some examples to clarify it.
         </p>
+      
+        <!-- ************************************************** -->
+      
+        <div class="example">
+          <h2 class="example-title">Creating rows and columns: the classical way...</h2>
+      
+          <div class="example-description">
+            Like most CSS grid systems, PocketGrid can create rows (using <code>&lt;div class="block-group"&gt;</code>) and columns (using <code>&lt;div class="block"&gt;</code>).<br/>
+            Here you can see a demo with a grid containing 3 rows with various column sizes (the source code is just after the demo):<br/>
+            <em>(note: <b>you can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below)</em>
+          </div>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe>
+          </div>
+          <div class="example-comments">
+            As you can see in the code below, you just have to:
+            <ul>
+              <li>create your <b>block-groups</b> (rows) and <b>blocks</b> (columns) in your HTML</li>
+              <li>define the block <b>widths</b> in your CSS</li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- ************************************************** -->
+      
+        <div class="example">
+          <h2 class="example-title">Creating rows and columns: the COOL way!</h2>
+      
+          <div class="example-description">
+            Thanks to PocketGrid, we can take advantage of the "automatic rows" feature!<br/>
+            Thus, instead of creating a <b>block-group</b> for each row, we can create just <b>1 block-group containing all our blocks</b>!<br/>
+            Then, according to the width of blocks, blocks will automatically go to a new line when a row is full:
+          </div>
+          <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/automatic-rows.html" style="height: 240px;" frameborder="0"></iframe>
+          </div>
+          <div class="example-comments">
+            The "automatic rows" principle is simple to understand:<br/>
+            <ul>
+              <li>b1 + b2 = 50% + 50% = 100%, so b3 goes to a new line.</li>
+              <li>b3 + b4 + b5 = 50% + 25% + 25% = 100%, so b6 goes to a new line.</li>
+              <li>b6 + b7 + b8 + b9 = 25% + 25% + 20% + 20% = 90%, but b10 has a width of 20%, so the total would be greater than 100%. Thus b10 goes to a new line!</li>
+            </ul>
+          </div>
+        </div>
+        <div class="note">
+          To sum up what makes the "<b>automatic rows</b>" feature more flexible:
+          <ul>
+            <li>In the HTML, you just define blocks in a block-group, no matter if they are on the same row or not.</li>
+            <li>In the CSS, you set the block widths, and according to the block widths, the blocks will be displayed on the same row (or not).</li>
+            <li>It's <b>compatible with Media Queries</b>: you can set different widths for blocks according to the device (smartphone, tablet, desktop...)<br/>
+            For example, blocks could be stacked on mobile, side by side on desktop, and an hybrid version on tablets: it's just CSS configuration!<br/>
+            <b>That's what makes PocketGrid so flexible and powerful!</b></li>
+          </ul>
+        </div>
 
         <!-- ************************************************** -->
       
         <div class="example">
-          <h2 class="example-title">First example: default mobile stack</h2>
+          <h2 class="example-title">Mobile layout</h2>
       
           <div class="example-description">
-            Let's begin with a very basic example, displaying a simple stack of blocks, as we often see for mobile layout.<br/>
-            This stack contains a header block, a navigation block, a main block, a links block and a footer block.<br/>
-            You can see the preview of this example below<br/>
-            <em>(note: <b>you can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below)</em>
+            Usually, a mobile layout consists of blocks (header, navigation, main content, links, footer...) vertically stacked.<br/>
+            This kind of layout is very simple with PocketGrid: you just have to put all your blocks in a block-group, without any CSS configuration (because the default width of blocks is 100%, and blocks automatically go to a new row after 100%, so <b>blocks are stacked by default</b>):
           </div>
           <div class="iframe-border">
             <iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 300px;" frameborder="0"></iframe>
@@ -109,7 +173,7 @@
             The source of this example (just below) is pretty self-explanatory:
             <ul>
               <li>each block has a <code class="highlight">block</code> class</li>
-              <li>a <code class="highlight">block-group</code> surrounds all these blocks</li>
+              <li>a <code class="highlight">block-group</code> wraps all these blocks</li>
               <li>blocks are stacked by default (width: 100%)</li>
             </ul>
           </div>
@@ -118,10 +182,10 @@
         <!-- ************************************************** -->
       
         <div class="example">
-          <h2 class="example-title">Basic Layout</h2>
+          <h2 class="example-title">Basic layout</h2>
       
           <div class="example-description">
-            Now imagine that we would like to display the navigation block and the main block side-by-side:
+            Now imagine that we would like to display the navigation block and the main block side by side:
           </div>
           <div class="iframe-border">
             <iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe>
@@ -141,8 +205,8 @@
             For example, we want to have this behaviour:<br/>
             <ul>
               <li>All blocks are stacked on mobile</li>
-              <li>The navigation and main blocks are side-by-side on tablet (width &gt; 640px)</li>
-              <li>The navigation, main and links blocks are side-by-side on desktop (width &gt; 960px)</li>
+              <li>The navigation and main blocks are side by side on tablet (width &gt; 640px)</li>
+              <li>The navigation, main and links blocks are side by side on desktop (width &gt; 960px)</li>
             </ul>
             Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
           </div>
@@ -192,7 +256,7 @@
         <!-- ************************************************** -->
       
         <div class="example">
-          <h2 class="example-title">Offsets</h2>
+          <h2 class="example-title">Offsetting columns</h2>
       
           <div class="example-description">
             You can add offsets to blocks (to simulate empty columns for example).<br/>
@@ -226,7 +290,7 @@
       
         <!-- ************************************************** -->
       
-        <div class="example">
+       <!--  <div class="example">
           <h2 class="example-title">Fix for different block heights</h2>
       
           <div class="example-description">
@@ -237,12 +301,22 @@
           <div class="iframe-border">
             <iframe class="example-iframe" src="../examples/fix-for-different-block-heights.html" style="height: 680px;" frameborder="0"></iframe>
           </div>
+        </div> -->
+      
+        <!-- ************************************************** -->
+      
+        <div class="example">
+          <h2 class="example-title">When blocks do not have the same height, my layout is broken: why?</h2>
+      
+          <div class="example-description">
+            This is a very important point that could occur if you use the "automatic rows" feature.<br/>
+            This problem has been <a href="../faq/#different-heights">answered in the FAQ</a>. It's really worth reading!
+          </div>
         </div>
 
 
-        <div class="note">
-          Note: this documentation is a <b>work in progress</b>. More examples are coming soon.<br/>
-          I'll try to do my best to update it very quickly.
+        <div class="info">
+          For more tips and information, you should take a look at the <a href="../faq">FAQ page</a>.
         </div>
 
 

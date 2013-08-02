@@ -154,16 +154,16 @@ tr:hover td {
   background-color: #F60;
 }
 
-.button.open {
+.button.newtab {
   float: right;
   color: #777;
   font-weight: bold;
-  background-color: #FC0;
+  background-color: #FB0;
 }
 
-.button.open:hover {
+.button.newtab:hover {
   color: white;
-  background-color: #FA0;
+  background-color: #F90;
 }
 
 .button-large {
@@ -272,6 +272,14 @@ tr:hover td {
   /*border: 1px dashed #CCC !important;*/
 }
 
+.example-comments {
+  margin-top: .5em;
+}
+
+.example ul, .note ul {
+  margin: 0;
+}
+
 .iframe-border {
   border: solid 2px #999;
   border-top-width: 30px;
@@ -295,6 +303,11 @@ tr:hover td {
 .highlight {
   font-weight: bold;
   background-color: rgba(255, 255, 0, 0.5);
+}
+
+.highlight-group {
+  font-weight: bold;
+  background-color: rgba(255, 150, 0, 0.3);
 }
 
 .highlight-css {

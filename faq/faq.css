@@ -226,71 +226,77 @@ tr:hover td {
     text-shadow: 0 0 0.12em #CCC, 0 0 0.12em #CCC;
   }
 }
-.download h2 {
+.clear {
+  clear: left;
+}
+
+.question-anchor {
+  visibility: hidden;
+}
+
+.question-title {
+  margin-top: 50px;
+  color: #777 !important;
+}
+
+.border {
+  border: dashed 1px #CCC;
+  width: 208px;
+  padding: 10px;
+  margin: 0 50px;
+}
+
+.code-sample {
+  font-family: monospace;
+  white-space: pre;
+  overflow: auto;
+}
+
+.faq-different-heights .box {
+  background-color: #DDD;
+  width: 50px;
+  line-height: 50px;
+  margin: 1px;
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  color: #999;
+}
+.faq-different-heights .block-group {
+  width: 208px;
   margin: 0;
 }
-.download .source, .download .minified, .download .github {
-  width: 100%;
+.faq-different-heights .block-group .block {
+  padding: 0;
+  width: auto;
 }
-
-.button {
-  text-align: center;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.faq-different-heights .dif-height .b2 .box {
+  line-height: 70px;
+  background-color: #C6C6C6;
 }
-.source .button {
-  background-color: #00C;
+.faq-different-heights .dif-height .b5 .box {
+  color: red;
+  background-color: #FAA;
 }
-.github .button {
-  background-color: #777;
+.faq-different-heights .cleared .b5 {
+  clear: left;
 }
-.button:hover {
-  background-color: #F60;
+.faq-different-heights .cleared .b5 .box {
+  color: green;
+  background-color: #AFA;
 }
-
-@media (min-width: 35em) {
-  .source:hover, .minified:hover, .github:hover {
-    background-color: #FFC;
-  }
-
-  .download-text, .download-button {
-    width: 50%;
-  }
-
-  .download-button {
-    padding-top: 3em;
-  }
-
-  .minified {
-    border: 2px solid #DDD;
-    border-width: 2px 0 2px 0;
-  }
-
-  .button {
-    width: 60%;
-  }
+.faq-different-heights .dif-height2 .b2 .box, .faq-different-heights .dif-height2 .b7 .box {
+  line-height: 70px;
+  background-color: #C6C6C6;
 }
-@media (min-width: 60em) {
-  .download .description {
-    height: 1em;
-    height: 3em\9;
-    /* Hack IE < 9 */
-  }
-  .download .source, .download .minified, .download .github {
-    width: 33.33%;
-  }
-
-  .download-text, .download-button {
-    width: 100%;
-  }
-
-  .minified {
-    border-width: 0 2px 0 2px;
-  }
-
-  .button {
-    width: 10em;
-  }
+.faq-different-heights .dif-height2 .b5 .box, .faq-different-heights .dif-height2 .b9 .box {
+  color: red;
+  background-color: #FAA;
+}
+.faq-different-heights .cleared2 .block:nth-child(4n+1) {
+  clear: left;
+}
+.faq-different-heights .cleared2 .b5 .box, .faq-different-heights .cleared2 .b9 .box {
+  color: green;
+  background-color: #AFA;
 }

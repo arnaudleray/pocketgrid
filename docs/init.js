@@ -7,7 +7,7 @@ var anchor;
 _.each($('h2').toArray(), function (title) {
   if (iTitle > 0) {
     $title = $(title);
-    anchor = $title.text().replace(/[^a-zA-Z]/g, '').toLowerCase();
+    anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
     $title.before('<a name="'+anchor+'" href="#" style="visibility: hidden;">#</a>');
     $title.wrap('<a href="#'+anchor+'" class="title-anchor"></a>');
     $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
@@ -55,7 +55,7 @@ _.each($('h2').toArray(), function (title) {
 
     // Add a button to open examples in a new tab.
     $example.find('.iframe-border')
-      .prepend($('<a href="' + exampleUrl + '" target="_blank" class="button open" style="margin-top: -27px; margin-right: 1px; padding: 0 10px;">View this demo in a new tab</a>'));
+      .prepend($('<a href="' + exampleUrl + '" target="_blank" class="button newtab" style="margin-top: -27px; margin-right: 1px; padding: 0 10px;">View this demo in a new tab</a>'));
 
     $example.append('<div class="block-group"><div class="html-source block">Loading...</div><div class="css-source block">Loading...</div></div>')
 
@@ -79,7 +79,7 @@ _.each($('h2').toArray(), function (title) {
       $example.find('.html-source').html(
         '<div class="example-sourcetitle">HTML</div><pre class="prettyprint linenums lang-html">' +
           htmlEncode(htmlSource)
-            .replace(/block-group"/g, '<span class="highlight">block-group</span>"')
+            .replace(/block-group"/g, '<span class="highlight-group">block-group</span>"')
             .replace(/(block)([^-])/g, '<span class="highlight">$1</span>$2')
             .replace(/&lt;div class="box"&gt;(([^&]|[\r\n])*)&lt;.div&gt;/g, '<span class="discreet">&lt;div class="box"&gt;</span>$1<span class="discreet">&lt;\\div&gt;</span>') +
           '</pre>'
@@ -155,9 +155,11 @@ var promises = [];
   // $toc.html('');
   _.each($('.example').toArray(), function (ex) {
     // $toc.append($('<a href="' + $(ex).find('.example-iframe').attr('src') + '">' + $(ex).find('.example-title').text() + '</a><br/>'))
-    promises.push(function() {
-      return $.Deferred(function (dfd) { addSources(ex, dfd); }).promise();
-    });
+    if (ex.find('example-iframe')) {
+      promises.push(function() {
+        return $.Deferred(function (dfd) { addSources(ex, dfd); }).promise();
+      });
+    }
   });
 
   $.when(deferredHelper.all(promises)).then(function(sourceResults) {
