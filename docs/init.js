@@ -155,11 +155,9 @@ var promises = [];
   // $toc.html('');
   _.each($('.example').toArray(), function (ex) {
     // $toc.append($('<a href="' + $(ex).find('.example-iframe').attr('src') + '">' + $(ex).find('.example-title').text() + '</a><br/>'))
-    if (ex.find('example-iframe')) {
-      promises.push(function() {
-        return $.Deferred(function (dfd) { addSources(ex, dfd); }).promise();
-      });
-    }
+    promises.push(function() {
+      return $.Deferred(function (dfd) { addSources(ex, dfd); }).promise();
+    });
   });
 
   $.when(deferredHelper.all(promises)).then(function(sourceResults) {
