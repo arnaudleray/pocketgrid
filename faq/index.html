@@ -53,7 +53,9 @@
       
         <div class="toc">
           <a href="#why-pocketgrid">Why should I use PocketGrid instead of Twitter Bootstrap or other grids?</a><br/>
-          <a href="#different-heights">When blocks do not have the same height, my layout is broken: why?</a>
+          <a href="#different-heights">When blocks do not have the same height, my layout is broken: why?</a><br/>
+          <a href="#device-detection">I don't like Media Queries, can I use mobile device detection instead, or something else?</a><br/>
+          <a href="#how-it-works">How PocketGrid works internally?</a>
         </div>
 
         <!-- ************************************************** -->
@@ -71,170 +73,69 @@
             Moreover, PocketGrid has many nice features:
             <ul>
               <li>PocketGrid is really <b>lightweight</b>, so you can use it in all your projects at no cost (Twitter Bootstrap is about 200x bigger, even minified!)</li>
-              <li>Twitter Bootstrap's grid has only 1 breakpoint (like many grid systems), whereas with PocketGrid you can define <b>as many breakpoints as you want</b>!</li>
+              <li>Twitter Bootstrap 2's grid has only 1 breakpoint (like many grid systems), whereas with PocketGrid you can define <b>as many breakpoints as you want</b>!</li>
               <li>PocketGrid is one of the very few <b>semantic</b> grids (especially pure CSS grids!): you don't have "span4" or "small-6 large-2 columns" classes everywhere in your HTML: column size should be defined in the stylesheet, not in the HTML! That's the PocketGrid philosophy!</li>
               <li>Percentage sizing is more natural and more precise than using a number of columns<br/>
-              (how can you make 5 columns in a 12 or 16-columns system? It's impossible! With PocketGrid, just put "width:20%", easy!)</li>
+              (how can you make 5 columns in a 12 or 16-columns system? It's impossible! With PocketGrid, just put "<code>width:20%</code>", easy!)</li>
               <li>PocketGrid does not require a CSS preprocessor (but you can use one if you want).</li>
             </ul>
+
+            <div class="note">
+              If you want to use a complete CSS framework like Twitter Bootstrap, it's dangerous to use it for ALL your site structure because when you upgrade this framework (e.g. upgrading Bootstrap 2 to Bootstrap 3), all your layout will be broken because their grid has evolved and is not backward compatible.<br/>
+              <b>Using a separate grid for your layout (such as PocketGrid!) allows you to upgrade safely your CSS framework</b> (buttons, tabs, carousel...) without breaking your layout!
+            </div>
           </div>
         </div>
 
-        <div class="question" name="different-heights">
+        <div class="question">
           <a class="question-anchor" name="different-heights">#</a>
           <a href="#different-heights"><h2 class="question-title">When blocks do not have the same height, my layout is broken: why?</h2></a>
                 
-          <div class="question-answer faq-different-heights">
-            For layout positioning, PocketGrid uses <a href="http://basicuse.net/articles/pl/textile/html_css/details_about_float_property">floats</a> (like most CSS grids): each <code>block</code> has a "<code>float: left</code>" property.<br/>
-            By default, float elements are displayed side by side, and with PocketGrid's "automatic rows" feature, when there is not enough space in the row to display all elements, the next elements go to a new line (like words in a text):<br/>
-            <div class="border" style="float: left;">
-              <div class="block-group">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div>
-            <pre class="code-sample prettyprint linenums lang-html">
-&lt;div class="block-group"&gt;
-  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+          <div class="question-answer">
+            This important question has been included in the documentation: <a href="../docs/#automatic-rows-in-real-life">you can see the answer here</a>.
+          </div>
+        </div>
 
-            Nevertheless, if elements do not have the same height, the design can be broken.<br/>
-            Here, block 2 has a greater height:<br/>
-            <div class="border">
-              <div class="block-group dif-height">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div>
-            <div>It's a classical problem with floats: the line break is blocked by the bigger blocks (here block 2).<br/>
-              A simple (but poor) solution could be to use a "block-group" for each row (like Twitter Bootstrap does with <code>class="row"</code>), but you would loose the "automatic rows" cool feature:</div>
-            <div class="border" style="float: left;">
-              <div class="block-group dif-height">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-              </div>
-              <div class="block-group">
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-              </div>
-              <div class="block-group">
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div>
-            <pre class="code-sample prettyprint linenums language-html">
-&lt;div class="block-group"&gt;
-  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="block-group"&gt;
-  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="block-group"&gt;
-  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-            <div>A better solution (keeping the "automatic rows") is to put "<code>clear: left</code>" on blocks that should be on a real new row (here: block 5):</div>
-            <div class="border" style="float: left;">
-              <div class="block-group dif-height cleared">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div>
-            <pre class="code-sample prettyprint linenums lang-css">.b5 { clear: left; }</pre>
-            <div style="clear: left;"><b>TIP</b>: if we had more than 1 big block (or if we didn't know the height of the blocks), instead of manually setting "<code>clear: left</code>" on each block that should be on a real new row, we can use the <code>nth-child</code> pseudo selector to force the clear every 4 blocks:</div>
-            <!-- <div class="border" style="float: left;">
-              <div class="block-group dif-height2">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div> -->
-            <div class="border" style="float: left;">
-              <div class="block-group dif-height2 cleared2">
-                <div class="block b1"><div class="box">1</div></div>
-                <div class="block b2"><div class="box">2</div></div>
-                <div class="block b3"><div class="box">3</div></div>
-                <div class="block b4"><div class="box">4</div></div>
-                <div class="block b5"><div class="box">5</div></div>
-                <div class="block b6"><div class="box">6</div></div>
-                <div class="block b7"><div class="box">7</div></div>
-                <div class="block b8"><div class="box">8</div></div>
-                <div class="block b9"><div class="box">9</div></div>
-                <div class="block b10"><div class="box">10</div></div>
-                <div class="block b11"><div class="box">11</div></div>
-                <div class="block b12"><div class="box">12</div></div>
-              </div>
-            </div>
-             <pre class="code-sample prettyprint linenums lang-css">
-.block:<span style="font-weight: bold;">nth-child(4n+1)</span> {
-    clear: left;
-}</pre>
-            <div class="clear">For a complete responsive example using <code>clear</code> and <code>nth-child</code>, you can see <a href="http://arnaudleray.github.io/pocketgrid/examples/fix-for-different-block-heights-nthchild.html">this example</a>.</div>
+        <div class="question">
+          <a class="question-anchor" name="device-detection">#</a>
+          <a href="#device-detection"><h2 class="question-title">I don't like Media Queries, can I use mobile device detection instead, or something else?</h2></a>
+                
+          <div class="question-answer">
+            Yes! Contrary to frameworks like Twitter Bootstrap (where Media Queries are hard-coded!) PocketGrid lets you completely free for <a href="https://en.wikipedia.org/wiki/Mobile_device_detection" target="_blank">device detection</a>.<br/>
+            Instead of writing a Media Query like <code>@media (min-width: 40em) { /* Tablet version */ }</code> you could detect the device type with any other technique (parsing the User Agent for example, or using <a href="https://en.wikipedia.org/wiki/WURFL" target="_blank">WURFL</a> or <a href="http://51degrees.codeplex.com/" target="_blank">51Degrees</a>...), and <b>put a CSS class on the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> tag</b> using some javascript or during server rendering:<br/>
+            <code>&lt;html&nbsp;<b>class="tablet"</b>&gt;</code>.<br/>
+            Then, instead of using Media Queries, you can <b>prefix your block classes with the corresponding device classes</b>:<br/>
+            <pre class="code-sample prettyprint linenums language-css">
+/* Tablet version */
+<b>.tablet</b> .header { width: 100%; }
+<b>.tablet</b> .menu { width: 100%; }
 
+/* Desktop version */
+<b>.desktop</b> .header { width: 70%; }
+<b>.desktop</b> .menu { width: 30%; }
+
+/* TV version */
+<b>.tv</b> .header { width: 50%; }
+<b>.tv</b> .menu { width: 50%; }</pre>
+            <div class="note">Some CSS class name suggestions:
+              <ul style="margin: 0 0 8px 0;">
+                <li>"mobile", "tablet", "desktop", "tv"...</li>
+                <li>"small", "medium", "large"...</li>
+                <li>"S", "M", "L", "XL", "XXL"...</li>
+                <li>or even breakpoint sizes like "bp320", "bp768", "bp1024"...</li>
+              </ul>
+              With PocketGrid, you're completely free!
+            </div>
+          </div>
+        </div>
+
+        <div class="question">
+          <a class="question-anchor" name="how-it-works">#</a>
+          <a href="#different-heights"><h2 class="question-title">How PocketGrid works internally?</h2></a>
+                
+          <div class="question-answer">
+            <!-- This question has also been <a href="../docs/#automatic-rows-in-real-life">answered in the documentation</a>.<br/> -->
+            In few words, PocketGrid uses CSS floats and some magical CSS tricks! ;)
           </div>
         </div>
 
@@ -257,9 +158,9 @@
   </div> <!-- /.layout -->
 
 
-<!-- Media Queries polyfill for IE < 9 -->
+<!-- For IE6-8 Media Queries compatibility -->
 <!--[if lt IE 9]>
-  <script src="http://scottjehl.github.io/Respond/respond.src.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
 <![endif]-->
 
 <script src="../docs/google-code-prettify/prettify.js"></script>

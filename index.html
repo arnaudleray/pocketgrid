@@ -8,8 +8,8 @@
   <title>PocketGrid - Pure CSS responsive and semantic grid system</title>
 
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/normalize/2.1.0/normalize.css">
-  <link rel="stylesheet" href="pocketgrid.css" media="screen" />
-  <link rel="stylesheet" href="docs/doc.css" media="screen" />
+  <link rel="stylesheet" href="pocketgrid.css" />
+  <link rel="stylesheet" href="docs/doc.css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
         <nav>
           <ul>
             <li><a href="docs">Documentation</a></li>
-            <li><a href="../faq">FAQ</a></li>
+            <li><a href="faq">FAQ</a></li>
             <li><a href="download">Download</a></li>
             <li><a href="https://github.com/arnaudleray/pocketgrid" target="_blank">Github</a></li>
           </ul>
@@ -57,8 +57,8 @@
             <h3 class="feature-title">Flexible</h3>
             <ul>
               <li>Unlimited number of columns</li>
-              <li>Column width in percentage</li>
-              <li>Infinite nested grid</li>
+              <li>Unlimited nested grids</li>
+              <li>Automatic rows</li>
             </ul>
           </div>
           <div class="feature block">
@@ -66,11 +66,13 @@
             <ul>
               <li>Define your own breakpoints</li>
               <li>Unlimited number of breakpoints</li>
+              <li>Compatible with Media Queries or mobile device detection</li>
             </ul>
           </div>
           <div class="feature block">
             <h3 class="feature-title">Mobile-first</h3>
             <ul>
+              <li>Optimized for mobile devices</li>
               <li>Blocks are stacked by default</li>
             </ul>
           </div>
@@ -78,21 +80,21 @@
             <h3 class="feature-title">Content-first</h3>
             <ul>
               <li>Swap columns</li>
-              <li>Define your own breakpoints for each element in your page</li>
+              <li>Define your own breakpoints for each content in your page</li>
             </ul>
           </div>
           <div class="feature block">
             <h3 class="feature-title">Semantic</h3>
             <ul>
-              <li>Just define blocks and groups of blocks in your HTML</li>
-              <li>Adjust columns in your CSS</li>
+              <li>Just define <b>blocks</b> and <b>block&nbsp;groups</b> in your HTML</li>
+              <li>Define columns in your CSS</li>
             </ul>
           </div>
           <div class="feature block">
             <h3 class="feature-title">Use it everywhere!</h3>
             <ul>
               <li>Very light: &lt; 1 kb!</li>
-              <li>Compatible with frameworks like Twitter&nbsp;Bootstrap</li>
+              <li>Compatible with Twitter&nbsp;Bootstrap and most CSS frameworks</li>
               <li>No plugin or preprocessor needed</li>
             </ul>
           </div>
@@ -125,9 +127,9 @@
   </div> <!-- /.layout -->
 
 
-<!-- Media Queries polyfill for IE < 9 -->
+<!-- For IE6-8 Media Queries compatibility -->
 <!--[if lt IE 9]>
-  <script src="http://scottjehl.github.io/Respond/respond.src.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
 <![endif]-->
 
 </body>

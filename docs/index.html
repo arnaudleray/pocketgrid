@@ -44,7 +44,7 @@
 
       <div class="content">
         <div class="note">
-          Note: this documentation is a <b>work in progress</b>. More examples are coming soon.<br/>
+          This documentation is a <b>work in progress</b>. More examples are coming soon.<br/>
           I'll try to do my best to update it very quickly.
         </div>
 
@@ -110,7 +110,8 @@
           <div class="example-description">
             Like most CSS grid systems, PocketGrid can create rows (using <code>&lt;div class="block-group"&gt;</code>) and columns (using <code>&lt;div class="block"&gt;</code>).<br/>
             Here you can see a demo with a grid containing 3 rows with various column sizes (the source code is just after the demo):<br/>
-            <em>(note: <b>you can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below)</em>
+            <div class="note">All the examples displayed  in a "Demo" frame are <b>real examples</b> displayed in an iframe (no fake image).<br/>
+            <b>You can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below.</div>
           </div>
           <div class="iframe-border">
             <iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe>
@@ -150,11 +151,14 @@
           To sum up what makes the "<b>automatic rows</b>" feature more flexible:
           <ul>
             <li>In the HTML, you just define blocks in a block-group, no matter if they are on the same row or not.</li>
-            <li>In the CSS, you set the block widths, and according to the block widths, the blocks will be displayed on the same row (or not).</li>
-            <li>It's <b>compatible with Media Queries</b>: you can set different widths for blocks according to the device (smartphone, tablet, desktop...)<br/>
+            <li>In the CSS, you set the block widths, and <b>according to the block widths, the blocks will be displayed on the same row (or not)</b>.</li>
+            <li>It's <b>compatible with Media Queries</b>: you can set different widths for each block according to the device (smartphone, tablet, desktop, TV...)<br/>
             For example, blocks could be stacked on mobile, side by side on desktop, and an hybrid version on tablets: it's just CSS configuration!<br/>
             <b>That's what makes PocketGrid so flexible and powerful!</b></li>
           </ul>
+        </div>
+        <div class="warn">
+          If your blocks have <b>different heights</b>, the "automatic rows" layout could seem broken, but it's not: <a href="http://localhost:5656/pocketgrid-repo/gh-pages/docs/#when-blocks-do-not-have-the-same-height-my-layout-is-broken-why">this problem and its solution will be explained later</a>.
         </div>
 
         <!-- ************************************************** -->
@@ -214,7 +218,7 @@
             <iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe>
           </div>
           <div class="example-comments">
-            To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block width according to the device width:
+            To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block widths according to the device width:
           </div>
         </div>
       
@@ -224,7 +228,7 @@
           <h2 class="example-title">Nested grids</h2>
       
           <div class="example-description">
-            With PocketGrid, you can nest grids (infinitely!).<br/>
+            With PocketGrid, you can nest grids (i.e. create a grid inside a grid).<br/>
             You just have to put a <b>block-group</b> inside another <b>block-group</b>!<br/>
             Let's modify the previous example, replacing the main block with a nested grid (containing items in 5 columns):
           </div>
@@ -302,20 +306,203 @@
             <iframe class="example-iframe" src="../examples/fix-for-different-block-heights.html" style="height: 680px;" frameborder="0"></iframe>
           </div>
         </div> -->
-      
+
         <!-- ************************************************** -->
       
         <div class="example-faq">
-          <h2 class="example-title">When blocks do not have the same height, my layout is broken: why?</h2>
+          <h2 class="example-title">Automatic rows in real life!</h2>
       
-          <div class="example-description">
-            This is a very important point that could occur if you use the "automatic rows" feature.<br/>
-            This problem has been <a href="../faq/#different-heights">answered in the FAQ</a>. It's really worth reading!
-          </div>
+          <div class="example-description faq-different-heights">
+            In previous examples, all blocks had the same height. But in real life, with real content, they could have different heights.<br/>
+            However, when blocks have different heights, the "automatic rows" layout could seem broken (but of course, it's not!)<br/>
+            To make it clearer, let's see how PocketGrid works internally:<br/>
+            <br/>
+            For layout positioning, PocketGrid uses <a href="http://basicuse.net/articles/pl/textile/html_css/details_about_float_property" target="_blank">floats</a> (like most CSS grids): each <code>block</code> has a "<code>float: left</code>" property.<br/>
+            By default, float elements are displayed side by side, and with PocketGrid's "automatic rows" feature, when there is not enough space in the row to display all elements, the next elements go to a new line (like words in a text):<br/>
+            <div class="block-group">
+              <div class="block-auto block">
+                <div class="border" style="float: left;">
+                  <div class="block-group small-group">
+                    <div class="block b1"><div class="box">1</div></div>
+                    <div class="block b2"><div class="box">2</div></div>
+                    <div class="block b3"><div class="box">3</div></div>
+                    <div class="block b4"><div class="box">4</div></div>
+                    <div class="block b5"><div class="box">5</div></div>
+                    <div class="block b6"><div class="box">6</div></div>
+                    <div class="block b7"><div class="box">7</div></div>
+                    <div class="block b8"><div class="box">8</div></div>
+                    <div class="block b9"><div class="box">9</div></div>
+                    <div class="block b10"><div class="box">10</div></div>
+                    <div class="block b11"><div class="box">11</div></div>
+                    <div class="block b12"><div class="box">12</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-auto block">
+            <pre class="code-sample prettyprint linenums lang-html">
+&lt;div class="block-group"&gt;
+  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            Nevertheless, if elements do not have the same height, the design can be broken.<br/>
+            Here, block 2 has a greater height:<br/>
+            <div class="border">
+              <div class="block-group small-group dif-height">
+                <div class="block b1"><div class="box">1</div></div>
+                <div class="block b2"><div class="box">2</div></div>
+                <div class="block b3"><div class="box">3</div></div>
+                <div class="block b4"><div class="box">4</div></div>
+                <div class="block b5"><div class="box">5</div></div>
+                <div class="block b6"><div class="box">6</div></div>
+                <div class="block b7"><div class="box">7</div></div>
+                <div class="block b8"><div class="box">8</div></div>
+                <div class="block b9"><div class="box">9</div></div>
+                <div class="block b10"><div class="box">10</div></div>
+                <div class="block b11"><div class="box">11</div></div>
+                <div class="block b12"><div class="box">12</div></div>
+              </div>
+            </div>
+            <div>It's a classical problem with floats: the line break is blocked by the bigger blocks (here block 2).<br/>
+              A simple (but poor) solution could be to use a "block-group" for each row (like Twitter Bootstrap does, with its "row" class), but this solution would loose the "automatic rows" benefits:</div>
+            <div class="block-group">
+              <div class="block-auto block">
+                <div class="border" style="float: left;">
+                  <div class="block-group small-group dif-height">
+                    <div class="block b1"><div class="box">1</div></div>
+                    <div class="block b2"><div class="box">2</div></div>
+                    <div class="block b3"><div class="box">3</div></div>
+                    <div class="block b4"><div class="box">4</div></div>
+                  </div>
+                  <div class="block-group small-group">
+                    <div class="block b5"><div class="box">5</div></div>
+                    <div class="block b6"><div class="box">6</div></div>
+                    <div class="block b7"><div class="box">7</div></div>
+                    <div class="block b8"><div class="box">8</div></div>
+                  </div>
+                  <div class="block-group small-group">
+                    <div class="block b9"><div class="box">9</div></div>
+                    <div class="block b10"><div class="box">10</div></div>
+                    <div class="block b11"><div class="box">11</div></div>
+                    <div class="block b12"><div class="box">12</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-auto block">
+                <pre class="code-sample prettyprint linenums language-html">
+&lt;div class="block-group"&gt;
+  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="block-group"&gt;
+  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="block-group"&gt;
+  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+            </div>
+            <div>A <b>better solution</b> (keeping the "automatic rows") is to put "<code>clear: left</code>" on blocks that should be on a real new row (here: block 5):</div>
+            <div class="block-group">
+              <div class="block-auto block">
+                <div class="border" style="float: left;">
+                  <div class="block-group small-group dif-height cleared">
+                    <div class="block b1"><div class="box">1</div></div>
+                    <div class="block b2"><div class="box">2</div></div>
+                    <div class="block b3"><div class="box">3</div></div>
+                    <div class="block b4"><div class="box">4</div></div>
+                    <div class="block b5"><div class="box">5</div></div>
+                    <div class="block b6"><div class="box">6</div></div>
+                    <div class="block b7"><div class="box">7</div></div>
+                    <div class="block b8"><div class="box">8</div></div>
+                    <div class="block b9"><div class="box">9</div></div>
+                    <div class="block b10"><div class="box">10</div></div>
+                    <div class="block b11"><div class="box">11</div></div>
+                    <div class="block b12"><div class="box">12</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-auto block">
+                <pre class="code-sample prettyprint linenums lang-css">.b5 { clear: left; }</pre>
+              </div>
+            </div>
+            <div style="clear: left;">This solution is better because it does not impact the HTML (<b>CSS-only</b>), it's compatible with <b>Media Queries</b> (you could apply line breaks on different blocks according to the device) and you can use the "<b>automatic rows</b>" feature.</div>
+            <div class="note">If we had more than 1 big block (or if we didn't know the height of the blocks), instead of manually setting "<code>clear: left</code>" on each block that should be on a real new row, <b>we can use the <code>nth-child</code> pseudo selector to force the clear every 4 blocks</b>:
+
+              <div class="block-group">
+                <div class="block-auto block">
+                  <div class="border" style="float: left;">
+                    <div class="block-group small-group dif-height2 cleared2">
+                      <div class="block b1"><div class="box">1</div></div>
+                      <div class="block b2"><div class="box">2</div></div>
+                      <div class="block b3"><div class="box">3</div></div>
+                      <div class="block b4"><div class="box">4</div></div>
+                      <div class="block b5"><div class="box">5</div></div>
+                      <div class="block b6"><div class="box">6</div></div>
+                      <div class="block b7"><div class="box">7</div></div>
+                      <div class="block b8"><div class="box">8</div></div>
+                      <div class="block b9"><div class="box">9</div></div>
+                      <div class="block b10"><div class="box">10</div></div>
+                      <div class="block b11"><div class="box">11</div></div>
+                      <div class="block b12"><div class="box">12</div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-auto block">
+                 <pre class="code-sample prettyprint linenums lang-css">
+.block:<span style="font-weight: bold;">nth-child(4n+1)</span> {
+    clear: left;
+}</pre>
+                </div>
+              </div>
+            </div>
+            <div class="clear">For a complete responsive example using <code>clear</code> and <code>nth-child</code>, you can see <a href="http://arnaudleray.github.io/pocketgrid/examples/fix-for-different-block-heights-nthchild.html">this example</a>.</div>
+
+                    </div>
         </div>
 
 
-        <div class="info">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="note">
           For more tips and information, you should take a look at the <a href="../faq">FAQ page</a>.
         </div>
 
@@ -339,9 +526,9 @@
 
 
 
-<!-- Media Queries polyfill for IE < 9 -->
+<!-- For IE6-8 Media Queries compatibility -->
 <!--[if lt IE 9]>
-  <script src="http://scottjehl.github.io/Respond/respond.src.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
 <![endif]-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="google-code-prettify/prettify.js"></script>
