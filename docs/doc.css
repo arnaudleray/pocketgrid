@@ -120,19 +120,43 @@ tr:hover td {
   background-color: #DDD !important;
 }
 
-.note, .info {
-  background-color: #FFC;
-  border: 1px solid #CC9;
-  padding: .2em 1em;
-  margin: .5em 0;
-  font-style: italic;
-  /*  font-size: .9em; */
-  line-height: 1.2em;
+code {
+  background-color: #f6f6f6;
 }
 
-.info {
-  background-color: #CDF;
-  border-color: #9AC;
+.note, .info, .warn {
+  background-color: #FFC;
+  border-style: solid;
+  border-width: 1px 1px 1px 8px;
+  border-color: #fff000;
+  padding: .2em 1em .2em .5em;
+  margin: .5em 0;
+  line-height: 1.2em;
+}
+.note:before, .info:before, .warn:before {
+  content: "Info";
+  color: #fd0;
+  font-weight: bold;
+  font-style: normal;
+  display: block;
+}
+
+.note {
+  background-color: #dde9ff;
+  border-color: #9AF;
+}
+.note:before {
+  content: "Note";
+  color: #67C;
+}
+
+.warn {
+  background-color: #fdc;
+  border-color: #f60;
+}
+.warn:before {
+  content: "Warning!";
+  color: #f60;
 }
 
 .remark {
@@ -253,6 +277,11 @@ tr:hover td {
   text-align: center;
 }
 
+.title-anchor {
+  visibility: hidden;
+  padding-top: 50px;
+}
+
 .section-title, .example-title {
   color: #777 !important;
   font-size: 1.8em;
@@ -325,6 +354,62 @@ tr:hover td {
   overflow: auto;
 }
 
+.faq-different-heights .box {
+  background-color: #DDD;
+  width: 50px;
+  line-height: 50px;
+  margin: 1px;
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  color: #999;
+}
+.faq-different-heights .border {
+  background-color: white;
+  border: dashed 1px #CCC;
+  width: 208px;
+  padding: 10px;
+  margin: 0 50px;
+}
+.faq-different-heights .block-group.small-group {
+  width: 208px;
+  margin: 0;
+}
+.faq-different-heights .block-group.small-group .block {
+  padding: 0;
+  width: auto;
+}
+.faq-different-heights .dif-height .b2 .box {
+  line-height: 70px;
+  background-color: #C6C6C6;
+}
+.faq-different-heights .dif-height .b5 .box {
+  color: red;
+  background-color: #FAA;
+}
+.faq-different-heights .cleared .b5 {
+  clear: left;
+}
+.faq-different-heights .cleared .b5 .box {
+  color: green;
+  background-color: #AFA;
+}
+.faq-different-heights .dif-height2 .b2 .box, .faq-different-heights .dif-height2 .b7 .box {
+  line-height: 70px;
+  background-color: #C6C6C6;
+}
+.faq-different-heights .dif-height2 .b5 .box, .faq-different-heights .dif-height2 .b9 .box {
+  color: red;
+  background-color: #FAA;
+}
+.faq-different-heights .cleared2 .block:nth-child(4n+1) {
+  clear: left;
+}
+.faq-different-heights .cleared2 .b5 .box, .faq-different-heights .cleared2 .b9 .box {
+  color: green;
+  background-color: #AFA;
+}
+
 @media (min-width: 35em) {
   .hero {
     display: block;
@@ -361,13 +446,17 @@ tr:hover td {
 
   .feature {
     width: 50% !important;
-    height: 8.5em;
+    height: 9.5em;
     text-align: center;
   }
   .feature ul {
     display: inline-block;
     text-align: left;
     width: 14em;
+  }
+
+  .block-auto {
+    width: auto;
   }
 }
 @media (min-width: 60em) {

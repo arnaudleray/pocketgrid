@@ -120,19 +120,43 @@ tr:hover td {
   background-color: #DDD !important;
 }
 
-.note, .info {
-  background-color: #FFC;
-  border: 1px solid #CC9;
-  padding: .2em 1em;
-  margin: .5em 0;
-  font-style: italic;
-  /*  font-size: .9em; */
-  line-height: 1.2em;
+code {
+  background-color: #f6f6f6;
 }
 
-.info {
-  background-color: #CDF;
-  border-color: #9AC;
+.note, .info, .warn {
+  background-color: #FFC;
+  border-style: solid;
+  border-width: 1px 1px 1px 8px;
+  border-color: #fff000;
+  padding: .2em 1em .2em .5em;
+  margin: .5em 0;
+  line-height: 1.2em;
+}
+.note:before, .info:before, .warn:before {
+  content: "Info";
+  color: #fd0;
+  font-weight: bold;
+  font-style: normal;
+  display: block;
+}
+
+.note {
+  background-color: #dde9ff;
+  border-color: #9AF;
+}
+.note:before {
+  content: "Note";
+  color: #67C;
+}
+
+.warn {
+  background-color: #fdc;
+  border-color: #f60;
+}
+.warn:before {
+  content: "Warning!";
+  color: #f60;
 }
 
 .remark {
@@ -232,10 +256,10 @@ tr:hover td {
 
 .question-anchor {
   visibility: hidden;
+  padding-top: 50px;
 }
 
 .question-title {
-  margin-top: 50px;
   color: #777 !important;
 }
 

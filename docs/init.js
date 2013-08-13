@@ -8,8 +8,8 @@ _.each($('h2').toArray(), function (title) {
   if (iTitle > 0) {
     $title = $(title);
     anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
-    $title.before('<a name="'+anchor+'" href="#" style="visibility: hidden;">#</a>');
-    $title.wrap('<a href="#'+anchor+'" class="title-anchor"></a>');
+    $title.before('<a name="'+anchor+'" href="#" class="title-anchor">#</a>');
+    $title.wrap('<a href="#'+anchor+'"></a>');
     $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
   }
   iTitle++;

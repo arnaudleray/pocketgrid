@@ -1,12 +1,18 @@
-.com { color: #93a1a1; }
+.com { color: #999; }
 /*.lit { color: #195f91; }*/
-.lit { color: #195ff1; }
+.lit { color: #f00; }
+.highlight-css .lit { color: #39f; }
 .pun, .opn, .clo { color: #93a1a1; }
 .fun { color: #dc322f; }
 .str, .atv { color: #D14; }
-.kwd, .prettyprint .tag { color: #1e347b; }
-.typ, .atn, .dec, .var { color: teal; }
+.kwd, .prettyprint .tag { color: #3f6f9f; }
+.typ, .atn, .dec, .var { color: #009999; }
+.atn { color: #4f9fcf; }
 .pln { color: #48484c; }
+pre.prettyprint {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: .8em;
+}
 
 .prettyprint {
   /*padding: 8px;*/
@@ -27,5 +33,5 @@ ol.linenums li {
   margin-left: -5px;
   color: #bebec5;
   line-height: 20px;
-  text-shadow: 0 1px 0 #fff;
+  /*text-shadow: 0 1px 0 #fff;*/
 }
