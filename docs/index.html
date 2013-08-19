@@ -43,11 +43,6 @@
       </div>
 
       <div class="content">
-        <div class="note">
-          This documentation is a <b>work in progress</b>. More examples are coming soon.<br/>
-          I'll try to do my best to update it very quickly.
-        </div>
-
       
         <!-- ************************************************** -->
       
@@ -61,7 +56,7 @@
         <h2 class="section-title">Quick start</h2>
       
         <p>Here is the minimal markup you need to put in your pages:</p>
-        <pre class="prettyprint linenums lang-html">
+        <pre class="prettyprint lang-html">
 &lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -294,19 +289,131 @@
       
         <!-- ************************************************** -->
       
-       <!--  <div class="example">
-          <h2 class="example-title">Fix for different block heights</h2>
+        <div class="example-faq">
+          <h2 class="example-title">Gutters</h2>
       
           <div class="example-description">
-            When blocks do not have the same height, your layout can seem broken. For example, in the demo below, we want to display 5 blocks per row, but the 3rd block has a greater height than the other blocks.<br/>
-            With the PocketGrid "automatic row" feature, "Block 6" should be placed on a brand new row, but instead, it is <i>blocked</i> by the big "Block 3". This is because PocketGrid uses CSS floats to manage blocks.<br/>
-            To solve this problem, just put "<code>clear: left</code>" in the style of the block ("Block 6" here) to force using a real new row, no matter the height of the previous blocks.
+            Gutters refer to the space between blocks.<br/>
+            PocketGrid can manage horizontal and vertical gutters.<br/>
+            To use gutters, you have 2 options:<br/>
+            <h3>Option 1: paddings all around the blocks</h3>
+            <p>This first option is quite intuitive: to make gutters, we apply padding all around blocks:<br/>
+            (to illustrate it, you can see the padding of the first and last blocks in red below)</p>
+            <div class="block-group example-gutters1 border">
+              <div class="block-auto block">
+                <div class="border" style="float: left;">
+                  <div class="block-group">
+                    <div class="block b1"><div class="box">1</div></div>
+                    <div class="block b2"><div class="box">2</div></div>
+                    <div class="block b3"><div class="box">3</div></div>
+                    <div class="block b4"><div class="box">4</div></div>
+                    <div class="block b5"><div class="box">5</div></div>
+                    <div class="block b6"><div class="box">6</div></div>
+                    <div class="block b7"><div class="box">7</div></div>
+                    <div class="block b8"><div class="box">8</div></div>
+                    <div class="block b9"><div class="box">9</div></div>
+                    <div class="block b10"><div class="box">10</div></div>
+                    <div class="block b11"><div class="box">11</div></div>
+                    <div class="block b12"><div class="box">12</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-auto block">
+                To set gutters, just add these styles:
+                <pre class="code-sample prettyprint lang-css">
+.block-group { margin: -<i>verticalGutter</i> -<i>horizontalGutter</i>; }
+.block { padding: <i>verticalGutter</i> <i>horizontalGutter</i>; }
+</pre>
+                For example, if we want an horizontal gutter of 2px, and a vertical gutter of 6px:
+                <pre class="code-sample prettyprint lang-css">
+.block-group { margin: -2px -6px; }
+.block { padding: 2px 6px; }
+</pre>
+                (note that block-group margins are <b>negative</b> values)
+              </div>
+            </div>
+            <p>
+              <b>Advantage</b> of this option: it's intuitive and it's easy to make a mouseover effect on blocks for example.<br/> 
+              <b>Drawback</b> of this option: because of the bottom and right paddings, it could display <b>scrollbars</b> when the grid is 100% of the page width.
+            </p>
+
+            <h3>Option 2: paddings only on left and top sides</h3>
+            <p>This second option consists of putting paddings only to the left and top sides of blocks to <b>avoid the scrollbars problem of option&nbsp;1</b>:<br/>
+            (to illustrate it, you can see the padding of the first and last blocks in red below, and compare it to option 1)</p>
+            <div class="block-group example-gutters2">
+              <div class="block-auto block">
+                <div class="border" style="float: left;">
+                  <div class="block-group">
+                    <div class="block b1"><div class="box">1</div></div>
+                    <div class="block b2"><div class="box">2</div></div>
+                    <div class="block b3"><div class="box">3</div></div>
+                    <div class="block b4"><div class="box">4</div></div>
+                    <div class="block b5"><div class="box">5</div></div>
+                    <div class="block b6"><div class="box">6</div></div>
+                    <div class="block b7"><div class="box">7</div></div>
+                    <div class="block b8"><div class="box">8</div></div>
+                    <div class="block b9"><div class="box">9</div></div>
+                    <div class="block b10"><div class="box">10</div></div>
+                    <div class="block b11"><div class="box">11</div></div>
+                    <div class="block b12"><div class="box">12</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-auto block">
+                To set gutters, just add these styles:
+                <pre class="code-sample prettyprint lang-css">
+.block-group { margin: -<i>verticalGutter</i> 0 0 -<i>horizontalGutter</i>; }
+.block { padding: <i>verticalGutter</i> 0 0 <i>horizontalGutter</i>; }
+</pre>
+                For example, if we want an horizontal gutter of 1em, and a vertical gutter of 2em:
+                <pre class="code-sample prettyprint lang-css">
+.block-group { margin: -4px 0 0 -12px; }
+.block { padding: 4px 0 0 12px; }
+</pre>
+(note that margins and paddings have been multiplied by 2 in comparison to option&nbsp;1,<br/>because they are only on left and top sides)
+              </div>
+            </div>
+            <p>
+              <b>Advantage</b> of this option: avoids the scrollbars issue.<br/> 
+              <b>Drawback</b> of this option: you cannot put a background or a border on these blocks, because it would not be centered.
+            </p>
+            <div class="note">
+              <p>
+                <b>Which option is better?</b> It depends! ;)<br/>
+                Option 1 (paddings all around the blocks) can be more appropriate if you want to put backgrounds directly on blocks (because paddings are equally spread around blocks).<br/>
+                Option 2 (top and left paddings) is more appropriate for global site layout if your layout is 100% page width (to avoid scrollbars).</p>
+              <p>
+                Try playing with both, and see which one feels better for you.<br/>
+                You could even <a href="../examples/mixed-gutters.html" target="_blank">mix these 2 options!</a> <b>With PocketGrid, you are free</b>!<br/>
+              </p>
+              <p>
+                To go further with gutters, you can see these 2 examples:<br/>
+                <ul style="font-weight: bold;">
+                  <li><a href="../examples/mixed-gutters.html" target="_blank">Mixing option 1 and option 2 gutter types</a>: use the best of both worlds!</li>
+                  <li><a href="../examples/responsive-gutters.html"target="_blank">Responsive gutters!</a> (yes, with PocketGrid, even gutters can be responsive!)</li>
+                </ul>
+              </p>
+            </div>
+          </div> <!-- .example-description -->
+          <!-- <div class="iframe-border">
+            <iframe class="example-iframe" src="../examples/mixed-gutters.html" style="height: 450px;" frameborder="0"></iframe>
+          </div> -->
+        </div> <!-- .example -->
+      
+        <!-- ************************************************** -->
+      
+<!--         <div class="example">
+          <h2 class="example-title">Playing with gutters</h2>
+      
+          <div class="example-description">
+            PocketGrid is so flexible that we could even imagine responsive gutters!<br/>
+            For example, we could have no gutters on mobile, only small vertical gutters on tablet, and horizontal and vertical gutters on desktop:
           </div>
           <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/fix-for-different-block-heights.html" style="height: 680px;" frameborder="0"></iframe>
+            <iframe class="example-iframe" src="../examples/responsive-gutters.html" style="height: 280px;" frameborder="0"></iframe>
           </div>
-        </div> -->
-
+        </div>
+ -->      
         <!-- ************************************************** -->
       
         <div class="example-faq">
@@ -339,7 +446,7 @@
                 </div>
               </div>
               <div class="block-auto block">
-            <pre class="code-sample prettyprint linenums lang-html">
+            <pre class="code-sample prettyprint lang-html">
 &lt;div class="block-group"&gt;
   &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
   &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
@@ -401,7 +508,7 @@
                 </div>
               </div>
               <div class="block-auto block">
-                <pre class="code-sample prettyprint linenums language-html">
+                <pre class="code-sample prettyprint lang-html">
 &lt;div class="block-group"&gt;
   &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
   &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
@@ -443,7 +550,9 @@
                 </div>
               </div>
               <div class="block-auto block">
-                <pre class="code-sample prettyprint linenums lang-css">.b5 { clear: left; }</pre>
+                <pre class="code-sample prettyprint lang-css">.b5 {
+  clear: left;
+}</pre>
               </div>
             </div>
             <div style="clear: left;">This solution is better because it does not impact the HTML (<b>CSS-only</b>), it's compatible with <b>Media Queries</b> (you could apply line breaks on different blocks according to the device) and you can use the "<b>automatic rows</b>" feature.</div>
@@ -469,37 +578,18 @@
                   </div>
                 </div>
                 <div class="block-auto block">
-                 <pre class="code-sample prettyprint linenums lang-css">
+                 <pre class="code-sample prettyprint lang-css">
 .block:<span style="font-weight: bold;">nth-child(4n+1)</span> {
     clear: left;
 }</pre>
                 </div>
               </div>
             </div>
+
             <div class="clear">For a complete responsive example using <code>clear</code> and <code>nth-child</code>, you can see <a href="http://arnaudleray.github.io/pocketgrid/examples/fix-for-different-block-heights-nthchild.html">this example</a>.</div>
 
-                    </div>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <div class="note">
@@ -527,10 +617,11 @@
 
 
 <!-- For IE6-8 Media Queries compatibility -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!--[if lt IE 9]>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
+  <script type="text/javascript" src="../js/selectivizr-min.js"></script>
 <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="google-code-prettify/prettify.js"></script>
 <script src="http://underscorejs.org/underscore.js"></script>
 <script src="helpers-underscore.js"></script>

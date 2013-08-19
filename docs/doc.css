@@ -1,3 +1,12 @@
+/* Pocketgrid gutters */
+.block-group {
+  margin: -1em 0 0 -1em;
+}
+
+.block {
+  padding: 1em 0 0 1em;
+}
+
 body {
   padding: 0;
   font-family: Calibri, Helvetica, Arial, sans-serif;
@@ -183,6 +192,8 @@ code {
   color: #777;
   font-weight: bold;
   background-color: #FB0;
+  margin: -27px 1px -1px 0;
+  padding: 0 10px;
 }
 
 .button.newtab:hover {
@@ -199,12 +210,13 @@ code {
   border-radius: .7em;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 35.5em) {
   .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -305,7 +317,7 @@ code {
   margin-top: .5em;
 }
 
-.example ul, .note ul {
+.example ul, .example-faq ul, .note ul {
   margin: 0;
 }
 
@@ -352,6 +364,79 @@ code {
 .prettyprint {
   margin: 0;
   overflow: auto;
+  background-color: transparent;
+  position: relative;
+  border-radius: 4px;
+}
+
+.note .prettyprint, .info .prettyprint, .warn .prettyprint {
+  background-color: #F9F9F9;
+}
+
+.lang-html:before, .lang-css:before {
+  content: 'HTML';
+  font-size: 3em;
+  font-weight: bold;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  padding-right: 4px;
+  color: #F0F0F0;
+  background-color: #F9F9F9;
+  text-align: right;
+  margin: 0;
+  line-height: 1em;
+}
+
+.lang-css:before {
+  content: 'CSS';
+}
+
+.example-gutters1 .box, .example-gutters2 .box {
+  background-color: #DDD;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  color: #999;
+}
+.example-gutters1 .border, .example-gutters2 .border {
+  background-color: white;
+  border: dashed 2px #99F;
+  display: inline-block;
+}
+.example-gutters1 .border .block, .example-gutters2 .border .block {
+  width: auto;
+}
+.example-gutters1 .border .block:hover, .example-gutters2 .border .block:hover {
+  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.example-gutters1 .border .b1, .example-gutters1 .border .b12, .example-gutters2 .border .b1, .example-gutters2 .border .b12 {
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.example-gutters1 .border .block:nth-child(4n+1), .example-gutters2 .border .block:nth-child(4n+1) {
+  clear: left;
+}
+
+.example-gutters1 .border .block-group {
+  margin: -4px -10px;
+}
+.example-gutters1 .border .block {
+  padding: 4px 10px;
+}
+
+.example-gutters2 .border .block-group {
+  margin: -8px 0 0 -20px;
+}
+.example-gutters2 .border .block {
+  padding: 8px 0 0 20px;
 }
 
 .faq-different-heights .box {
@@ -410,7 +495,7 @@ code {
   background-color: #AFA;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 35.5em) {
   .hero {
     display: block;
   }

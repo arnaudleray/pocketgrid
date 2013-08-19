@@ -55,7 +55,7 @@ _.each($('h2').toArray(), function (title) {
 
     // Add a button to open examples in a new tab.
     $example.find('.iframe-border')
-      .prepend($('<a href="' + exampleUrl + '" target="_blank" class="button newtab" style="margin-top: -27px; margin-right: 1px; padding: 0 10px;">View this demo in a new tab</a>'));
+      .prepend($('<a href="' + exampleUrl + '" target="_blank" class="button newtab">View this demo in a new tab</a>'));
 
     $example.append('<div class="block-group"><div class="html-source block">Loading...</div><div class="css-source block">Loading...</div></div>')
 
@@ -77,7 +77,7 @@ _.each($('h2').toArray(), function (title) {
 
       // Append HTML sources to the example.
       $example.find('.html-source').html(
-        '<div class="example-sourcetitle">HTML</div><pre class="prettyprint linenums lang-html">' +
+        '<div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">' +
           htmlEncode(htmlSource)
             .replace(/block-group"/g, '<span class="highlight-group">block-group</span>"')
             .replace(/(block)([^-])/g, '<span class="highlight">$1</span>$2')
@@ -96,7 +96,7 @@ _.each($('h2').toArray(), function (title) {
 
         // Append CSS sources to the example.
         $example.find('.css-source').html(
-          '<div class="example-sourcetitle">CSS</div><pre class="prettyprint linenums lang-css">' +
+          '<div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">' +
             htmlEncode(cssSource)
               .replace(/(@media.*)( {)/g, '<span class="highlight-css">$1</span>$2') +
             '</pre>'

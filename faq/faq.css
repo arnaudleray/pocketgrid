@@ -1,3 +1,12 @@
+/* Pocketgrid gutters */
+.block-group {
+  margin: -1em 0 0 -1em;
+}
+
+.block {
+  padding: 1em 0 0 1em;
+}
+
 body {
   padding: 0;
   font-family: Calibri, Helvetica, Arial, sans-serif;
@@ -183,6 +192,8 @@ code {
   color: #777;
   font-weight: bold;
   background-color: #FB0;
+  margin: -27px 1px -1px 0;
+  padding: 0 10px;
 }
 
 .button.newtab:hover {
@@ -199,12 +210,13 @@ code {
   border-radius: .7em;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 35.5em) {
   .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     margin: 0;
     padding: 0;
     background-color: transparent;
