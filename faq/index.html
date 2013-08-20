@@ -52,18 +52,53 @@
         <h2>Table of Contents</h2>
       
         <div class="toc">
-          <a href="#why-pocketgrid">Why should I use PocketGrid instead of Twitter Bootstrap or other grids?</a><br/>
+          <a href="#compatibility">Compatibility: which browsers are supported by PocketGrid?</a><br/>
+          <a href="#why-pocketgrid">Should I use PocketGrid instead of Twitter Bootstrap or other grids?</a><br/>
           <a href="#different-heights">When blocks do not have the same height, my layout is broken: why?</a><br/>
           <a href="#device-detection">I don't like Media Queries, can I use mobile device detection instead, or something else?</a><br/>
-          <a href="#how-it-works">How PocketGrid works internally?</a>
+          <a href="#change-class-names">Can I change the 'block' and 'block-group' class names?</a><br/>
+          <a href="#extra-block-groups">Can I avoid using an extra &lt;div&gt; for block groups?</a><br/>
+          <a href="#html5-tags">Can I use HTML5 tags instead of &lt;div&gt; tags?</a>
         </div>
 
         <!-- ************************************************** -->
+
+        <div class="question">
+          <a class="question-anchor" name="compatibility">#</a>
+          <a href="#compatibility"><h2 class="question-title">Compatibility: which browsers are supported by PocketGrid?</h2></a>
+                
+          <div class="question-answer">
+            PocketGrid is compatible with most browsers (not only modern browsers):<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>IE6+, Firefox, Chrome, Safari, Opera and mobile browsers (iPhone, iPad, Android, Windows Phone, BlackBerry...)</b>
+            <div class="note">
+              By default, PocketGrid is IE8+ compatible.<br/>
+              <b>For IE6 and IE7 compatibility</b>, you will need a polyfill for "box-sizing" compatibility:</p>
+              <ul>
+                <li><b>Box-sizing polyfill (IE6 and IE7 only): <a href="https://github.com/Schepp/box-sizing-polyfill" target="_blank">https://github.com/Schepp/box-sizing-polyfill</a></b><br/>
+              To use it, <a href="https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc" target="_blank">download it</a> and put it on your site (in a "scripts" folder for example),<br/>then add these CSS styles (changing the path to the "boxsizing.htc" file):
+              <pre class="code-sample prettyprint lang-css">
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+  *behavior: url(/scripts/boxsizing.htc); /* change the path */
+}</pre>
+                </li>
+              </ul>
+            </div>
+            <div class="info">
+              Some <b>optional</b> polyfills can also be useful (and are used in some documentation examples):
+              <ul>
+                <li style="margin-bottom: 10px;">For <b>Media Queries</b> (optional, for IE6, IE7 and IE8): <a href="https://github.com/scottjehl/Respond" target="_blank">Respond.js</a><br/>
+                An example of use can be found here: <a href="../examples/basic-layout-responsive.html" target="_blank">basic-layout-responsive example</a></li>
+                <li>For '<b>nth-child</b>' selector compatibility (optional, for IE6, IE7 and IE8): <a href="http://selectivizr.com/" target="_blank">Selectivizr</a><br/>
+                An example of use can be found here: <a href="../examples/fix-for-different-block-heights-nthchild.html" target="_blank">nth-child example</a></li>
+              </ul>
+              Note: these 2 polyfills require your CSS to be in an <b>external file</b> (<code>&lt;link rel="stylesheet" href="stylesheet.css" /&gt;</code>), not in an inline &lt;style&gt; tag.
+            </div>
+          </div>
+        </div>
       
-        <!-- <a id="doc">&nbsp;</a> -->
         <div class="question">
           <a class="question-anchor" name="why-pocketgrid">#</a>
-          <a href="#why-pocketgrid"><h2 class="question-title">Why should I use PocketGrid instead of Twitter Bootstrap or other grids?</h2></a>
+          <a href="#why-pocketgrid"><h2 class="question-title">Should I use PocketGrid instead of Twitter Bootstrap or other grids?</h2></a>
                 
           <div class="question-answer faq-why-pocketgrid">
             Well, first, <b>you can use both</b>!<br/>
@@ -82,7 +117,7 @@
 
             <div class="note">
               If you want to use a complete CSS framework like Twitter Bootstrap, it's dangerous to use it for ALL your site structure because when you upgrade this framework (e.g. upgrading Bootstrap 2 to Bootstrap 3), all your layout will be broken because their grid has evolved and is not backward compatible.<br/>
-              <b>Using a separate grid for your layout (such as PocketGrid!) allows you to upgrade safely your CSS framework</b> (buttons, tabs, carousel...) without breaking your layout!
+              <p><b>Using a separate grid for your layout (such as PocketGrid!) allows you to upgrade safely your CSS framework</b> (buttons, tabs, carousel...) without breaking your layout!</p>
             </div>
           </div>
         </div>
@@ -103,20 +138,21 @@
           <div class="question-answer">
             Yes! Contrary to frameworks like Twitter Bootstrap (where Media Queries are hard-coded!) PocketGrid lets you completely free for <a href="https://en.wikipedia.org/wiki/Mobile_device_detection" target="_blank">device detection</a>.<br/>
             Instead of writing a Media Query like <code>@media (min-width: 40em) { /* Tablet version */ }</code> you could detect the device type with any other technique (parsing the User Agent for example, or using <a href="https://en.wikipedia.org/wiki/WURFL" target="_blank">WURFL</a> or <a href="http://51degrees.codeplex.com/" target="_blank">51Degrees</a>...), and <b>put a CSS class on the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> tag</b> using some javascript or during server rendering:<br/>
-            <code>&lt;html&nbsp;<b>class="tablet"</b>&gt;</code>.<br/>
+            <pre class="code-sample prettyprint lang-html">
+&lt;html&nbsp;<span class="highlight">class="tablet"</span>&gt;</code></pre>
             Then, instead of using Media Queries, you can <b>prefix your block classes with the corresponding device classes</b>:<br/>
-            <pre class="code-sample prettyprint linenums language-css">
+            <pre class="code-sample prettyprint lang-css">
 /* Tablet version */
-<b>.tablet</b> .header { width: 100%; }
-<b>.tablet</b> .menu { width: 100%; }
+<span class="highlight">.tablet</span> .header { width: 100%; }
+<span class="highlight">.tablet</span> .menu { width: 100%; }
 
 /* Desktop version */
-<b>.desktop</b> .header { width: 70%; }
-<b>.desktop</b> .menu { width: 30%; }
+<span class="highlight">.desktop</span> .header { width: 70%; }
+<span class="highlight">.desktop</span> .menu { width: 30%; }
 
 /* TV version */
-<b>.tv</b> .header { width: 50%; }
-<b>.tv</b> .menu { width: 50%; }</pre>
+<span class="highlight">.tv</span> .header { width: 50%; }
+<span class="highlight">.tv</span> .menu { width: 50%; }</pre>
             <div class="note">Some CSS class name suggestions:
               <ul style="margin: 0 0 8px 0;">
                 <li>"mobile", "tablet", "desktop", "tv"...</li>
@@ -130,12 +166,50 @@
         </div>
 
         <div class="question">
-          <a class="question-anchor" name="how-it-works">#</a>
-          <a href="#different-heights"><h2 class="question-title">How PocketGrid works internally?</h2></a>
+          <a class="question-anchor" name="change-class-names">#</a>
+          <a href="#change-class-names"><h2 class="question-title">Can I change the 'block' and 'block-group' class names?</h2></a>
                 
           <div class="question-answer">
-            <!-- This question has also been <a href="../docs/#automatic-rows-in-real-life">answered in the documentation</a>.<br/> -->
-            In few words, PocketGrid uses CSS floats and some magical CSS tricks! ;)
+            Yes!<br/>
+            You may prefer '<b>grid</b>' or '<b>row</b>' and '<b>col</b>'?<br/>
+            No problem! PocketGrid is so tiny that it's trivial to customize: in your favorite text editor, first do a 'replace all' for the 'block-group' name (with 'grid' or 'row' for example), and then do a 'replace all' for the 'block' name (with 'col' for example).<br/>
+            Do it in that order (because the '<i>block</i>-group' contains 'block').<br/>
+            <i>Note: Twitter Bootstrap already defines classes like 'container' or 'row', so if you want to use PocketGrid with Twitter Bootstrap, avoid using the same class names! ;)</i>
+          </div>
+        </div>
+
+        <div class="question">
+          <a class="question-anchor" name="extra-block-groups">#</a>
+          <a href="#extra-block-groups"><h2 class="question-title">Can I avoid using an extra <code>&lt;div&gt;</code> for block groups?</h2></a>
+                
+          <div class="question-answer">
+            Yes! You can put the <code>block-group</code> class directly on the <code>&lt;body&gt;</code> tag:<br/>
+            <pre class="code-sample prettyprint lang-html">
+&lt;<span class="highlight">body</span> class="block-group"&gt;
+  &lt;div class="header block"&gt;Header&lt;/div&gt;
+  &lt;div class="nav block"&gt;Nav&lt;/div&gt;
+  &lt;div class="main block"&gt;Main&lt;/div&gt;
+  &lt;div class="links block"&gt;Links&lt;/div&gt;
+  &lt;div class="footer block"&gt;Footer&lt;/div&gt;
+&lt;/body&gt;</pre>
+          </div>
+        </div>
+
+        <div class="question">
+          <a class="question-anchor" name="html5-tags">#</a>
+          <a href="#html5-tags"><h2 class="question-title">Can I use HTML5 tags instead of <code>&lt;div&gt;</code> tags?</h2></a>
+                
+          <div class="question-answer">
+            Yes! You can use any tag you want!<br/>
+            For example:<br/>
+            <pre class="code-sample prettyprint lang-html">
+&lt;body class="block-group"&gt;
+  &lt;<span class="highlight">header</span> class="header block"&gt;Header&lt;/header&gt;
+  &lt;<span class="highlight">nav</span> class="nav block"&gt;Nav&lt;/nav&gt;
+  &lt;<span class="highlight">section</span> class="main block"&gt;Main&lt;/section&gt;
+  &lt;<span class="highlight">aside</span> class="links block"&gt;Links&lt;/aside&gt;
+  &lt;<span class="highlight">footer</span> class="footer block"&gt;Footer&lt;/footer&gt;
+&lt;/body&gt;</pre>
           </div>
         </div>
 

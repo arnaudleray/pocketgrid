@@ -172,6 +172,41 @@ code {
   color: #999;
 }
 
+.prettyprint {
+  margin: 0;
+  overflow: auto;
+  background-color: transparent;
+  position: relative;
+  border-radius: 4px;
+}
+
+.note .prettyprint, .info .prettyprint, .warn .prettyprint {
+  background-color: #F9F9F9;
+}
+
+.lang-html:before, .lang-css:before {
+  content: 'HTML';
+  font-size: 3em;
+  font-weight: bold;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  padding-right: 4px;
+  color: #F0F0F0;
+  background-color: #F9F9F9;
+  text-align: right;
+  margin: 0;
+  line-height: 1em;
+}
+
+.lang-css:before {
+  content: 'CSS';
+}
+
 .button {
   color: white;
   background-color: #06F;
@@ -273,6 +308,11 @@ code {
 
 .question-title {
   color: #777 !important;
+}
+
+.highlight {
+  font-weight: bold;
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .border {
