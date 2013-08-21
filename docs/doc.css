@@ -537,7 +537,8 @@ code {
   .feature ul {
     display: inline-block;
     text-align: left;
-    width: 14em;
+    width: 14.5em;
+    padding-left: 0;
   }
 
   .block-auto {
