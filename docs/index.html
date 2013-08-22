@@ -814,7 +814,7 @@
   <script type="text/javascript" src="../js/selectivizr-min.js"></script>
 <![endif]-->
 <script src="google-code-prettify/prettify.js"></script>
-<script src="http://underscorejs.org/underscore.js"></script>
+<!-- <script src="http://underscorejs.org/underscore.js"></script> -->
 <!-- <script src="helpers-underscore.js"></script> -->
 <!-- <script src="init.js"></script> -->
 
@@ -825,16 +825,17 @@
   var iTitle = 0;
   var $title;
   var anchor;
-  _.each($('h2').toArray(), function (title) {
+  var titles = $('h2').toArray()
+  var nbTitles = titles.length;
+  for (iTitle = 0; iTitle < nbTitles; iTitle++) {
     if (iTitle > 0) {
-      $title = $(title);
+      $title = $(titles[iTitle]);
       anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
       $title.before('<a name="'+anchor+'" href="#" class="title-anchor">#</a>');
       $title.wrap('<a href="#'+anchor+'"></a>');
       $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
     }
-    iTitle++;
-  });
+  }
 
   // Colorize HTML and CSS code
   prettyPrint();
