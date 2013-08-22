@@ -227,7 +227,6 @@ code {
   color: #777;
   font-weight: bold;
   background-color: #FB0;
-  margin: -27px 1px -1px 0;
   padding: 0 10px;
 }
 
@@ -297,6 +296,10 @@ code {
     text-shadow: 0 0 0.12em #CCC, 0 0 0.12em #CCC;
   }
 }
+.test {
+  color: blue;
+}
+
 .hero {
   display: none;
 }
@@ -358,17 +361,22 @@ code {
 
 .iframe-border {
   border: solid 2px #999;
-  border-top-width: 30px;
+  /*border-top-width: 30px;*/
   border-radius: 8px;
 }
 
-.iframe-border:before {
-  content: "Demo";
+.iframe-header {
+  background-color: #999;
+  height: 33px;
+  padding: 0 3px 0 8px;
+}
+
+.iframe-title {
+  float: left;
   color: white;
-  position: absolute;
-  margin-top: -27px;
-  margin-left: 10px;
   font-weight: bold;
+  line-height: 30px;
+  font-size: 1.2em;
 }
 
 .example-sourcetitle {
@@ -505,9 +513,11 @@ code {
     font-weight: bold;
     text-align: center;
     color: #FFF;
-    color: black\9;
-    /* Hack IE < 9 */
     text-shadow: 0 0 .2em #555;
+  }
+  .lte9 .hero-title h1 {
+    /* Hack IE < 9 */
+    color: black;
   }
   .hero-title h1, .hero-title h1 x:-moz-any-link {
     /* Hack Firefox */
@@ -537,8 +547,11 @@ code {
   .feature ul {
     display: inline-block;
     text-align: left;
-    width: 14.5em;
-    padding-left: 0;
+    width: 16em;
+    padding-left: 4px;
+  }
+  .feature ul li {
+    padding-right: .7em;
   }
 
   .block-auto {

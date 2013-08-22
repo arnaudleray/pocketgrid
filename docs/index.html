@@ -110,9 +110,9 @@
             <div class="note">All the examples displayed  in a "Demo" frame are <b>real examples</b> displayed in an iframe (no fake image).<br/>
             <b>You can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below.</div>
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/rows-and-columns.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             As you can see in the code below, you just have to:
             <ul>
@@ -120,6 +120,32 @@
               <li>define the block <b>widths</b> in your CSS</li>
             </ul>
           </div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- First row --&gt;
+  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- Second row --&gt;
+  &lt;div class="b3 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- Third row --&gt;
+  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">/* First row */
+.b1, .b2 { width: 50%; }
+
+/* Second row */
+.b3 { width: 50%; }
+.b4, .b5 { width: 25%; }
+
+/* Third row */
+.b6, .b7, .b8, .b9, .b10 { width: 20%; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -132,9 +158,9 @@
             Thus, instead of creating a <b>block-group</b> for each row, we can create just <b>1 block-group containing all our blocks</b>!<br/>
             Then, according to the width of blocks, blocks will automatically go to a new line when a row is full:
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/automatic-rows.html" style="height: 240px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/automatic-rows.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/automatic-rows.html" style="height: 200px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             The "automatic rows" principle is simple to understand:<br/>
             <ul>
@@ -143,19 +169,35 @@
               <li>b6 + b7 + b8 + b9 = 25% + 25% + 20% + 20% = 90%, but b10 has a width of 20%, so the total would be greater than 100%. Thus b10 goes to a new line!</li>
             </ul>
           </div>
-        </div>
-        <div class="note">
-          To sum up what makes the "<b>automatic rows</b>" feature more flexible:
-          <ul>
-            <li>In the HTML, you just define blocks in a block-group, no matter if they are on the same row or not.</li>
-            <li>In the CSS, you set the block widths, and <b>according to the block widths, the blocks will be displayed on the same row (or not)</b>.</li>
-            <li>It's <b>compatible with Media Queries</b>: you can set different widths for each block according to the device (smartphone, tablet, desktop, TV...)<br/>
-            For example, blocks could be stacked on mobile, side by side on desktop, and an hybrid version on tablets: it's just CSS configuration!<br/>
-            <b>That's what makes PocketGrid so flexible and powerful!</b></li>
-          </ul>
-        </div>
-        <div class="warn">
-          If your blocks have <b>different heights</b>, the "automatic rows" layout could seem broken, but it's not: this problem and its solution will be explained later (<a href="#automatic-rows-in-real-life">see "Automatic rows in real life!"</a>).
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
+  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b3 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3 { width: 50%; }
+.b4, .b5, .b6, .b7 { width: 25%; }
+.b8, .b9, .b10 { width: 20%; }</pre></div></div>
+
+          <div class="note">
+            To sum up what makes the "<b>automatic rows</b>" feature more flexible:
+            <ul>
+              <li>In the HTML, you just define blocks in a block-group, no matter if they are on the same row or not.</li>
+              <li>In the CSS, you set the block widths, and <b>according to the block widths, the blocks will be displayed on the same row (or not)</b>.</li>
+              <li>It's <b>compatible with Media Queries</b>: you can set different widths for each block according to the device (smartphone, tablet, desktop, TV...)<br/>
+              For example, blocks could be stacked on mobile, side by side on desktop, and an hybrid version on tablets: it's just CSS configuration!<br/>
+              <b>That's what makes PocketGrid so flexible and powerful!</b></li>
+            </ul>
+          </div>
+          <div class="warn">
+            If your blocks have <b>different heights</b>, the "automatic rows" layout could seem broken, but it's not: this problem and its solution will be explained later (<a href="#automatic-rows-in-real-life">see "Automatic rows in real life!"</a>).
+          </div>
         </div>
 
         <!-- ************************************************** -->
@@ -167,9 +209,9 @@
             Usually, a mobile layout consists of blocks (header, navigation, main content, links, footer...) vertically stacked.<br/>
             This kind of layout is very simple with PocketGrid: you just have to put all your blocks in a block-group, without any CSS configuration (because the default width of blocks is 100%, and blocks automatically go to a new row after 100%, so <b>blocks are stacked by default</b>):
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 300px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/simple-stack.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 240px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             The source of this example (just below) is pretty self-explanatory:
             <ul>
@@ -178,6 +220,15 @@
               <li>blocks are stacked by default (width: 100%)</li>
             </ul>
           </div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
+  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">/* Nothing in the CSS! */</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -188,12 +239,22 @@
           <div class="example-description">
             Now imagine that we would like to display the navigation block and the main block side by side:
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             To do this, we can keep the same HTML as in the previous example: we just have to give a width to the navigation and main blocks (respectively 20% and 80%):
           </div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
+  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
+.main { width: 80%; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -211,12 +272,22 @@
             </ul>
             Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout-responsive.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block widths according to the device width:
           </div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
+  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
+.main { width: 80%; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -229,9 +300,35 @@
             You just have to put a <b>block-group</b> inside another <b>block-group</b>!<br/>
             Let's modify the previous example, replacing the main block with a nested grid (containing items in 5 columns):
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 350px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 310px;" frameborder="0"></iframe></div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
+  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;!-- nested grid --&gt;
+  &lt;div class="main <span class="highlight-group">block-group</span>"&gt;
+    &lt;div class="ngrid <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nested grid<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
+.main { width: 80%; }
+/* Items in 5 columns (20% each) */
+.item { width: 20%; }
+
+/* Give a height of 200px to the nav, to make it more realistic! */
+.nav { height: 200px; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -245,13 +342,42 @@
             Keeping our previous nested grids example, we will display the nested items in 2 columns on mobile, 4 columns on tablet and 5 columns on desktop!<br/>
             Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 450px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids-responsive.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 380px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">
             Sounds difficult?<br/>
             Well, with PocketGrid, it's very simple: to dynamically change the number of columns of a grid, you just have to redefine the block width according to media queries:
           </div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;!-- &lt;div class="block-container"&gt; --&gt;
+  &lt;div class="<span class="highlight-group">block-group</span>"&gt;
+    &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;!-- nested grid --&gt;
+    &lt;div class="main <span class="highlight-group">block-group</span>"&gt;
+      &lt;div class="ngrid <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nested grid<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;/div&gt;
+&lt;!-- &lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
+.main { width: 80%; }
+/* Items in 5 columns (20% each) */
+.item { width: 20%; }
+
+/* Give a height of 200px to the nav, to make it more realistic! */
+.nav { height: 200px; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -264,10 +390,38 @@
             To do so, you just have to set the <b>margin-left</b> or <b>margin-right</b> properties of a block to the size of one or more columns.<br/>
             For example, here the "Left offset" block has a left offset of 1 column (<code>margin-left: 20%</code>) and the "Right offset" block has a left offset of 2 column (<code>margin-right: 40%</code>)
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/offsets.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;body class="<span class="highlight-group">block-group</span>"&gt;
+
+  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b3 <span class="highlight">block</span>"&gt;&lt;div class="box" title="margin-left: 20%"&gt;Left&nbsp;offset&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b11 <span class="highlight">block</span>"&gt;&lt;div class="box" title="margin-right: 20%"&gt;Right&nbsp;offset&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="b12 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B12<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+
+&lt;/body&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
+  width: 20%;
+}
+/* Left offset: just give the margin-left the size you want! */
+.b3 { margin-left: 20%; }
+/* Right offset: just give the margin-right the size you want! */
+.b11 { margin-right: 40%; }
+
+/* Some cosmetics for readability */
+.b3 .box { background-color: #CDF; font-size: .8em; }
+.b11 .box { background-color: #CFC; font-size: .8em; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -283,10 +437,45 @@
               <li>Set the <code>left</code> property of B to <em>minus</em> the width of A</li>
             </ul>
           </div>
-          <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe>
-          </div>
+
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/source-ordering-push-pull.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe></div>
+
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
+
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;body class="<span class="highlight-group">block-group</span>"&gt;
+
+  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="before <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>BEFORE<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="after <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>AFTER<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+
+&lt;/body&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b5, .b6, .b7, .b8, .b9, .b10 {
+  width: 10%;
+}
+
+.before {
+  width: 30%;
+  /* Move the column to the right
+     (left == AFTER's width) */
+  position: relative; left: 20%;
+}
+.after {
+  width: 20%;
+
+  /* Move the column to the left
+     (left == -BEFORE's width) */
+  position: relative; left: -30%;
+}
+
+.before .box { background-color: #CDF; }
+.after .box { background-color: #CFC; }</pre></div></div>
+
         </div>
       
         <!-- ************************************************** -->
@@ -626,8 +815,30 @@
 <![endif]-->
 <script src="google-code-prettify/prettify.js"></script>
 <script src="http://underscorejs.org/underscore.js"></script>
-<script src="helpers-underscore.js"></script>
-<script src="init.js"></script>
+<!-- <script src="helpers-underscore.js"></script> -->
+<!-- <script src="init.js"></script> -->
+
+<script>
+  // Build the table of contents
+  var $toc = $('.toc');
+  $toc.html('');
+  var iTitle = 0;
+  var $title;
+  var anchor;
+  _.each($('h2').toArray(), function (title) {
+    if (iTitle > 0) {
+      $title = $(title);
+      anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
+      $title.before('<a name="'+anchor+'" href="#" class="title-anchor">#</a>');
+      $title.wrap('<a href="#'+anchor+'"></a>');
+      $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
+    }
+    iTitle++;
+  });
+
+  // Colorize HTML and CSS code
+  prettyPrint();
+</script>
 
 </body>
 </html>
