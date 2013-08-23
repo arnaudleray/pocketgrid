@@ -8,9 +8,9 @@
   <title>PocketGrid Documentation</title>
 
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/normalize/2.1.0/normalize.css">
-  <link rel="stylesheet" href="google-code-prettify/prettify.css">
-  <link rel="stylesheet" href="../pocketgrid.css" media="screen" />
-  <link rel="stylesheet" href="doc.css" media="screen" />
+  <!-- <link rel="stylesheet" href="google-code-prettify/prettify.css"> -->
+  <link rel="stylesheet" href="../pocketgrid.css" />
+  <link rel="stylesheet" href="doc.css" />
 
   <link rel="shortcut icon" href="../images/favicon.ico">
 </head>
@@ -26,8 +26,6 @@
         <!-- NAVIGATION -->
         <nav>
           <ul>
-            <!-- <li><a href="../#features">Features</a></li> -->
-            <!-- <li><a href="#">Quick start</a></li> -->
             <li><a href="..">Home</a></li>
             <li><a href="#" class="selected">Documentation</a></li>
             <li><a href="../faq">FAQ</a></li>
@@ -58,20 +56,22 @@
         <h2 class="section-title">Quick start</h2>
       
         <p>Here is the minimal markup you need to put in your pages:</p>
-        <pre class="prettyprint lang-html">
+
+<pre class="prettyprint lang-html">
 &lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;!-- Don't forget the viewport meta tag for responsive sites! --&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;!-- Include PocketGrid --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;pocketgrid.css&quot; /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- YOUR CONTENT HERE --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<span class="tag">&lt;html</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head</span><span class="tag">&gt;</span>
+    <span class="com">&lt;!-- Don't forget the viewport meta tag for responsive sites! --&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="pname">name</span><span class="punc">="</span><span class="pval">viewport" content="width=device-width, initial-scale=1.0</span><span class="punc">"</span><span class="tag">&gt;</span>
+    <span class="com">&lt;!-- Include PocketGrid --&gt;</span>
+    <span class="tag">&lt;link</span> <span class="pname">rel</span><span class="punc">="</span><span class="pval">stylesheet" href="pocketgrid.css</span><span class="punc">"</span> /<span class="tag">&gt;</span>
+  <span class="tag">&lt;/head</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;body</span><span class="tag">&gt;</span>
+    <span class="com">&lt;!-- YOUR CONTENT HERE --&gt;</span>
+  <span class="tag">&lt;/body&gt;
+&lt;/html</span><span class="tag">&gt;</span>
 </pre>
+
         <p>As you can see, you just have to include the <b>pocketgrid.css</b> (or pocketgrid.min.css) file in the <code>&lt;head&gt;</code> tag of your page<br/>
           and don't forget to set the <b>viewport meta tag</b> to manage media queries correctly on mobile.
         </p>
@@ -121,30 +121,30 @@
             </ul>
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- First row --&gt;
-  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span> <span class="com">&lt;!-- First row --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b1 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b2 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b2<span class="tag">&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- Second row --&gt;
-  &lt;div class="b3 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span> <span class="com">&lt;!-- Second row --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b3 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b4 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b5 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b5<span class="tag">&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="<span class="highlight-group">block-group</span>"&gt; &lt;!-- Third row --&gt;
-  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">/* First row */
-.b1, .b2 { width: 50%; }
+&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span> <span class="com">&lt;!-- Third row --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b6 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b7 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b8 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b9 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b10 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b10<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css"><span class="com">/* First row */</span>
+.b1, .b2 { <span class="pname">width</span><span class="punc">: </span><span class="pval">50%</span><span class="punc">;</span> }
 
-/* Second row */
-.b3 { width: 50%; }
-.b4, .b5 { width: 25%; }
+<span class="com">/* Second row */</span>
+.b3 { <span class="pname">width</span><span class="punc">: </span><span class="pval">50%</span><span class="punc">;</span> }
+.b4, .b5 { <span class="pname">width</span><span class="punc">: </span><span class="pval">25%</span><span class="punc">;</span> }
 
-/* Third row */
-.b6, .b7, .b8, .b9, .b10 { width: 20%; }</pre></div></div>
+<span class="com">/* Third row */</span>
+.b6, .b7, .b8, .b9, .b10 { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }</pre></div></div>
 
         </div>
       
@@ -170,20 +170,20 @@
             </ul>
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
-  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b3 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>b10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3 { width: 50%; }
-.b4, .b5, .b6, .b7 { width: 25%; }
-.b8, .b9, .b10 { width: 20%; }</pre></div></div>
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b1 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b2 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b3 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b4 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b5 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b6 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b7 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b8 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b9 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b10 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>b10<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3 { <span class="pname">width</span><span class="punc">: </span><span class="pval">50%</span><span class="punc">;</span> }
+.b4, .b5, .b6, .b7 { <span class="pname">width</span><span class="punc">: </span><span class="pval">25%</span><span class="punc">;</span> }
+.b8, .b9, .b10 { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }</pre></div></div>
 
           <div class="note">
             To sum up what makes the "<b>automatic rows</b>" feature more flexible:
@@ -221,13 +221,13 @@
             </ul>
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
-  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">/* Nothing in the CSS! */</pre></div></div>
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">nav <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nav<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">main <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Main<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">links <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Links<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css"><span class="com">/* Nothing in the CSS! */</span></pre></div></div>
 
         </div>
       
@@ -246,14 +246,14 @@
             To do this, we can keep the same HTML as in the previous example: we just have to give a width to the navigation and main blocks (respectively 20% and 80%):
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
-  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
-.main { width: 80%; }</pre></div></div>
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">nav <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nav<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">main <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Main<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">links <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Links<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+.main { <span class="pname">width</span><span class="punc">: </span><span class="pval">80%</span><span class="punc">;</span> }</pre></div></div>
 
         </div>
       
@@ -279,14 +279,28 @@
             To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block widths according to the device width:
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
-  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="main <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Main<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="links <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Links<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
-.main { width: 80%; }</pre></div></div>
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">nav <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nav<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">main <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Main<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">links <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Links<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css"><span class="com">/* Smartphone version
+   Nothing to <span class="pname">do</span><span class="punc">: </span><span class="pval">blocks are stacked by default</span><span class="punc"></span>. */</span>
+
+<span class="com">/* Tablet version */</span>
+<span class="mq">@media <span class="punc">(</span><span class="pname">min-width</span><span class="punc">: </span><span class="pval">768px</span><span class="punc"></span><span class="punc">)</span></span> {
+  .nav { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+  .main { <span class="pname">width</span><span class="punc">: </span><span class="pval">80%</span><span class="punc">;</span> }
+}
+
+<span class="com">/* Desktop version */</span>
+<span class="mq">@media <span class="punc">(</span><span class="pname">min-width</span><span class="punc">: </span><span class="pval">960px</span><span class="punc"></span><span class="punc">)</span></span> {
+  .nav { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+  .main { <span class="pname">width</span><span class="punc">: </span><span class="pval">60%</span><span class="punc">;</span> }
+  .links { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+}
+</pre></div></div>
 
         </div>
       
@@ -303,31 +317,31 @@
 
 <div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 310px;" frameborder="0"></iframe></div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;div class="<span class="highlight-group">block-group</span>"&gt;
-  &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;!-- nested grid --&gt;
-  &lt;div class="main <span class="highlight-group">block-group</span>"&gt;
-    &lt;div class="ngrid <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nested grid<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-&lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
-.main { width: 80%; }
-/* Items in 5 columns (20% each) */
-.item { width: 20%; }
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">nav <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nav<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="com">&lt;!-- nested grid --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">main <span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">ngrid <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nested grid<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+.main { <span class="pname">width</span><span class="punc">: </span><span class="pval">80%</span><span class="punc">;</span> }
+<span class="com">/* Items in 5 columns (20% each) */</span>
+.item { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
 
-/* Give a height of 200px to the nav, to make it more realistic! */
-.nav { height: 200px; }</pre></div></div>
+<span class="com">/* Give a height of 200px to the nav, to make it more realistic! */</span>
+.nav { <span class="pname">height</span><span class="punc">: </span><span class="pval">200px</span><span class="punc">;</span> }</pre></div></div>
 
         </div>
       
@@ -350,33 +364,40 @@
             Well, with PocketGrid, it's very simple: to dynamically change the number of columns of a grid, you just have to redefine the block width according to media queries:
           </div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;!-- &lt;div class="block-container"&gt; --&gt;
-  &lt;div class="<span class="highlight-group">block-group</span>"&gt;
-    &lt;div class="header <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Header<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;div class="nav <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nav<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;!-- nested grid --&gt;
-    &lt;div class="main <span class="highlight-group">block-group</span>"&gt;
-      &lt;div class="ngrid <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Nested grid<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>3<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-      &lt;div class="item <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="footer <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>Footer<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;/div&gt;
-&lt;!-- &lt;/div&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.nav { width: 20%; }
-.main { width: 80%; }
-/* Items in 5 columns (20% each) */
-.item { width: 20%; }
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">nav <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nav<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="com">&lt;!-- nested grid --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">main <span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">ngrid <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Nested grid<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">item <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css"><span class="com">/* Common to smartphone, tablet and desktop */</span>
+.nav { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> <span class="pname">height</span><span class="punc">: </span><span class="pval">200px</span><span class="punc">;</span> }
+.main { <span class="pname">width</span><span class="punc">: </span><span class="pval">80%</span><span class="punc">;</span> }
+.item { <span class="pname">width</span><span class="punc">: </span><span class="pval">50%</span><span class="punc">;</span> } <span class="com">/* 2 columns */</span>
 
-/* Give a height of 200px to the nav, to make it more realistic! */
-.nav { height: 200px; }</pre></div></div>
+<span class="com">/* Tablet version:
+   items are displayed in 4 columns (25% each) */</span>
+<span class="mq">@media <span class="punc">(</span><span class="pname">min-width</span><span class="punc">: </span><span class="pval">40em</span><span class="punc"></span><span class="punc">)</span></span> {
+  .item { <span class="pname">width</span><span class="punc">: </span><span class="pval">25%</span><span class="punc">;</span> } <span class="com">/* 4 columns */</span>
+}
+
+<span class="com">/* Desktop version:
+   items are displayed in 5 columns (20% each) */</span>
+<span class="mq">@media <span class="punc">(</span><span class="pname">min-width</span><span class="punc">: </span><span class="pval">60em</span><span class="punc"></span><span class="punc">)</span></span> {
+  .item { <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> } <span class="com">/* 5 columns */</span>
+}</pre></div></div>
 
         </div>
       
@@ -395,32 +416,32 @@
 
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;body class="<span class="highlight-group">block-group</span>"&gt;
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;body</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
 
-  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b3 <span class="highlight">block</span>"&gt;&lt;div class="box" title="margin-left: 20%"&gt;Left&nbsp;offset&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="b4 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B4<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b11 <span class="highlight">block</span>"&gt;&lt;div class="box" title="margin-right: 20%"&gt;Right&nbsp;offset&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="b12 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B12<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b1 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b2 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b3 <span class="highlight">block</span>"<span class="tag">&gt;</span><span class="tag">&lt;div</span> class="box" title="margin-left: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Left&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b4 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b5 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b6 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b7 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b8 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b9 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b10 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b11 <span class="highlight">block</span>"<span class="tag">&gt;</span><span class="tag">&lt;div</span> class="box" title="margin-right: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Right&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b12 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B12<span class="tag">&lt;/div&gt;
 
-&lt;/body&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
-  width: 20%;
+&lt;/body</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
+  <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span>
 }
-/* Left offset: just give the margin-left the size you want! */
-.b3 { margin-left: 20%; }
-/* Right offset: just give the margin-right the size you want! */
-.b11 { margin-right: 40%; }
+<span class="com">/* Left <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-left the size you want</span><span class="punc"></span>! */</span>
+.b3 { <span class="pname">margin-left</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+<span class="com">/* Right <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-right the size you want</span><span class="punc"></span>! */</span>
+.b11 { <span class="pname">margin-right</span><span class="punc">: </span><span class="pval">40%</span><span class="punc">;</span> }
 
-/* Some cosmetics for readability */
-.b3 .box { background-color: #CDF; font-size: .8em; }
-.b11 .box { background-color: #CFC; font-size: .8em; }</pre></div></div>
+<span class="com">/* Some cosmetics for readability */</span>
+.b3 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CDF; <span class="pname">font-size</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>.8em; }
+.b11 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CFC; <span class="pname">font-size</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>.8em; }</pre></div></div>
 
         </div>
       
@@ -442,39 +463,39 @@
 
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
 
-<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html">&lt;body class="<span class="highlight-group">block-group</span>"&gt;
+<div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;body</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
 
-  &lt;div class="b1 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B1<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b2 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B2<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="before <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>BEFORE<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="after <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>AFTER<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b5 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B5<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b6 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B6<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b7 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B7<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b8 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B8<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b9 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B9<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
-  &lt;div class="b10 <span class="highlight">block</span>"&gt;<span class="discreet">&lt;div class="box"&gt;</span>B10<span class="discreet">&lt;\div&gt;</span>&lt;/div&gt;
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b1 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b2 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">before <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>BEFORE<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">after <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>AFTER<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b5 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b6 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b7 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b8 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b9 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b10 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B10<span class="tag">&lt;/div&gt;
 
-&lt;/body&gt;</pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b5, .b6, .b7, .b8, .b9, .b10 {
-  width: 10%;
+&lt;/body</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b5, .b6, .b7, .b8, .b9, .b10 {
+  <span class="pname">width</span><span class="punc">: </span><span class="pval">10%</span><span class="punc">;</span>
 }
 
 .before {
-  width: 30%;
-  /* Move the column to the right
-     (left == AFTER's width) */
-  position: relative; left: 20%;
+  <span class="pname">width</span><span class="punc">: </span><span class="pval">30%</span><span class="punc">;</span>
+  <span class="com">/* Move the column to the right
+     (left == AFTER's width) */</span>
+  <span class="pname">position</span><span class="punc">: </span><span class="pval">relative</span><span class="punc">;</span> <span class="pname">left</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span>
 }
 .after {
-  width: 20%;
+  <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span>
 
-  /* Move the column to the left
-     (left == -BEFORE's width) */
-  position: relative; left: -30%;
+  <span class="com">/* Move the column to the left
+     (left == -BEFORE's width) */</span>
+  <span class="pname">position</span><span class="punc">: </span><span class="pval">relative</span><span class="punc">;</span> <span class="pname">left</span><span class="punc">: </span><span class="pval">-30%</span><span class="punc">;</span>
 }
 
-.before .box { background-color: #CDF; }
-.after .box { background-color: #CFC; }</pre></div></div>
+.before .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CDF; }
+.after .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CFC; }</pre></div></div>
 
         </div>
       
@@ -511,14 +532,14 @@
               </div>
               <div class="block-auto block">
                 To set gutters, just add these styles:
-                <pre class="code-sample prettyprint lang-css">
-.block-group { margin: -<i>verticalGutter</i> -<i>horizontalGutter</i>; }
-.block { padding: <i>verticalGutter</i> <i>horizontalGutter</i>; }
+<pre class="prettyprint lang-css">
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-verticalGutter -horizontalGutter</span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">verticalGutter horizontalGutter</span><span class="punc">;</span> }
 </pre>
                 For example, if we want an horizontal gutter of 2px, and a vertical gutter of 6px:
-                <pre class="code-sample prettyprint lang-css">
-.block-group { margin: -2px -6px; }
-.block { padding: 2px 6px; }
+<pre class="prettyprint lang-css">
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-2px -6px</span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">2px 6px</span><span class="punc">;</span> }
 </pre>
                 (note that block-group margins are <b>negative</b> values)
               </div>
@@ -552,14 +573,14 @@
               </div>
               <div class="block-auto block">
                 To set gutters, just add these styles:
-                <pre class="code-sample prettyprint lang-css">
-.block-group { margin: -<i>verticalGutter</i> 0 0 -<i>horizontalGutter</i>; }
-.block { padding: <i>verticalGutter</i> 0 0 <i>horizontalGutter</i>; }
+<pre class="prettyprint lang-css">
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-verticalGutter 0 0 -horizontalGutter</span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">verticalGutter 0 0 horizontalGutter</span><span class="punc">;</span> }
 </pre>
                 For example, if we want an horizontal gutter of 1em, and a vertical gutter of 2em:
-                <pre class="code-sample prettyprint lang-css">
-.block-group { margin: -4px 0 0 -12px; }
-.block { padding: 4px 0 0 12px; }
+<pre class="prettyprint lang-css">
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-4px 0 0 -12px</span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">4px 0 0 12px</span><span class="punc">;</span> }
 </pre>
 (note that margins and paddings have been multiplied by 2 in comparison to option&nbsp;1,<br/>because they are only on left and top sides)
               </div>
@@ -586,9 +607,6 @@
               </p>
             </div>
           </div> <!-- .example-description -->
-          <!-- <div class="iframe-border">
-            <iframe class="example-iframe" src="../examples/mixed-gutters.html" style="height: 450px;" frameborder="0"></iframe>
-          </div> -->
         </div> <!-- .example -->
       
         <!-- ************************************************** -->
@@ -637,21 +655,22 @@
                 </div>
               </div>
               <div class="block-auto block">
-            <pre class="code-sample prettyprint lang-html">
-&lt;div class="block-group"&gt;
-  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+<pre class="prettyprint lang-html">
+<span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b1</span><span class="punc">"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b2</span><span class="punc">"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b3</span><span class="punc">"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b4</span><span class="punc">"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b5</span><span class="punc">"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b6</span><span class="punc">"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b7</span><span class="punc">"</span><span class="tag">&gt;</span>7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b8</span><span class="punc">"</span><span class="tag">&gt;</span>8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b9</span><span class="punc">"</span><span class="tag">&gt;</span>9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b10</span><span class="punc">"</span><span class="tag">&gt;</span>10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b11</span><span class="punc">"</span><span class="tag">&gt;</span>11<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b12</span><span class="punc">"</span><span class="tag">&gt;</span>12<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span>
+</pre>
               </div>
             </div>
 
@@ -699,25 +718,26 @@
                 </div>
               </div>
               <div class="block-auto block">
-                <pre class="code-sample prettyprint lang-html">
-&lt;div class="block-group"&gt;
-  &lt;div class="block b1"&gt;&lt;div class="box"&gt;1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b2"&gt;&lt;div class="box"&gt;2&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b3"&gt;&lt;div class="box"&gt;3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b4"&gt;&lt;div class="box"&gt;4&lt;/div&gt;&lt;/div&gt;
+<pre class="prettyprint lang-html">
+<span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b1</span><span class="punc">"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b2</span><span class="punc">"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b3</span><span class="punc">"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b4</span><span class="punc">"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="block-group"&gt;
-  &lt;div class="block b5"&gt;&lt;div class="box"&gt;5&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b6"&gt;&lt;div class="box"&gt;6&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b7"&gt;&lt;div class="box"&gt;7&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b8"&gt;&lt;div class="box"&gt;8&lt;/div&gt;&lt;/div&gt;
+&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b5</span><span class="punc">"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b6</span><span class="punc">"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b7</span><span class="punc">"</span><span class="tag">&gt;</span>7<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b8</span><span class="punc">"</span><span class="tag">&gt;</span>8<span class="tag">&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="block-group"&gt;
-  &lt;div class="block b9"&gt;&lt;div class="box"&gt;9&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b10"&gt;&lt;div class="box"&gt;10&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b11"&gt;&lt;div class="box"&gt;11&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="block b12"&gt;&lt;div class="box"&gt;12&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b9</span><span class="punc">"</span><span class="tag">&gt;</span>9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b10</span><span class="punc">"</span><span class="tag">&gt;</span>10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b11</span><span class="punc">"</span><span class="tag">&gt;</span>11<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight">block</span> b12</span><span class="punc">"</span><span class="tag">&gt;</span>12<span class="tag">&lt;/div&gt;
+&lt;/div</span><span class="tag">&gt;</span>
+</pre>
               </div>
             </div>
             <div>A <b>better solution</b> (keeping the "automatic rows") is to put "<code>clear: left</code>" on blocks that should be on a real new row (here: block 5):</div>
@@ -740,10 +760,12 @@
                   </div>
                 </div>
               </div>
-              <div class="block-auto block">
-                <pre class="code-sample prettyprint lang-css">.b5 {
-  clear: left;
-}</pre>
+              <div class="block-auto block" style="padding-top: 50px;">
+<pre class="prettyprint lang-css">
+.b5 {
+  <span class="pname">clear</span><span class="punc">: </span><span class="pval">left</span><span class="punc">;</span>
+}
+</pre>
               </div>
             </div>
             <div style="clear: left;">This solution is better because it does not impact the HTML (<b>CSS-only</b>), it's compatible with <b>Media Queries</b> (you could apply line breaks on different blocks according to the device) and you can use the "<b>automatic rows</b>" feature.</div>
@@ -768,11 +790,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="block-auto block">
-                 <pre class="code-sample prettyprint lang-css">
-.block:<span style="font-weight: bold;">nth-child(4n+1)</span> {
-    clear: left;
-}</pre>
+                <div class="block-auto block" style="padding-top: 50px;">
+<pre class="prettyprint lang-css">
+.block:nth-child(4n+1) {
+    <span class="pname">clear</span><span class="punc">: </span><span class="pval">left</span><span class="punc">;</span>
+}
+</pre>
                 </div>
               </div>
             </div>
@@ -813,7 +836,8 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
   <script type="text/javascript" src="../js/selectivizr-min.js"></script>
 <![endif]-->
-<script src="google-code-prettify/prettify.js"></script>
+
+<!-- <script src="google-code-prettify/prettify.js"></script> -->
 <!-- <script src="http://underscorejs.org/underscore.js"></script> -->
 <!-- <script src="helpers-underscore.js"></script> -->
 <!-- <script src="init.js"></script> -->
@@ -838,7 +862,7 @@
   }
 
   // Colorize HTML and CSS code
-  prettyPrint();
+  // prettyPrint();
 </script>
 
 </body>

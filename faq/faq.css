@@ -173,6 +173,10 @@ code {
 }
 
 .prettyprint {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: .8em;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
   margin: 0;
   overflow: auto;
   background-color: transparent;
@@ -186,6 +190,7 @@ code {
 
 .lang-html:before, .lang-css:before {
   content: 'HTML';
+  font-family: Calibri, Helvetica, Arial, sans-serif;
   font-size: 3em;
   font-weight: bold;
   overflow: hidden;

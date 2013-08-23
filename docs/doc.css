@@ -173,6 +173,10 @@ code {
 }
 
 .prettyprint {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: .8em;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
   margin: 0;
   overflow: auto;
   background-color: transparent;
@@ -186,6 +190,7 @@ code {
 
 .lang-html:before, .lang-css:before {
   content: 'HTML';
+  font-family: Calibri, Helvetica, Arial, sans-serif;
   font-size: 3em;
   font-weight: bold;
   overflow: hidden;
@@ -296,10 +301,6 @@ code {
     text-shadow: 0 0 0.12em #CCC, 0 0 0.12em #CCC;
   }
 }
-.test {
-  color: blue;
-}
-
 .hero {
   display: none;
 }
@@ -399,9 +400,30 @@ code {
   background-color: rgba(0, 100, 255, 0.1);
 }
 
-.discreet * {
+.discreet {
   color: #BBB !important;
   display: none;
+}
+
+pre .tag {
+  color: #3f6f9f;
+}
+pre .pname {
+  color: #4f9fcf;
+}
+pre .pval {
+  color: #D14;
+}
+pre .com, pre .com * {
+  color: #999 !important;
+}
+pre .punc {
+  color: #999;
+}
+pre .mq {
+  color: #39F;
+  font-weight: bold;
+  background-color: rgba(0, 100, 255, 0.1);
 }
 
 .example-gutters1 .box, .example-gutters2 .box {
@@ -462,7 +484,7 @@ code {
   border: dashed 1px #CCC;
   width: 208px;
   padding: 10px;
-  margin: 0 50px;
+  margin: 0 20px;
 }
 .faq-different-heights .block-group.small-group {
   width: 208px;
