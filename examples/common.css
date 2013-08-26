@@ -32,10 +32,8 @@ body {
 }
 
 /* Box-sizing polyfill for IE6 and IE7 */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; *behavior: url(../js/boxsizing.htc);
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+  *behavior: url(../js/boxsizing.htc);
 }
 
 .block-group .block-group .box {
