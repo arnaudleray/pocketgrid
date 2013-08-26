@@ -1,3 +1,8 @@
+/* Box-sizing polyfill for IE6 and IE7 */
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+  *behavior: url(../js/boxsizing.htc);
+}
+
 /* Pocketgrid gutters */
 .block-group {
   margin: -1em 0 0 -1em;
@@ -310,6 +315,12 @@ pre .mq {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #AAA;
   }
+  .lte7 .header {
+    position: relative;
+    z-index: 0;
+    height: 50px;
+    padding-top: 30px;
+  }
   .header .brand {
     float: left;
   }
@@ -364,6 +375,9 @@ pre .mq {
 }
 .button:hover {
   background-color: #F60;
+}
+.lte7 .button {
+  width: 250px !important;
 }
 
 @media (min-width: 35em) {

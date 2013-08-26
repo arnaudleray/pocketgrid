@@ -31,6 +31,13 @@ body {
 	padding: 10px 0;
 }
 
+/* Box-sizing polyfill for IE6 and IE7 */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; *behavior: url(../js/boxsizing.htc);
+}
+
 .block-group .block-group .box {
 	background-color: #CDF;
 	border: solid 1px #BCD;

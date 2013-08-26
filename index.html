@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="docs/doc.css" />
 
   <link rel="shortcut icon" href="images/favicon.ico">
+
+  <style>
+    /* Box-sizing polyfill for IE6 and IE7 */
+    .block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+      *behavior: url(js/boxsizing.htc);
+    }
+  </style>
 </head>
 <body>
 
@@ -134,11 +141,6 @@
 
   </div> <!-- /.layout -->
 
-
-<!-- For IE6-8 Media Queries compatibility -->
-<!--[if lt IE 9]>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
-<![endif]-->
 
 </body>
 </html>
