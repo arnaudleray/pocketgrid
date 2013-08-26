@@ -220,6 +220,18 @@ code {
   content: '';
 }
 
+pre .highlight {
+  font-weight: bold;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+pre .highlight-group {
+  font-weight: bold;
+  background-color: rgba(255, 150, 0, 0.3);
+}
+pre .highlight-css {
+  font-weight: bold;
+  background-color: rgba(0, 100, 255, 0.1);
+}
 pre .tag {
   color: #3f6f9f;
 }
@@ -412,21 +424,6 @@ pre .mq {
 .example-sourcetitle {
   font-weight: bold;
   margin-top: 4px;
-}
-
-.highlight {
-  font-weight: bold;
-  background-color: rgba(255, 255, 0, 0.5);
-}
-
-.highlight-group {
-  font-weight: bold;
-  background-color: rgba(255, 150, 0, 0.3);
-}
-
-.highlight-css {
-  font-weight: bold;
-  background-color: rgba(0, 100, 255, 0.1);
 }
 
 .discreet {
