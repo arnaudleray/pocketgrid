@@ -13,24 +13,32 @@ body {
 	box-sizing: border-box;
 	height: 100%;
 
-	background: -moz-linear-gradient(top,  rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 	background-color: #EEE;/*#E0E9FF; /* Old browsers */
 
 	font-size: .8em;
 	color: #777;
 
-	border: solid 1px #C0C9DF;
-	border-radius: 2px;
+	border: solid 1px #DDD;
+	/*border-radius: 2px;*/
 	text-align: center;
 	padding: 10px 0;
 }
 
+/* Box-sizing polyfill for IE6 and IE7 */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; *behavior: url(../js/boxsizing.htc);
+}
+
 .block-group .block-group .box {
 	background-color: #CDF;
+	border: solid 1px #BCD;
 }

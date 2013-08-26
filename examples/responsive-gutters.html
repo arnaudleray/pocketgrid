@@ -15,24 +15,26 @@
 
     <!-- Styles defining the layout -->
     <style type="text/css">
+      .header { width: 50%; }
+      .nav { width: 50%; }
       .main { width: 70%; }
       .links { width: 30%; }
 
       /* Smartphone version:
-         only a small vertical gutter */
-      @media (max-width: 40em) {
-        .block-group { margin: -.3em 0 0 0; }
-        .block { padding: .3em 0 0 0; }
-      }
+         nothing to do: no gutters by default */
 
       /* Tablet version:
-         nothing to do: default gutters */
+         only vertical gutters */
+      @media (min-width: 40em) {
+        .block-group { margin: -5px 0 0 0; }
+        .block { padding: 5px 0 0 0; }
+      }
 
       /* Desktop version:
-         big gutters */
+         horizontal and vertical gutters */
       @media (min-width: 60em) {
-        .block-group { margin: -2em 0 0 -2em; }
-        .block { padding: 2em 0 0 2em; }
+        .block-group { margin: -15px 0 0 -10px; }
+        .block { padding: 15px 0 0 10px; }
       }
     </style>
   </head>
