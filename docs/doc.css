@@ -207,9 +207,38 @@ code {
   margin: 0;
   line-height: 1em;
 }
+.lte8 .lang-html:before, .lte8 .lang-css:before {
+  /* Hack IE <= 8 */
+  content: '';
+}
 
 .lang-css:before {
   content: 'CSS';
+}
+.lte8 .lang-css:before {
+  /* Hack IE <= 8 */
+  content: '';
+}
+
+pre .tag {
+  color: #3f6f9f;
+}
+pre .pname {
+  color: #4f9fcf;
+}
+pre .pval {
+  color: #D14;
+}
+pre .com, pre .com * {
+  color: #999 !important;
+}
+pre .punc {
+  color: #999;
+}
+pre .mq {
+  color: #39F;
+  font-weight: bold;
+  background-color: rgba(0, 100, 255, 0.1);
 }
 
 .button {
@@ -405,27 +434,6 @@ code {
   display: none;
 }
 
-pre .tag {
-  color: #3f6f9f;
-}
-pre .pname {
-  color: #4f9fcf;
-}
-pre .pval {
-  color: #D14;
-}
-pre .com, pre .com * {
-  color: #999 !important;
-}
-pre .punc {
-  color: #999;
-}
-pre .mq {
-  color: #39F;
-  font-weight: bold;
-  background-color: rgba(0, 100, 255, 0.1);
-}
-
 .example-gutters1 .box, .example-gutters2 .box {
   background-color: #DDD;
   width: 50px;
@@ -538,7 +546,7 @@ pre .mq {
     text-shadow: 0 0 .2em #555;
   }
   .lte9 .hero-title h1 {
-    /* Hack IE < 9 */
+    /* Hack IE <= 9 */
     color: black;
   }
   .hero-title h1, .hero-title h1 x:-moz-any-link {

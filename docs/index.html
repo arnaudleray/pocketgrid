@@ -1,5 +1,9 @@
 <!doctype html>
-<html>
+<!--[if lt IE 7 ]> <html class="ie6 lte7 lte8 lte9"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 lte7 lte8 lte9"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 lte8 lte9"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 lte9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -62,9 +66,9 @@
 <span class="tag">&lt;html</span><span class="tag">&gt;</span>
   <span class="tag">&lt;head</span><span class="tag">&gt;</span>
     <span class="com">&lt;!-- Don't forget the viewport meta tag for responsive sites! --&gt;</span>
-    <span class="tag">&lt;meta</span> <span class="pname">name</span><span class="punc">="</span><span class="pval">viewport" content="width=device-width, initial-scale=1.0</span><span class="punc">"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="pname">name</span><span class="punc">="</span><span class="pval">viewport</span><span class="punc">"</span> <span class="pname">content</span><span class="punc">="</span><span class="pval">width=device-width, initial-scale=1.0</span><span class="punc">"</span><span class="tag">&gt;</span>
     <span class="com">&lt;!-- Include PocketGrid --&gt;</span>
-    <span class="tag">&lt;link</span> <span class="pname">rel</span><span class="punc">="</span><span class="pval">stylesheet" href="pocketgrid.css</span><span class="punc">"</span> /<span class="tag">&gt;</span>
+    <span class="tag">&lt;link</span> <span class="pname">rel</span><span class="punc">="</span><span class="pval">stylesheet</span><span class="punc">"</span> <span class="pname">href</span><span class="punc">="</span><span class="pval">pocketgrid.css</span><span class="punc">"</span> /<span class="tag">&gt;</span>
   <span class="tag">&lt;/head</span><span class="tag">&gt;</span>
   <span class="tag">&lt;body</span><span class="tag">&gt;</span>
     <span class="com">&lt;!-- YOUR CONTENT HERE --&gt;</span>
@@ -286,7 +290,7 @@
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">links <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Links<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">footer <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;
 &lt;/div</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css"><span class="com">/* Smartphone version
-   Nothing to <span class="pname">do</span><span class="punc">: </span><span class="pval">blocks are stacked by default</span><span class="punc"></span>. */</span>
+   Nothing to <span class="pname">do</span><span class="punc">: </span><span class="pval">blocks are stacked by default. </span><span class="punc"></span>*/</span>
 
 <span class="com">/* Tablet version */</span>
 <span class="mq">@media <span class="punc">(</span><span class="pname">min-width</span><span class="punc">: </span><span class="pval">768px</span><span class="punc"></span><span class="punc">)</span></span> {
@@ -420,7 +424,7 @@
 
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b1 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B1<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b2 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B2<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
-  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b3 <span class="highlight">block</span>"<span class="tag">&gt;</span><span class="tag">&lt;div</span> class="box" title="margin-left: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Left&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b3 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">box</span><span class="punc">"</span> <span class="pname">title</span><span class="punc">="</span><span class="pval">margin-left: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Left&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b4 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B4<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b5 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B5<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b6 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B6<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
@@ -428,7 +432,7 @@
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b8 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B8<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b9 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B9<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b10 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B10<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
-  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b11 <span class="highlight">block</span>"<span class="tag">&gt;</span><span class="tag">&lt;div</span> class="box" title="margin-right: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Right&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b11 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">box</span><span class="punc">"</span> <span class="pname">title</span><span class="punc">="</span><span class="pval">margin-right: 20%</span><span class="punc">"</span><span class="tag">&gt;</span>Right&nbsp;offset<span class="tag">&lt;/div&gt;&lt;/div</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">b12 <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>B12<span class="tag">&lt;/div&gt;
 
 &lt;/body</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
@@ -440,8 +444,8 @@
 .b11 { <span class="pname">margin-right</span><span class="punc">: </span><span class="pval">40%</span><span class="punc">;</span> }
 
 <span class="com">/* Some cosmetics for readability */</span>
-.b3 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CDF; <span class="pname">font-size</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>.8em; }
-.b11 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CFC; <span class="pname">font-size</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>.8em; }</pre></div></div>
+.b3 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CDF</span><span class="punc">;</span> <span class="pname">font-size</span><span class="punc">: </span><span class="pval">.8em</span><span class="punc">;</span> }
+.b11 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CFC</span><span class="punc">;</span> <span class="pname">font-size</span><span class="punc">: </span><span class="pval">.8em</span><span class="punc">;</span> }</pre></div></div>
 
         </div>
       
@@ -494,8 +498,8 @@
   <span class="pname">position</span><span class="punc">: </span><span class="pval">relative</span><span class="punc">;</span> <span class="pname">left</span><span class="punc">: </span><span class="pval">-30%</span><span class="punc">;</span>
 }
 
-.before .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CDF; }
-.after .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval"></span><span class="punc"></span>#CFC; }</pre></div></div>
+.before .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CDF</span><span class="punc">;</span> }
+.after .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CFC</span><span class="punc">;</span> }</pre></div></div>
 
         </div>
       
@@ -533,8 +537,8 @@
               <div class="block-auto block">
                 To set gutters, just add these styles:
 <pre class="prettyprint lang-css">
-.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-verticalGutter -horizontalGutter</span><span class="punc">;</span> }
-.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">verticalGutter horizontalGutter</span><span class="punc">;</span> }
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval"><span class="highlight">-verticalGutter</span> <span class="highlight">-horizontalGutter</span></span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval"><span class="highlight">verticalGutter</span> <span class="highlight">horizontalGutter</span></span><span class="punc">;</span> }
 </pre>
                 For example, if we want an horizontal gutter of 2px, and a vertical gutter of 6px:
 <pre class="prettyprint lang-css">
@@ -574,8 +578,8 @@
               <div class="block-auto block">
                 To set gutters, just add these styles:
 <pre class="prettyprint lang-css">
-.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-verticalGutter 0 0 -horizontalGutter</span><span class="punc">;</span> }
-.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">verticalGutter 0 0 horizontalGutter</span><span class="punc">;</span> }
+.block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval"><span class="highlight">-verticalGutter</span> 0 0 <span class="highlight">-horizontalGutter</span></span><span class="punc">;</span> }
+.block { <span class="pname">padding</span><span class="punc">: </span><span class="pval"><span class="highlight">verticalGutter</span> 0 0 <span class="highlight">horizontalGutter</span></span><span class="punc">;</span> }
 </pre>
                 For example, if we want an horizontal gutter of 1em, and a vertical gutter of 2em:
 <pre class="prettyprint lang-css">
@@ -763,7 +767,7 @@
               <div class="block-auto block" style="padding-top: 50px;">
 <pre class="prettyprint lang-css">
 .b5 {
-  <span class="pname">clear</span><span class="punc">: </span><span class="pval">left</span><span class="punc">;</span>
+  <span class="highlight"><span class="pname">clear</span><span class="punc">: </span><span class="pval">left</span><span class="punc">;</span></span>
 }
 </pre>
               </div>
@@ -792,7 +796,7 @@
                 </div>
                 <div class="block-auto block" style="padding-top: 50px;">
 <pre class="prettyprint lang-css">
-.block:nth-child(4n+1) {
+.block:<span class="highlight">nth-child(4n+1)</span> {
     <span class="pname">clear</span><span class="punc">: </span><span class="pval">left</span><span class="punc">;</span>
 }
 </pre>
