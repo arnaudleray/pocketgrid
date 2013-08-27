@@ -363,74 +363,90 @@ pre .mq {
     text-shadow: 0 0 0.12em #CCC, 0 0 0.12em #CCC;
   }
 }
-.download h2 {
+.hero {
+  display: none;
+}
+
+.mobile-description {
+  font-size: 1.4em;
+}
+
+.features-title {
+  display: none;
+}
+
+.feature ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feature-title {
+  color: #555;
+  font-size: 1.8em;
   margin: 0;
-}
-.download .source, .download .minified, .download .github {
-  width: 100%;
+  text-shadow: 0.15em 0.1em 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.button {
+.button-group {
   text-align: center;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.source .button {
-  background-color: #00C;
-}
-.github .button {
-  background-color: #777;
-}
-.button:hover {
-  background-color: #F60;
-}
-.lte7 .button {
-  width: 250px !important;
 }
 
-@media (min-width: 35em) {
-  .source:hover, .minified:hover, .github:hover {
-    background-color: #FFC;
+@media (min-width: 35.5em) {
+  .hero {
+    display: block;
   }
 
-  .download-text, .download-button {
-    width: 50%;
+  .hero-title h1 {
+    font-size: 5.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 0 .2em #555;
+  }
+  .lte9 .hero-title h1 {
+    /* Hack IE <= 9 */
+    color: black;
+  }
+  .hero-title h1, .hero-title h1 x:-moz-any-link {
+    /* Hack Firefox */
+    text-shadow: 0 0 0.12em #555;
   }
 
-  .download-button {
-    padding-top: 3em;
+  .hero-description {
+    color: #BBB;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: -1em;
   }
 
-  .minified {
-    border: 2px solid #DDD;
-    border-width: 2px 0 2px 0;
+  .mobile-description {
+    display: none;
   }
 
-  .button {
-    width: 60%;
+  .features-title {
+    display: none;
+  }
+
+  .feature {
+    width: 50% !important;
+    height: 9.5em;
+    text-align: center;
+  }
+  .feature ul {
+    display: inline-block;
+    text-align: left;
+    width: 16em;
+    padding-left: 4px;
+  }
+  .feature ul li {
+    padding-right: .7em;
   }
 }
 @media (min-width: 60em) {
-  .download .description {
-    height: 1em;
-    height: 3em\9;
-    /* Hack IE < 9 */
+  .feature {
+    width: 33.33% !important;
   }
-  .download .source, .download .minified, .download .github {
-    width: 33.33%;
-  }
-
-  .download-text, .download-button {
-    width: 100%;
-  }
-
-  .minified {
-    border-width: 0 2px 0 2px;
-  }
-
-  .button {
-    width: 10em;
+  .feature ul {
+    width: 16em;
   }
 }

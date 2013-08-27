@@ -88,10 +88,20 @@ code, pre {
   color: white;
   background-color: black;
 }
-.footer .box div {
+.footer .box .center {
   max-width: 65em;
   margin: 0 auto;
   padding: 1em 20px;
+}
+.footer .box .copyright, .footer .box .tweets {
+  padding: 0;
+}
+.footer .box .copyright {
+  width: 30%;
+}
+.footer .box .tweets {
+  width: 70%;
+  text-align: right;
 }
 .footer a {
   color: #108EEF;
