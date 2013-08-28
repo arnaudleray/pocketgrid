@@ -112,10 +112,10 @@
             Like most CSS grid systems, PocketGrid can create rows (using <code>&lt;div class="block-group"&gt;</code>) and columns (using <code>&lt;div class="block"&gt;</code>).<br/>
             Here you can see a demo with a grid containing 3 rows with various column sizes (the source code is just after the demo):<br/>
             <div class="note">All the examples displayed  in a "Demo" frame are <b>real examples</b> displayed in an iframe (no fake image).<br/>
-            <b>You can open each example alone in a new tab</b> clicking on the <b>"View this demo in a new tab"</b> orange button at the top right side of the frame below.</div>
+            <b>You can open each example alone in a new tab</b> clicking on the <b>"Open in a new tab"</b> orange button at the top right side of the frame below.</div>
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/rows-and-columns.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/rows-and-columns.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/rows-and-columns.html" style="height: 165px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             As you can see in the code below, you just have to:
@@ -163,7 +163,7 @@
             Then, according to the width of blocks, blocks will automatically go to a new line when a row is full:
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/automatic-rows.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/automatic-rows.html" style="height: 200px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/automatic-rows.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/automatic-rows.html" style="height: 200px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             The "automatic rows" principle is simple to understand:<br/>
@@ -214,7 +214,7 @@
             This kind of layout is very simple with PocketGrid: you just have to put all your blocks in a block-group, without any CSS configuration (because the default width of blocks is 100%, and blocks automatically go to a new row after 100%, so <b>blocks are stacked by default</b>):
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/simple-stack.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 240px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/simple-stack.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/simple-stack.html" style="height: 240px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             The source of this example (just below) is pretty self-explanatory:
@@ -244,7 +244,7 @@
             Now imagine that we would like to display the navigation block and the main block side by side:
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout.html" style="height: 240px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             To do this, we can keep the same HTML as in the previous example: we just have to give a width to the navigation and main blocks (respectively 20% and 80%):
@@ -271,13 +271,14 @@
             For example, we want to have this behaviour:<br/>
             <ul>
               <li>All blocks are stacked on mobile</li>
-              <li>The navigation and main blocks are side by side on tablet (width &gt; 640px)</li>
+              <li>The navigation and main blocks are side by side on tablet (width &gt; 768px)</li>
               <li>The navigation, main and links blocks are side by side on desktop (width &gt; 960px)</li>
             </ul>
-            Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
+            Resize your browser and see the layout changes in the preview below:
+            <div class="note">You should click on the "Open in a new tab" orange button to play with this example more easily.</div>
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout-responsive.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/basic-layout-responsive.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/basic-layout-responsive.html" style="height: 300px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             To make this responsive behaviour, we just have to put our own <a href="https://developer.mozilla.org/en/docs/CSS/Media_queries" target="_blank">Media Queries</a> in the CSS, and change the block widths according to the device width:
@@ -319,7 +320,7 @@
             Let's modify the previous example, replacing the main block with a nested grid (containing items in 5 columns):
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 310px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids.html" style="height: 310px;" frameborder="0"></iframe></div>
 
 <div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
   <span class="tag">&lt;div</span> <span class="pname">class</span><span class="punc">="</span><span class="pval">header <span class="highlight">block</span></span><span class="punc">"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div</span><span class="tag">&gt;</span>
@@ -358,10 +359,11 @@
             Now we are going to do something <em>impossible to do with most CSS grid systems!</em> (such as Twitter Bootstrap)<br/>
             We will change the number of columns of our grid according to the device width.<br/>
             Keeping our previous nested grids example, we will display the nested items in 2 columns on mobile, 4 columns on tablet and 5 columns on desktop!<br/>
-            Resize your browser and see the layout changes in the preview below <span class="remark">(you should click on the "View this demo in a new tab" orange button to play with this example more easily)</span>
+            Resize your browser and see the layout changes in the preview below.
+            <div class="note">You should click on the "Open in a new tab" orange button to play with this example more easily.</div>
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids-responsive.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 380px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/nested-grids-responsive.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/nested-grids-responsive.html" style="height: 380px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">
             Sounds difficult?<br/>
@@ -416,9 +418,7 @@
             For example, here the "Left offset" block has a left offset of 1 column (<code>margin-left: 20%</code>) and the "Right offset" block has a left offset of 2 column (<code>margin-right: 40%</code>)
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/offsets.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe></div>
-
-          <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/offsets.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/offsets.html" style="height: 160px;" frameborder="0"></iframe></div>
 
 <div class="block-group"><div class="html-source block"><div class="example-sourcetitle">HTML</div><pre class="prettyprint lang-html"><span class="tag">&lt;body</span> <span class="pname">class</span><span class="punc">="</span><span class="pval"><span class="highlight-group">block-group</span></span><span class="punc">"</span><span class="tag">&gt;</span>
 
@@ -443,7 +443,7 @@
 <span class="com">/* Right <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-right the size you want</span><span class="punc"></span>! */</span>
 .b11 { <span class="pname">margin-right</span><span class="punc">: </span><span class="pval">40%</span><span class="punc">;</span> }
 
-<span class="com">/* Some cosmetics for readability */</span>
+<span class="com">/* Some styles for better readability */</span>
 .b3 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CDF</span><span class="punc">;</span> <span class="pname">font-size</span><span class="punc">: </span><span class="pval">.8em</span><span class="punc">;</span> }
 .b11 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CFC</span><span class="punc">;</span> <span class="pname">font-size</span><span class="punc">: </span><span class="pval">.8em</span><span class="punc">;</span> }</pre></div></div>
 
@@ -463,7 +463,7 @@
             </ul>
           </div>
 
-<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/source-ordering-push-pull.html" target="_blank" class="button newtab">View this demo in a new tab</a></div><iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe></div>
+<div class="iframe-border"><div class="iframe-header"><div class="iframe-title">Demo</div><a href="../examples/source-ordering-push-pull.html" target="_blank" class="button newtab" title="Open this demo in a new tab">Open in a new tab</a></div><iframe class="example-iframe" src="../examples/source-ordering-push-pull.html" style="height: 110px;" frameborder="0"></iframe></div>
 
           <div class="example-comments">If you look at the HTML source, the "BEFORE" column is declared <em>before</em> the "AFTER" column, whereas it is displayed <em>after</em>.</div>
 
@@ -540,7 +540,7 @@
 .block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval"><span class="highlight">-verticalGutter</span> <span class="highlight">-horizontalGutter</span></span><span class="punc">;</span> }
 .block { <span class="pname">padding</span><span class="punc">: </span><span class="pval"><span class="highlight">verticalGutter</span> <span class="highlight">horizontalGutter</span></span><span class="punc">;</span> }
 </pre>
-                For example, if we want an horizontal gutter of 2px, and a vertical gutter of 6px:
+                For example, if we want an vertical gutter of 2px, and a horizontal gutter of 6px:
 <pre class="prettyprint lang-css">
 .block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-2px -6px</span><span class="punc">;</span> }
 .block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">2px 6px</span><span class="punc">;</span> }
@@ -581,7 +581,7 @@
 .block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval"><span class="highlight">-verticalGutter</span> 0 0 <span class="highlight">-horizontalGutter</span></span><span class="punc">;</span> }
 .block { <span class="pname">padding</span><span class="punc">: </span><span class="pval"><span class="highlight">verticalGutter</span> 0 0 <span class="highlight">horizontalGutter</span></span><span class="punc">;</span> }
 </pre>
-                For example, if we want an horizontal gutter of 1em, and a vertical gutter of 2em:
+                For example, if we want an vertical gutter of 2px, and a horizontal gutter of 6px:
 <pre class="prettyprint lang-css">
 .block-group { <span class="pname">margin</span><span class="punc">: </span><span class="pval">-4px 0 0 -12px</span><span class="punc">;</span> }
 .block { <span class="pname">padding</span><span class="punc">: </span><span class="pval">4px 0 0 12px</span><span class="punc">;</span> }
