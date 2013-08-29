@@ -1,6 +1,4 @@
 body {
-	/*padding: 0;*/
-	/*margin: 20px;*/
 	margin: 0;
 	font-size: .9em;
 	font-family: Arial;
@@ -33,7 +31,7 @@ body {
 
 /* Box-sizing polyfill for IE6 and IE7 */
 .block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
-  *behavior: url(../js/boxsizing.htc);
+  *behavior: url(../js/boxsizing-pocketgrid.htc);
 }
 
 .block-group .block-group .box {
