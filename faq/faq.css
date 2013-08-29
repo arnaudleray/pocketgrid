@@ -1,6 +1,6 @@
 /* Box-sizing polyfill for IE6 and IE7 */
 .block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
-  *behavior: url(../js/boxsizing.htc);
+  *behavior: url(../js/boxsizing-pocketgrid.htc);
 }
 
 /* Pocketgrid gutters */
@@ -333,6 +333,12 @@ pre .mq {
   }
   .header .brand {
     float: left;
+  }
+  .ie6 .header .brand {
+    margin: -15px 10px 0 20px !important;
+  }
+  .ie7 .header .brand {
+    margin: -25px 10px 15px 20px !important;
   }
   .header ul {
     float: right;

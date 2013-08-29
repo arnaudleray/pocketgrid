@@ -1,5 +1,6 @@
 /**
 * box-sizing Polyfill
+* (PocketGrid version)
 * 
 * A polyfill for box-sizing: border-box for IE6 & IE7.
 * 
@@ -34,7 +35,7 @@
 * Add the behavior/HTC after every `box-sizing: border-box;` that you assign:
 * 
 * box-sizing: border-box;
-* *behavior: url(/scripts/boxsizing.htc);`
+* *behavior: url(/scripts/boxsizing-pocketgrid.htc);`
 * 
 * Prefix the `behavior` property with a star, like seen above, so it will only be seen by 
 * IE6 & IE7, not by IE8+ who already implement box-sizing.
@@ -195,18 +196,23 @@ function getPixelWidth(object, value){
 	// For Percentage Values
 	var PERCENT = /^[\d\.]+%$/i;
 	if (PERCENT.test(value)){
+		var viewportwidth = (typeof window.innerWidth != 'undefined' ? window.innerWidth : element.document.documentElement.clientWidth);
+
+		// Fix by PocketGrid (http://arnaudleray.github.io/pocketgrid/)
+		// Inspired by http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+		var correctedValue = parseFloat(value);// - (0.5 / viewportwidth * 100);
 		try{
-			var parentPaddingLeft = getPixelWidth(object.parentElement,object.parentElement.currentStyle.paddingLeft);
-			var parentPaddingRight = getPixelWidth(object.parentElement,object.parentElement.currentStyle.paddingRight);
-			var parentBorderLeft = getPixelWidth(object.parentElement,object.parentElement.currentStyle.borderLeft);
-			var parentBorderRight = getPixelWidth(object.parentElement,object.parentElement.currentStyle.borderRight);
+			// var parentPaddingLeft = getPixelWidth(object.parentElement,object.parentElement.currentStyle.paddingLeft);
+			// var parentPaddingRight = getPixelWidth(object.parentElement,object.parentElement.currentStyle.paddingRight);
+			// var parentBorderLeft = getPixelWidth(object.parentElement,object.parentElement.currentStyle.borderLeft);
+			// var parentBorderRight = getPixelWidth(object.parentElement,object.parentElement.currentStyle.borderRight);
 			
-			//var parentWidth = getPixelWidth(object.parentElement,(object.parentElement.currentStyle.width != "auto" ? object.parentElement.currentStyle.width : "100%"));
-			var parentWidth = object.parentElement.offsetWidth - parentPaddingLeft - parentPaddingRight - parentBorderLeft - parentBorderRight;
-			var value = (parseFloat(value) / 100) * parentWidth;
+			var parentWidth = getPixelWidth(object.parentElement,(object.parentElement.currentStyle.width != "auto" ? object.parentElement.currentStyle.width : "100%"));
+			// var parentWidth = object.parentElement.offsetWidth - parentPaddingLeft - parentPaddingRight - parentBorderLeft - parentBorderRight;
+			var value = (correctedValue / 100) * parentWidth;
 		}
 		catch(e){
-			var value = (parseFloat(value) / 100) * element.document.documentElement.clientWidth;
+			var value = (correctedValue / 100) * element.document.documentElement.clientWidth;
 		}
 		return parseInt(value);
 	}

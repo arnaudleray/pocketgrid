@@ -18,10 +18,11 @@
       .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
         width: 20%;
       }
-      /* Left offset: just give the margin-left the size you want! */
-      .b3 { margin-left: 20%; }
+      /* Left offset: just give the margin-left the size you want!
+      Note: For IE6 compatibility, you have to put "!important" also. */
+      .b3 { margin-left: 20% !important; }
       /* Right offset: just give the margin-right the size you want! */
-      .b11 { margin-right: 40%; }
+      .b11 { margin-right: 40% !important; }
       
       /* Some styles for better readability */
       .b3 .box { background-color: #CDF; font-size: .8em; }

@@ -438,10 +438,11 @@
 &lt;/body</span><span class="tag">&gt;</span></pre></div><div class="css-source block"><div class="example-sourcetitle">CSS</div><pre class="prettyprint lang-css">.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12 {
   <span class="pname">width</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span>
 }
-<span class="com">/* Left <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-left the size you want</span><span class="punc"></span>! */</span>
-.b3 { <span class="pname">margin-left</span><span class="punc">: </span><span class="pval">20%</span><span class="punc">;</span> }
+<span class="com">/* Left <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-left the size you want</span><span class="punc"></span>!
+<span class="pname">Note</span><span class="punc">: </span><span class="pval">For IE6 compatibility</span><span class="punc"></span>, you have to put "!important" also. */</span>
+.b3 { <span class="pname">margin-left</span><span class="punc">: </span><span class="pval">20% </span><span class="punc"></span>!important; }
 <span class="com">/* Right <span class="pname">offset</span><span class="punc">: </span><span class="pval">just give the margin-right the size you want</span><span class="punc"></span>! */</span>
-.b11 { <span class="pname">margin-right</span><span class="punc">: </span><span class="pval">40%</span><span class="punc">;</span> }
+.b11 { <span class="pname">margin-right</span><span class="punc">: </span><span class="pval">40% </span><span class="punc"></span>!important; }
 
 <span class="com">/* Some styles for better readability */</span>
 .b3 .box { <span class="pname">background-color</span><span class="punc">: </span><span class="pval">#CDF</span><span class="punc">;</span> <span class="pname">font-size</span><span class="punc">: </span><span class="pval">.8em</span><span class="punc">;</span> }
@@ -806,6 +807,11 @@
 
             <div class="clear">For a complete responsive example using <code>clear</code> and <code>nth-child</code>, you can see <a href="../examples/fix-for-different-block-heights-nthchild.html" target="_blank">this example</a>.</div>
 
+            <div class="warn">
+              The "<code>clear: left</code>" solution is not compatible with IE6 and IE7.<br/>
+              For these browsers, you should force the blocks to have the same height, or you should use a "block-group" for each row.
+            </div>
+
           </div>
         </div>
 
@@ -847,34 +853,36 @@
 
   </div> <!-- /.layout -->
 
-  <script src="http://platform.twitter.com/widgets.js"></script>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!--[if lt IE 9]>
-  <script type="text/javascript" src="../js/selectivizr-min.js"></script>
-<![endif]-->
-
-<script>
-  // Build the table of contents
-  var $toc = $('.toc');
-  $toc.html('');
-  var iTitle = 0;
-  var $title;
-  var anchor;
-  var titles = $('h2').toArray()
-  var nbTitles = titles.length;
-  for (iTitle = 0; iTitle < nbTitles; iTitle++) {
-    if (iTitle > 0) {
-      $title = $(titles[iTitle]);
-      anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
-      $title.before('<a name="'+anchor+'" href="#" class="title-anchor">#</a>');
-      $title.wrap('<a href="#'+anchor+'"></a>');
-      $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
+  <script>
+    // Build the table of contents
+    var $toc = $('.toc');
+    $toc.html('');
+    var iTitle = 0;
+    var $title;
+    var anchor;
+    var titles = $('h2').toArray()
+    var nbTitles = titles.length;
+    for (iTitle = 0; iTitle < nbTitles; iTitle++) {
+      if (iTitle > 0) {
+        $title = $(titles[iTitle]);
+        anchor = $title.text().replace(/ /g, '-').replace(/[^a-zA-Z-]/g, '').replace(/-{2,}/g, '-').toLowerCase();
+        $title.before('<a name="'+anchor+'" href="#" class="title-anchor">#</a>');
+        $title.wrap('<a href="#'+anchor+'"></a>');
+        $toc.append($('<a href="#'+anchor+'">' + $title.text() + '</a><br/>'));
+      }
     }
-  }
-</script>
+  </script>
+
+  <!-- For IE6-8 Media Queries compatibility -->
+  <!--[if lt IE 9]>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <script src="http://platform.twitter.com/widgets.js"></script>
 
 </body>
 </html>

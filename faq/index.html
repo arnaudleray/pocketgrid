@@ -74,19 +74,22 @@
           <a href="#compatibility"><h2 class="question-title">Compatibility: which browsers are supported by PocketGrid?</h2></a>
                 
           <div class="question-answer">
+            <img src="../images/browser-logos-32.png" alt="Compatible browsers" /><br/>
             PocketGrid is compatible with most browsers (not only modern browsers):<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;<b>IE6+, Firefox, Chrome, Safari, Opera and mobile browsers (iPhone, iPad, Android, Windows Phone, BlackBerry...)</b>
+            <b>IE6+, Firefox, Chrome, Safari, Opera<br/>and mobile browsers (iPhone, iPad, Android, Windows Phone, BlackBerry...)</b>
             <div class="note">
               By default, PocketGrid is IE8+ compatible.<br/>
               <b>For IE6 and IE7 compatibility</b>, you will need a polyfill for "box-sizing" compatibility:</p>
               <ul>
-                <li><b>Box-sizing polyfill (IE6 and IE7 only): <a href="https://github.com/Schepp/box-sizing-polyfill" target="_blank">https://github.com/Schepp/box-sizing-polyfill</a></b><br/>
-              To use it, <a href="https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc" target="_blank">download it</a> and put it on your site (in a "scripts" folder for example),<br/>then add these CSS styles (changing the path to the "boxsizing.htc" file):
+                <li><b>Box-sizing polyfill (IE6 and IE7 only):</b><br/>
+                Christian Schaefer created a <a href="https://github.com/Schepp/box-sizing-polyfill" target="_blank">box-sizing polyfill</a> but the latest version does not seem to handle correctly the <a href="http://tylertate.com/blog/2012/01/05/subpixel-rounding.html" target="_blank">subpixel rounding problem</a>. So I wrote <a href="https://raw.github.com/arnaudleray/pocketgrid/master/js/boxsizing-pocketgrid.htc" target="_blank">my own version</a> of this polyfill.<br/>
+                To use it, <a href="https://raw.github.com/arnaudleray/pocketgrid/master/js/boxsizing-pocketgrid.htc" target="_blank">download it</a> and put it on your site (in a "js" folder for example),<br/>then add these CSS styles (changing the path to the "boxsizing-pocketgrid.htc" file):
 <pre class="prettyprint lang-css">
 .block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
-  *<span class="pname">behavior</span><span class="punc">: </span><span class="pval">url</span><span class="punc"></span>(<span class="highlight">/scripts/boxsizing.htc</span>); <span class="com">/* change the path */</span>
+  *<span class="pname">behavior</span><span class="punc">: </span><span class="pval">url</span><span class="punc"></span>(<span class="highlight">/js/boxsizing-pocketgrid.htc</span>); <span class="com">/* change the path */</span>
 }
 </pre>
+                Note: Don't forget the star (*) before "behavior": it ensures that only IE6 and IE7 will see this line.<br/>
                 </li>
               </ul>
             </div>
@@ -116,10 +119,12 @@
             <ul>
               <li>PocketGrid is really <b>lightweight</b>, so you can use it in all your projects at no cost (Twitter Bootstrap is about 200x bigger, even minified!)</li>
               <li>Twitter Bootstrap 2's grid has only 1 breakpoint (like many grid systems), whereas with PocketGrid you can define <b>as many breakpoints as you want</b>!</li>
+              <li>Twitter Bootstrap breakpoints are hard-coded and limited, whereas PocketGrid breakpoints are free and unlimited!</li>
+              <li>Twitter Bootstrap has only 12 columns, whereas PocketGrid columns are unlimited!</li>
               <li>PocketGrid is one of the very few <b>semantic</b> grids (especially pure CSS grids!): you don't have "span4" or "small-6 large-2 columns" classes everywhere in your HTML: column size should be defined in the stylesheet, not in the HTML! That's the PocketGrid philosophy!</li>
               <li>Percentage sizing is more natural and more precise than using a number of columns<br/>
-              (how can you make 5 columns in a 12 or 16-columns system? It's impossible! With PocketGrid, just put "<code>width:20%</code>", easy!)</li>
-              <li>PocketGrid does not require a CSS preprocessor (but you can use one if you want).</li>
+              (how can you make 5 columns in a 12 or 16-columns system? It's impossible! With PocketGrid, just put "<code>width:20%</code>" on your blocks, easy!)</li>
+              <li>PocketGrid does not require a CSS preprocessor such as LESS or SASS (but you can use one if you want).</li>
             </ul>
 
             <div class="note">
@@ -257,6 +262,11 @@
     </div> <!-- /.footer -->
 
   </div> <!-- /.layout -->
+
+  <!-- For IE6-8 Media Queries compatibility -->
+  <!--[if lt IE 9]>
+    <script src="../js/respond.min.js"></script>
+  <![endif]-->
 
   <script src="http://platform.twitter.com/widgets.js"></script>
 
