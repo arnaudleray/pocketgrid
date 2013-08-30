@@ -458,6 +458,7 @@ pre .mq {
     position: absolute;
     z-index: -1;
     background-color: #EEE;
+    border-radius: 8px;
     left: 30%;
     right: 30%;
     top: 30%;
@@ -471,8 +472,8 @@ pre .mq {
   .feature:hover:before {
     left: 0;
     right: 0;
-    top: 10px;
-    bottom: -10px;
+    top: .5em;
+    bottom: -.5em;
     opacity: 1;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
