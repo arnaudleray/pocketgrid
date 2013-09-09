@@ -1,4 +1,4 @@
-/*! PocketGrid 1.0.0
+/*! PocketGrid 1.1.0
 * Copyright 2013 Arnaud Leray
 * MIT License
 */
@@ -20,6 +20,13 @@
 }
 .block-group:after {
   clear: both;
+}
+
+.block-group {
+  /* ul/li compatibility */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Nested grid */
