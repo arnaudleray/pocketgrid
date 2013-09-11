@@ -459,10 +459,10 @@ pre .mq {
     z-index: -1;
     background-color: #EEE;
     border-radius: 8px;
-    left: 30%;
-    right: 30%;
-    top: 30%;
-    bottom: 30%;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
     opacity: 0;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
