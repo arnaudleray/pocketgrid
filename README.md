@@ -1,7 +1,5 @@
 # PocketGrid
 
-**New: PocketGrid 1.0.0 released!**
-
 **Official PocketGrid website**: http://arnaudleray.github.io/pocketgrid/  
 <a href="http://arnaudleray.github.io/pocketgrid/"><img src="http://arnaudleray.github.io/pocketgrid/images/screenshot.png" height="200px" alt="New website"></a>
 
@@ -34,7 +32,7 @@ See http://arnaudleray.github.io/pocketgrid/download/
 See http://arnaudleray.github.io/pocketgrid/faq/
 
 ## Community
-You can <a href="http://twitter.com/pocketgrid">follow @PocketGrid on Twitter!</a>
+You can <a href="https://twitter.com/intent/user?screen_name=pocketgrid">follow @PocketGrid on Twitter!</a>
 
 ## Should I use PocketGrid instead of Twitter Bootstrap or other grids?
 Well, first, **you can use both**!  
