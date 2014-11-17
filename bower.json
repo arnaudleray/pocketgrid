@@ -1,0 +1,30 @@
+{
+  "name": "pocketgrid",
+  "version": "1.1.0",
+  "homepage": "https://github.com/arnaudleray/pocketgrid",
+  "authors": [
+    "Arnaud Leray"
+  ],
+  "description": "pocket sized grid system",
+  "main": [
+    "pocketgrid.css",
+    "pocketgrid.min.css",
+    "pocketgrid.scss"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "grid",
+    "pocket",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
