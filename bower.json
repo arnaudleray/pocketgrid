@@ -9,7 +9,7 @@
   "main": [
     "pocketgrid.css",
     "pocketgrid.min.css",
-    "pocketgrid.scss"
+    "pocketgrid.sass"
   ],
   "moduleType": [
     "globals"

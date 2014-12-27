@@ -1,0 +1,51 @@
+/*! PocketGrid 1.1.0
+ * Copyright 2013 Arnaud Leray
+ * MIT License
+ */
+
+$v-gutter: 0
+$h-gutter: 0
+
+/* Border-box-sizing */
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before 
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+/* Clearfix */
+.block-group
+  *zoom: 1
+.block-group
+  /* ul/li compatibility */
+  list-style-type: none
+  padding: 0
+  margin: -$v-gutter
+
+  &:before, &:after
+    display: table
+    content: ""
+    line-height: 0
+
+  &:after
+    clear: both
+
+  & > &
+    /* Nested grid */
+    clear: none
+    float: left
+    margin: 0 !important
+
+/* Default block */
+.block 
+  float: left
+  width: 100%
+  padding: $v-gutter $h-gutter
+
+// // uncomment for Responsiveness
+// $columns: 20, 25, 30, 33, 40, 50, 60, 67, 70, 75, 80, 100
+// $min-width: 40em // 40 × 16px = 640px
+
+// @media (min-width: $min-width)
+//   @each $column in $columns
+//     .b#{$column}
+//       width: $column * 1%
